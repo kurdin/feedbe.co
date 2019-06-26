@@ -1,0 +1,42 @@
+<div>
+	<h1 style="color: {textStyle.color}">Just some text</h1>
+		{?show_test}
+		<ul class="items3">
+			{@Component name="itemTest" group="0" label="Hide On Remove" onremove2="keep"}{/Component}
+		</ul>
+		{:else}
+		<ul class="items3">
+			{@Component name="itemTest3" group="1" label="Test2" onremove2="keep"}{/Component}
+		</ul>
+		{/show_test}
+	<button class="updatetest">Update Test Component</button>
+	<button class="changecolor">Change color to {model.op_color}</button>
+	<button class="addbox">Add New Box</button>
+	<button class="removeboxes">Remove All Boxes</button>
+	<ul class="items2">
+			{! {#test_array}
+				{@Component name="itemTestArray" label=.}
+					<span>Test Child {.}</span>
+				{/Component}
+			{/test_array} !}
+	</ul>
+	<ul class="items2">
+		{! 	{#test_array}
+				{@Component name="itemTestArray" label=.}
+					<span>Test Child {.}</span>
+				{/Component}
+			{/test_array} !}
+	</ul>
+	<ul class="items2">
+		{#arr_top_comp}
+			{@Component name="itemTest3" label=. group="2"}{/Component}
+		{/arr_top_comp}
+	</ul>
+	<ul class="items2">		
+		{#arr_top_comp}
+			{@Component name="itemTest3" label=. group="3"}{/Component}
+		{/arr_top_comp}
+	</ul>
+	<ul class="items3">{@Component name="itemTest" group="2" label="this another"}{/Component}</ul>
+	<ul class="items3">{@Component name="itemTest" group="3" label="this is last"}{/Component}</ul>
+</div>

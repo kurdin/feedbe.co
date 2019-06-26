@@ -1,0 +1,16 @@
+<div class="therendertest" style="background: white">
+	<p class="green2" $$-style="textStyle1" $$-data="someData">This is NOT Green!</p>
+	<p class="test23" $$-style="textStyle2">That is NOT Blue!</p>
+	<p class="test21" $$-style="textStyle3"><span>Is NOT White!</span></p>
+	<p class="test4">This text does not changed<span>Is White {data.x}, {data.y}</span></p>
+	<ul class="items">
+		{#arr}
+			{@Component name="items" label=.}{/Component}
+		{/arr}
+	</ul>
+	<ul class="items">
+		{#arr2}
+			{@Component name="items" label=. type="static"}{/Component}
+		{/arr2}
+	</ul>		
+</div>

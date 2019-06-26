@@ -1,0 +1,16 @@
+host='root@5.9.145.34'
+path='/home/gits/eoverlay.git/eoverlay-www-server'
+SSH_PORT='-p 8822'
+
+[live]
+SSH_HOST='root@5.9.145.34'
+SSH_PORT='-p 8822'
+echo "Deployment to preview.eoverlay.com LIVE on production server";
+cd /home/gits/eoverlay.git/eoverlay-www-server
+git pull
+cd /home/gits/eoverlay.git/eoverlay-www-server/preview.eoverlay
+npm prune
+npm install --silent
+rm -rf package-lock.json
+rsync -avhW --delete --exclude data --exclude .git . /home/www/preview.eoverlay/
+forever restart PrevieweOverlay4000

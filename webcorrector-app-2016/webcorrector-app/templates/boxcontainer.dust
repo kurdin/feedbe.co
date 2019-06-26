@@ -1,0 +1,5 @@
+<div id="wcboxes">
+	{#boxes}
+		{@Component name="Box" box=.}{/Component}
+    {/boxes} 
+</div>

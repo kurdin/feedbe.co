@@ -1,0 +1,116 @@
+.jGrowl[shadow] { 
+
+    z-index:999999;
+    color:#EAEBF0!important;
+    font-size:14px!important;
+    position:fixed;
+
+    a {
+	   color: yellow;
+    }
+
+    &.top-left{
+	left:0;
+	top:0
+	}
+
+    &.top-right{
+    right:5px;
+    top:65px
+    }
+
+    &.bottom-left{
+    left:0;
+    bottom:0
+    }
+    
+    &.bottom-right{
+    right:0;
+    bottom:0
+    }
+    
+    &.center{
+    top:0;
+    width:50%;
+    left:25%
+    }
+    
+    .jGrowl-notification,
+    .jGrowl-closer{
+    background-color:#404040;
+    opacity:.90;
+    -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=90)';
+    filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
+    zoom:1;
+    width:235px;
+    padding:10px;
+    margin-top:5px;
+    margin-bottom:5px;
+    font-family:sans-serif;
+    font-size:14px;
+    text-align:left;
+    display:none;
+    border-radius:5px;
+    -webkit-border-radius:5px;
+    -webkit-box-shadow: 0px 1px 2px rgba(0,0,0,0.6);
+    -moz-box-shadow: 0px 1px 2px rgba(0,0,0,0.6);
+    box-shadow: 0px 1px 2px rgba(0,0,0,0.6);
+    border:1px solid rgba(0,0,0,0.6);
+    background: -webkit-linear-gradient(#333, #2F2E2E);
+    background: -moz-linear-gradient(#333, #2F2E2E);
+    background: -ms-linear-gradient(#333, #2F2E2E);
+    background: -o-linear-gradient(#333, #2F2E2E);
+    background: linear-gradient(#333, #2F2E2E);
+    }
+
+    .jGrowl-notification{
+        min-height:40px;
+    }
+    
+    .jGrowl-notification, .jGrowl-closer{
+    margin:10px
+    }
+    
+    .jGrowl-notification .jGrowl-header{
+    font-weight:bold;
+    font-size:.85em
+    }
+
+    .jGrowl-notification .jGrowl-close{
+    z-index:99;
+    float:right;
+    font-weight:bold;
+    font-size:15px;
+    cursor:pointer;
+    margin-top:-5px;
+    color:#fff!important;
+    }
+
+    .jGrowl-closer{
+    padding-top:4px;
+    padding-bottom:4px;
+    cursor:pointer;
+    font-size:.9em;
+    font-weight:bold;
+    text-align:center
+    }
+
+    .jGrowl-message{
+    font-family:sans-serif;
+    font-size:14px!important;
+    color:#EAEBF0!important;
+    line-height: 20px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
+    text-overflow: hidden;
+    }
+}
+
+.jGrowl-closer.highlight{
+    font-family:sans-serif;
+    color:#EAEBF0!important
+} 
+
+.center .jGrowl-notification, .center .jGrowl-closer{
+    margin-left:auto;
+    margin-right:auto
+}

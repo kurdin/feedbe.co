@@ -1,0 +1,4 @@
+<div>
+	<li>{props.label}<input type="text" $$-value="value" /></li>
+	{props.children|s}
+</div>

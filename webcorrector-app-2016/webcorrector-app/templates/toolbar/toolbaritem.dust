@@ -1,0 +1,2 @@
+{!ToolBar Item Template!} 
+<li class='wctbiconli {props.class}'><div class='wctbicon hint--right' data-hint='{@t k=props.translationKey /}'></div></li>

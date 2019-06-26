@@ -1,0 +1,7 @@
+{!HTML Validator Template!} 
+<p style="text-align:center">{@t k="tbar.vld.totalText" /}<p class="bigscore"><b class="wcfontbig {color}">{score}</b></p></p>
+<p style="text-align:center">{@t k="tbar.vld.repText" /}:</p><ul class="wcerrlist">
+{#errors}
+<li><b>{@t k="tbar.vld.error" /} {@math key="{$idx}" method="add" operand="1" /}</b> {@t k="tbar.vld.column" /} {lastColumn}: <p class="wchide">{message}</p><pre class="html wchide">{extract}...</pre></li>
+{/errors}
+</ul>

@@ -1,0 +1,6 @@
+<div class='wcandrag' id='wcorchat' wcelement>
+  <div class='chathandle' title='{@t k="chat.moveupdown"/}'></div>
+  <div id='chatwrap'>
+    <p id='chatmessage' contenteditable='true' placeholder-data='{@t k="chat.typesend"/}' class='editNoDrag'>{@t k="chat.chathere"/}</p>
+  </div>
+</div>

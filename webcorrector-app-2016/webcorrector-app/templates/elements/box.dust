@@ -1,0 +1,20 @@
+<div class="dragbox wcandrag" wcelement="" data-uid="523e-8b9f-95cd" $$-id="id" $$-style="style">
+    <div class="handle NE"></div>
+    <div class="handle NN"></div>
+    <div class="handle NW"></div>
+    <div class="handle WW"></div>
+    <div class="handle EE"></div>
+    <div class="handle SW"></div>
+    <div class="handle SS"></div>
+    <div class="handle SE"></div>
+    <span class="wcmagnet hint--bottom" data-hint="Remove gravity"></span>
+    <span class="wcicon selected hint--left" data-hint="Selected" data-placement="left"></span>
+    <span class="close-sticky hint--right" data-hint="Delete">x</span>
+    <div class="dragbox-content" $$-style="style2">
+        <div contenteditable="true" class="dragbox-contentwrap editNoDrag">
+        id: {id} 
+        <br>top: {style.top}, left: top: {style.left}
+        <br>width: {style.width}, height: {style.height}
+        </div>
+    </div>
+</div>

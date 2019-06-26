@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<style>
+		li {
+			-webkit-backface-visibility: hidden;
+			/* Chrome, Safari, Opera */
+			backface-visibility: hidden;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div id="draggable" class="ui-widget-content">
+		<p class="green">Drag me around</p>
+	</div>
+
+	<div>
+		<p class="count"></p>
+		<p class="green">This is Green</p>
+		<p>
+			<input type="text">
+		</p>
+	</div>
+
+	<div class="therendertest">
+		<p class="green2" $$-style="textStyle1">This is Green!</p>
+		<p class="test23" $$-style="textStyle2">That is Blue!</p>
+		<p class="test21" $$-style="textStyle3"><span>Is White!</span></p>
+		<p class="test4">This text does not changed<span>Is White 2, 22</span></p>
+		<ul class="items">
+			<li>foo1
+				<input type="text">
+			</li>
+			<li>foo1
+				<input type="text">
+			</li>
+			<li>bar
+				<input type="text">
+			</li>
+			<li>bar2
+				<input type="text">
+			</li>
+			<li>bar2
+				<input type="text">
+			</li>
+			<li>foo2
+				<input type="text">
+			</li>
+			<li>bar
+				<input type="text">
+			</li>
+		</ul>
+		<ul class="items2">
+			<li>f
+				<input type="text">
+			</li>
+			<li>f
+				<input type="text">
+			</li>
+			<li>d
+				<input type="text">
+			</li>
+			<li>e
+				<input type="text">
+			</li>
+		</ul>
+	</div>
+
+	<p class="green"><a href="#">This is test of links</a></p>
+	<script src="public/wcrapp-bundle.js"></script>
+</body>
+
+</html>

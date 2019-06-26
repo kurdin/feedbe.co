@@ -1,0 +1,258 @@
+{!@contextDump key="current|full" to="output|console" /!}
+{! Menu !}
+<div class='wcelements' id='wcsettings'>
+	<div class="wcsettingwrap scroller">
+		<div class="wcsetstitle">{@t k="sets.title" /}
+			<div class="wcsclose hint--right" data-side="left" data-hint='{@t k="sets.titleCl" /}'>x</div>
+		</div>
+		<p class='wcstitle'>{@t k="sets.lang" /}:</p>
+		<div class='wcsetgroup'>
+			<div class="wcdd-wrap" tabindex="1">
+			    <span>{@t k=langid /}</span>
+			    <ul class="dropdown">
+			        <li data-sel="en_US"><a href="#">{@t k="en_US" /}</a></li>
+			        <li data-sel="ru"><a href="#">{@t k="ru" /}</a></li>
+			    </ul>
+			</div>
+		</div>
+		<p class='wcstitle'>{@t k="sets.followcode" /}</p>
+		<div class='wcsetgroup clearfix'>
+				<span class="wcoptitle {?followcode} selected {/followcode} inputinside" data-skey="followcode">
+					<input class="wcinput wccode" placeholder='{@t k="sets.entercode"/}' value='{followcode}' spellcheck="false"/>
+				</span> 
+				<div class="wcswitch">
+				  <input type="checkbox" {?followcode} checked {/followcode} />
+				  <label>
+				    <span class="icon-ok"></span>
+				    <span class="icon-remove"></span>
+				    <div></div>
+				  </label>
+				</div>
+				<div class="clearfix" style="margin-bottom: 4px"></div>
+				<span class="wcoptitle {?autoscroll} selected {/autoscroll}" data-skey="autoscroll">{@t k="sets.autoscroll"/}</span>
+				<div class="wcswitch">
+				  <input type="checkbox" {?autoscroll} checked {/autoscroll}/>
+				  <label>
+				    <span class="icon-ok"></span>
+				    <span class="icon-remove"></span>
+				    <div></div>
+				  </label>
+				</div>
+				<div class="clearfix"></div>
+				<span class="wcoptitle {?autoscrollsel} selected {/autoscrollsel}" data-skey="autoscrollsel">{@t k="sets.autoscrollsel"/}</span>
+				<div class="wcswitch">
+				  <input type="checkbox" {?autoscrollsel} checked {/autoscrollsel}/>
+				  <label>
+				    <span class="icon-ok"></span>
+				    <span class="icon-remove"></span>
+				    <div></div>
+				  </label>
+				</div>
+		</div>	
+		<p class='wcstitle'>Another Option</p>
+		<div class='wcsetgroup clearfix'>
+				<span class="wcoptitle">Show Something</span>
+				<div class="wcswitch">
+				  <input type="checkbox" />
+				  <label>
+				    <span class="icon-ok"></span>
+				    <span class="icon-remove"></span>
+				    <div></div>
+				  </label>
+				</div>
+				<span class="wcoptitle">Show Something Else</span>
+				<div class="wcswitch">
+				  <input type="checkbox" />
+				  <label>
+				    <span class="icon-ok"></span>
+				    <span class="icon-remove"></span>
+				    <div></div>
+				  </label>
+				</div>
+				<span class="wcoptitle">Show More Option</span>
+				<div class="wcswitch">
+				  <input type="checkbox" checked />
+				  <label>
+				    <span class="icon-ok"></span>
+				    <span class="icon-remove"></span>
+				    <div></div>
+				  </label>
+				</div>
+				<span class="wcoptitle">Show Something</span>
+				<div class="wcswitch">
+				  <input type="checkbox" checked/>
+				  <label>
+				    <span class="icon-ok"></span>
+				    <span class="icon-remove"></span>
+				    <div></div>
+				  </label>
+				</div>
+		</div>	
+		<p class='wcstitle'>Option3 title</p>
+		<div class='wcsetgroup'>
+			<div>Option3 here</div>
+			<div>Option3 here</div>																		
+			<div>Option3 here</div>
+			<div>Option3 here</div>			
+			<div>Option3 here</div>
+			<div>Option3 here</div>
+			<div>Option3 here</div>
+			<div>Option3 here</div>
+			<div>Option3 here</div>
+		</div>			
+		<p class='wcstitle'>Option4 title</p>
+		<div class='wcsetgroup'>
+			<div>Option4 here</div>																		
+			<div>Option4 here</div>
+			<div>Option4 here</div>			
+			<div>Option4 here</div>
+			<div>Option4 here</div>
+			<div>Option4 here</div>
+			<div>Option4 here</div>
+			<div>Option4 here</div>
+			<div>Option4 here</div>																		
+			<div>Option4 here</div>
+			<div>Option4 here</div>			
+		</div>			
+		<p class='wcstitle'>Option5 title</p>
+		<div class='wcsetgroup'>
+			<div>Option5 here</div>
+			<div>Option5 here</div>
+			<div>Option5 here</div>
+			<div>Option5 here</div>
+			<div>Option5 here</div>
+			<div>Option5 here</div>																		
+		</div>
+		<div id='wcsettings-close' class='left hint--right' data-side='left' data-hint='{@t k="sets.titleOp" /}'></div> 
+	</div>
+</div>
+
+<div class='wcelements' id='wchistory'>
+	<div class="wchistorywrap scroller">
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>		
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>		
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>		
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>		
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>		
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>		
+		<div>History here</div>
+		<div>History here</div>
+		<div>History here</div>		
+		<div>History here</div>
+		<div>History here</div>		
+		<div id='wchistory-close' class='right hint--left' data-side='right' data-hint='{@t k="hist.titleOp" /}'></div>
+	</div>
+</div>
+  
+  {!<div id='UserView'></div><div id='noUserView'>NoBody</div> !}
+
+

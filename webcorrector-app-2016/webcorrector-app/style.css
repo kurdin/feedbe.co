@@ -1,0 +1,28 @@
+html.indexeddb > body a{
+	color: red;
+}
+
+#draggable {
+	/*width: 150px;*/
+	/*height: 150px;*/
+	padding: 0.5em;
+	border: 1px solid black;
+}
+
+body {
+	margin: 20px;
+	border: 10px solid red;
+}
+
+body p {
+	margin: 20px;
+	font-size: 20px;
+}
+
+.green {
+	font-weight: bold;
+	color: green;
+}
+
+.thetest[shadow] .green {
+}

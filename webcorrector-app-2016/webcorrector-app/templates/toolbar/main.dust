@@ -1,0 +1,91 @@
+<div id='wctoolbar' $$-class="classMap" $$-style="style" wcelement>
+  <div class='wcthandle hint--top' id='wcthandlelogo' data-hint='{@t k="tbar.main.openClose"/}'></div>
+  <ul class='wctwrap editools'>
+  {@Component name="toolbarItem" translationKey="tbar.main.selectElm" id="selectElement" class="tbSelect"}{/Component}
+  {@Component name="toolbarItem" translationKey="tbar.main.editTextElm" id="editElement" class="tbEditText"}{/Component}
+  {@Component name="toolbarItem" translationKey="tbar.main.markText" id="markText" class="tbMarkText"}{/Component}
+  </ul>
+  <div class='wcthandle' title='{@t k="tbar.main.moveUpDown"/}'></div>
+  <ul class='wctwrap'>
+  <li class='addBox ored hint--top' data-hint='{@t k="tbar.main.addOverlay"/}'>
+    <div class='wctbicon'></div>
+    <div class='bgccol'></div>
+    <ul class='oOptions hint--bottom' data-hint='{@t k="tbar.main.overlayColor"/}'>
+      <li class='ogrey'>
+        <div class='wctbicon'></div>
+        <div class='bgccol'></div>
+      </li>
+      <li class='oblue'>
+         <div class='wctbicon'></div>
+         <div class='bgccol'></div>
+      </li>
+      <li class='ogreen'>
+        <div class='wctbicon'></div>
+        <div class='bgccol'></div></li>
+      <li class='ored'>
+        <div class='wctbicon'></div>
+        <div class='bgccol'></div>
+      </li>
+      <li class='oyellow'>
+        <div class='wctbicon'></div>
+        <div class='bgccol'></div>
+      </li>
+    </ul>
+  </li>
+  <li class='addDraw ored hint--top' data-hint='{@t k="tbar.main.addDrawingBox"/}'>
+    <div class='wctbicon'></div>
+    <div class='bgccol'></div>
+    <ul class='oOptions hint--bottom' data-hint='{@t k="tbar.main.brushColor"/}'>
+      <li class='oblack'>
+        <div class='wctbicon'></div>
+        <div class='bgccol'></div>
+      </li>
+      <li class='owhite'>
+        <div class='wctbicon'></div>
+        <div class='bgccol'></div>
+      </li>
+      <li class='ogreen'>
+        <div class='wctbicon'></div>
+        <div class='bgccol'></div>
+      </li>
+      <li class='ored'>
+        <div class='wctbicon'></div>
+        <div class='bgccol'></div>
+      </li>
+      <li class='oyellow'>
+        <div class='wctbicon'></div>
+        <div class='bgccol'></div>
+      </li>
+      <ul class='wctsize' style='display:none'>
+        <li></li><li></li><li></li></ul></ul></li>
+      <li class='addStiker ored hint--top' data-hint='{@t k="tbar.main.addSticker"/}'>
+        <div class='wctbicon'></div>
+        <ul class='oOptions hint--bottom' data-hint='{@t k="tbar.main.selectColor"/}'>
+          <li class='ocyan'>
+            <div class='wctbicon'></div>
+          </li>
+          <li class='oblue'>
+            <div class='wctbicon'></div>
+          </li>
+          <li class='ogreen'>
+            <div class='wctbicon'></div>
+          </li>
+          <li class='ored'>
+            <div class='wctbicon'></div>
+          </li>
+          <li class='oyellow'>
+            <div class='wctbicon'></div>
+          </li>
+        </ul>
+      </li>
+  <li class='addSticky hint--right' data-hint='{@t k="tbar.main.addNote"/}'>
+    <div class='wctbicon'></div>
+  </li>
+  </ul>
+  <div class='wcthandle' title='{@t k="tbar.main.moveUpDown"/}'></div>
+  <ul class='wctwrap'>
+  <li class='runSpellCheck'><div class='wctbicon'><span class='wcscore bred'></span></div></li>
+  <li class='runSpeedTest'><div class='wctbicon'><span class='wcscore'></span></div></li>
+  <li class='runHTMLValid'><div class='wctbicon'><span class='wcscore'></span></div></li>
+  </ul>
+  </div>

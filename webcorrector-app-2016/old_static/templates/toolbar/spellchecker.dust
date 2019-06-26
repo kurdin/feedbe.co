@@ -1,0 +1,6 @@
+{?errors}
+<p>{@t k="tbar.spl.wasFound"/} <b style="font-size:120%;color:red">{errors}</b> {@t k="tbar.spl.errorsFound"/}</p>
+{:else}
+<p>{@t k="tbar.spl.noErrors"/}<p>
+{/errors}
+

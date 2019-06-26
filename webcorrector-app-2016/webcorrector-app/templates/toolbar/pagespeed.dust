@@ -1,0 +1,16 @@
+{!PageSpeed Template!} 
+<p style="text-align:center">
+	{@t k="tbar.psd.scoreText" /}
+	<p class="bigscore">
+		<b class="wcfontbig {color}">{score}</b>/100 (<b class="{color}">{@t k=speed /}</b>)
+	</p>
+</p>
+<p style="text-align:center">{@t k="tbar.psd.statText" /}:</p>
+<p class='{@gb k=numberResources max=40 /}'>{@t k="tbar.psd.ldText" /}: {numberResources}</p>
+<p class='{@gb k=numberStaticResources max=40 /}'>{@t k="tbar.psd.stText" /}: {numberStaticResources}</p>
+<p class='{@gb k=javascriptResponseBytes max=500 tokb=1/}'>{@t k="tbar.psd.jsText" /}: <span class='{@gb k=numberJsResources max=10 /}'>{numberJsResources}</span> ({@kb k=javascriptResponseBytes/}{@t k="kb" /})</p>
+<p class='{@gb k=cssResponseBytes max=300 tokb=1/}'>{@t k="tbar.psd.cssText" /}: <span class='{@gb k=numberCssResources max=10/}'>{numberCssResources}</span> ({@kb k=cssResponseBytes/}{@t k="kb" /})</p>   	
+<p class='{@gb k=htmlResponseBytes max=200 tokb=1/}'>{@t k="tbar.psd.htmlText" /}: {@kb k=htmlResponseBytes/}{@t k="kb" /}</p>
+<p class='{@gb k=imageResponseBytes max=600 tokb=1/}'>{@t k="tbar.psd.imgText" /}: {@kb k=imageResponseBytes/}{@t k="kb" /}</p>
+
+<!-- <p>{@t k="tbar.psd.test" o="{'name':'Kurdin'}" /}: {numberResources}</p> -->
