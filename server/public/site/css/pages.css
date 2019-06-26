@@ -1,0 +1,14 @@
+.page {
+	border: 0;
+}
+
+body .page p {
+	margin-bottom: 1rem;
+	font-family: 'Roboto', Verdana, Geneva, sans-serif;
+}
+
+.page h2,
+.page h3,
+.page h4 {
+	margin-top: 1rem;
+}

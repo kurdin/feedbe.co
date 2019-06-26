@@ -1,0 +1,33 @@
+<script src="/js/polyfill.min.js"></script>
+<script src="/js/jschannel.js"></script>
+
+<script type="text/javascript">
+	document.cookie.split(";").forEach(function(c) { document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/"); });
+	var channelName = window.location.search.substr(1).split('=')[1];
+	
+	window.consolere = {
+	  options: 'enable_redirect_default_console_methods_to_remote',
+	  channel: channelName
+	};
+
+	var chan = Channel.build({window: window.parent, origin: "*", scope: "sandboxScope"});
+	chan.bind('calleval', function(trans, params) {
+    try {
+      (function run(){ 
+          'use strict';
+          var out = eval(params.js);
+          // if (typeof out != 'undefined') console.re.info(out);
+          trans.complete(true);
+      })();
+    } catch(e) {
+      // console.error(e);
+      // var callerLine = e.stack.split(/\r?\n/)[1];
+      // var errorLine = callerLine && regex.exec(callerLine)[1];
+      var err = e.toString().replace(/unknown:?/gi, '').split(/\r?\n/);
+      console.re.error('[i][red]' + err[0] + '[/red][/i]');
+      params.onError({line: null, message: err[0]});
+    }
+});
+</script>
+
+<script src="//console.re/connector.js" id="consolerescript"></script>

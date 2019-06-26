@@ -1,0 +1,35 @@
+{?successLogin}
+<div class="notification-holder">
+  <div class="top notification is-success animated pulse">
+    <button class="delete"></button>
+    You Have <b>Successfully Logged In</b> as {userEmail} (<a href='/logout' class="loginAgain">logout</a>)
+  </div>
+</div>  
+{/successLogin}  
+
+{?successLogout}
+<div class="notification-holder">
+  <div class="top notification is-warning animated pulse">
+    <button class="delete"></button>
+    You Have <b>Successfully Logged Out</b> of Your Account.
+  </div>
+</div>  
+{/successLogout}  
+
+{?failureLogin}
+<div class="notification-holder">
+  <div class="top notification is-danger animated pulse">
+    <button class="delete"></button>
+    <b>Login Failed.</b> The Token Link is Incorrect or Expired. <a href="/login" class="loginAgain">Login Again</a> to Send Valid Token Link to Your Email.
+  </div>
+</div>
+{/failureLogin}
+
+{?success}
+<div class="notification-holder">
+  <div class="top notification is-success animated pulse">
+    <button class="delete"></button>
+    <b>Success!</b> {success}
+  </div>
+</div> 
+{/success}

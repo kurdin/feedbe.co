@@ -1,0 +1,129 @@
+.react-select-popover {
+  position: relative;
+  display: block;
+}
+.react-select-popover .hidden-select-box {
+  display: none;
+}
+.react-select-popover .popover {
+  z-index: 9999;
+  position: absolute;
+  left: 0;
+  box-sizing: border-box;
+  width: 100%;
+  /*max-width: 28em;*/
+  padding: 1em;
+  border: 1px solid #dadada;
+  background: #fff;
+  margin-top: 20px;
+}
+.react-select-popover .popover .tag {
+  cursor: pointer;
+}
+.react-select-popover .popover .empty-list {
+  color: #808080;
+  text-transform: uppercase;
+  text-align: center;
+  display: block;
+  font-weight: 100;
+  margin: 10px 0;
+}
+.react-select-popover .popover {
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+}
+.react-select-popover .popover:before,
+.react-select-popover .popover:after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border: 2px solid #dadada;
+  background: #fff;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.react-select-popover .popover:before {
+  z-index: -1;
+}
+.react-select-popover .popover.arrow-top:before,
+.react-select-popover .popover.arrow-top:after {
+  bottom: 100%;
+  left: 20px;
+  margin-bottom: -7px;
+  border-bottom: 0;
+  border-right: 0;
+}
+.react-select-popover .select-input {
+  border: 1px solid #dadada;
+  border-radius: 2px;
+  background: #fff;
+  padding: 10px;
+  margin: 0;
+  padding: 0;
+}
+.react-select-popover .select-input .empty-list {
+  color: #808080;
+  display: inline-block;
+  padding-left: 10px;
+}
+.react-select-popover .select-input .search-input {
+  margin: 0;
+  padding: 0;
+  line-height: 20px;
+  margin: 10px;
+  display: inline-block;
+  outline: none;
+  border: none;
+  background: transparent;
+  box-shadow: none;
+  color: #333;
+}
+/*
+  .react-select-popover .tag {
+    display: inline-block;
+    padding: 5px 8px;
+    border-radius: 3px;
+    line-height: 15px;
+    font-size: 15px;
+    margin: 5px;
+    background-color: #dadada;
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#f4f4f4', GradientType=0 );
+    background-image: -webkit-linear-gradient(top, #f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eeeeee 100%);
+    background-image: linear-gradient(to bottom, #f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eeeeee 100%);
+    color: #333;
+    box-shadow: 0 0 2px #fff inset, 0 1px 2px rgba(0, 0, 0, 0.2);
+    border: 1px solid #bdbdbd; }
+
+    .react-select-popover .tag.active {
+      border-color: #4C66BE;
+      color: #4C66BE; }
+      .react-select-popover .tag.active button {
+        color: #4C66BE; }
+    .react-select-popover .tag button {
+      background: none;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      color: #999999;
+      font-size: 14px;
+      line-height: 12px;
+      padding: 0 6px 0 2px;
+      position: relative;
+      top: -1px; }
+      .react-select-popover .tag button:hover {
+        color: #333; }
+        */
+.react-select-popover .select-input.is-danger {
+  border-color: #ff3860;
+}
+
+.react-select-popover .close-select-box {
+  position: absolute;
+  top: 0;
+  right: 8px;
+  color: gray;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+}

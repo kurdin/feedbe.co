@@ -1,0 +1,32 @@
+[
+	{
+		"id": 1,
+		"name": "Image Name Price Size Product Card",
+		"widgetName": "image-name-price-size"
+	},
+	{
+		"id": 2,
+		"name": "Image Only Product Card",
+		"widgetName": "image-only"
+	},
+	{
+		"id": 3,
+		"name": "Name Price Only Product Card",
+		"widgetName": "name-price"
+	},
+	{
+		"id": 4,
+		"name": "Full Product Info Card",
+		"widgetName": "full-information"
+	},
+	{
+		"id": 5,
+		"name": "Name Price Description Product Card",
+		"widgetName": "name-price-description"
+	},
+	{
+		"id": 6,
+		"name": "Name Price Gender Product Card",
+		"widgetName": "name-price-description"
+	}	
+]

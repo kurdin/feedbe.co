@@ -1,0 +1,79 @@
+{>"layout"/}
+
+{<title}Admin Image Upload|{/title}
+{<main}
+<section class="admin">
+  {?userEmail}
+    <p class="has-text-right p-a-1">Admin as <b>{userEmail}</b> <a href="/logout" class=" button is-small is-outlined">logout</a></p>
+  {/userEmail}
+  <div class="section-transparent p-t-0">
+    {?userEmail}
+      <div class="UppyDragDrop"></div>
+      {?images}
+        <div class="columns is-multiline m-t-10">
+          {#images}
+          <div class="column is-4">
+            <p class="has-text-right">
+              <a href="javascript:deleteimage('/admin/uploads/delete/?file={file}')"><span class="icon">&#204;</span></a>
+            </p>
+            <div class="card" >
+              <a href="/{file}" target="_blank">
+              <div style="background-image: url('/{file}'); height: 200px; background-position: center; background-repeat: no-repeat; background-size: contain;">
+              </div>
+              </a>
+              <div class="card-content p-075">
+                <div class="example-description" style="height: auto">
+                  <a href="/{file}" target="_blank">{host}/{file}</a> - {@formatDate date="{date}" format="ll"/}
+                </div>
+              </div>
+            </div>
+          </div>
+          {/images}
+        </div>
+      {/images}
+    {:else}
+      <h1>No access, admins only</h1>
+    {/userEmail}
+  </div>
+</section>    
+{/main}
+
+{<scripts}
+{?userEmail}
+  <script src="https://transloadit.edgly.net/releases/uppy/v0.29.1/dist/uppy.min.js"></script>
+  <script>
+
+    var deleteimage = function(img) {
+      var del = confirm("Do you want to delete this image ?");
+      if (del === true) {
+        location.href = img;
+      }
+      return false;
+    }
+
+    var uppy = Uppy.Core({debug: true, autoProceed: false, 
+      restrictions: {
+        maxFileSize:  1000000,
+        maxNumberOfFiles: 10,
+        allowedFileTypes: ['image/*', '.jpg', '.jpeg', '.svg', '.png', '.gif']
+      }
+    });
+    uppy.use(Uppy.Dashboard, { 
+      target: '.UppyDragDrop', 
+      width: '100%',
+      height: '200px',
+      proudlyDisplayPoweredByUppy: false,
+      metaFields: [
+        { id: 'name', name: 'Name', placeholder: 'file name' },
+        { id: 'folder', name: 'Folder', placeholder: 'folder name' }
+      ],
+      inline: true })
+    uppy.use(Uppy.XHRUpload, { headers: { 'csrf-token': datashared && datashared.csrfToken }, endpoint: '/admin/uploads', fieldName: 'file', metaFields: ['name', 'folder'], bundle: false })
+  </script>
+{/userEmail}
+{/scripts}
+
+{<styles}
+<link href="https://transloadit.edgly.net/releases/uppy/v0.29.1/dist/uppy.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="/apps/build/css/admin.css{staticAssetsCache}">
+{/styles}

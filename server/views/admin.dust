@@ -1,0 +1,53 @@
+{>"layout"/}
+
+{<title}Admin |{/title}
+{<main}
+<section class="admin">
+  {?userEmail}
+    <p class="has-text-right p-a-1">Admin as <b>{userEmail}</b> <a href="/logout" class=" button is-small is-outlined">logout</a></p>
+  {/userEmail}
+  <div class="section-transparent p-t-0">
+    {?userEmail}
+      <div id="root"></div>
+      <div id="admin">{AdminComponentHTML|s}</div>
+    {/userEmail}
+  </div>
+</section>    
+{/main}
+
+{<scripts}
+  <script src="/apps/build/js/admin-bundle.js"></script>
+{/scripts}
+
+{<styles}
+<style>
+  #tryit .CodeMirror {
+    height: auto;
+    min-height: 150px;
+  }
+  #tryit .CodeMirror {
+    border: 1px solid #d2d2d2;
+  }
+	.column.is-two-thirds {
+    background: #ececec;
+  }
+  .column.is-two-thirds.notActive {
+    background: #f0f0f0;
+  }
+  .notActiveMessage {
+    padding: 3px 5px;
+    background: #858585;
+    color: #FFF;
+  }
+  .notActive .input.select-input, .notActive input, #tryit .notActive .CodeMirror, #tryit .notActive .CodeMirror-gutters {
+    background: #e8e8e8;
+  }
+  .react-select-popover .popover {
+    z-index: 99;
+  }
+  .react-select-popover .tag {
+    margin: 3px 4px;
+  }
+</style>
+<link rel="stylesheet" type="text/css" href="/apps/build/css/admin-bundle.css">
+{/styles}

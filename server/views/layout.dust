@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1 user-scalable=no">
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta charset="utf-8">
+  {?isDev}
+    <base href="/" />
+  {/isDev}
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#656565">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+  <title>{+title/} Subjer | Subject matters</title>
+  <meta name="description" content="Short-term drop-off child care services for parents night out" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <link rel="stylesheet" type="text/css" href="/assets/fonts/css/all.css">
+  <link rel="stylesheet" type="text/css" href="/site/css/bulma.min.css">
+  <link rel="stylesheet" type="text/css" href="/site/css/animate.min.css">
+  <link rel="stylesheet" type="text/css" href="/site/css/hint.css">
+  <link rel="stylesheet" type="text/css" href="/site/css/build/index.css">
+
+  {+styles /}
+  {@AppSharedData /}
+</head>
+
+<body id="tryit">
+  <nav class="nav" id="top">
+    <div class="container">
+      <div class="nav-left">
+        <a href="/"><img src="/assets/img/happy-logo.svg" class="pnoc-logo"/></a>
+        <a class="nav-item top-logo-text" href="/"><b>P</b>arents-<b>N</b>ight-<b>O</b>ut.<b>C</b>lub</a>
+      </div>
+      <span class="nav-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+      <div class="nav-right nav-menu top-right-menu">
+        <span class="nav-item">
+          <a href="/for-parents">For Parents</a>
+        </span>
+        <span class="nav-item">
+          <a href="/for-providers">For Providers</a>
+        </span>
+        <span class="nav-item">
+          <a href="/our-services">Our Services</a>
+        </span>
+        <span class="nav-item">
+          <a href="/add" class="button is-primary is-small add-provider">add providers event</a>
+        </span>        
+
+        {?userEmail}
+        <span class="nav-item hint--flex login-item hint--timeout hint--bottom-left" aria-label="{userEmail}">
+          <a href="/profile" class="login logged"><span class="loginIcon">&#0046;</span><span class="loginName">{userName}</span></a>
+        </span>
+        {:else}   
+        <span class="nav-item hint--flex login-item hint--timeout hint--bottom-left" aria-label="Passwordless Login">
+          <a href="/login" class="button is-light is-small">Login</a>
+        </span>
+        {/userEmail}
+      </div>
+      </div>
+  </nav>
+  <main>
+    {+main/}
+  </main>
+  <footer class="site-footer">
+    <div class="site-footer-left">
+      <span class="poweredby"><a href="/" class="site-name-footer">Subjer.Com</a></span>
+    </div>
+    <div class="site-footer-right">
+      <a href="#">about</a>
+      <a href="#">contact</a>
+      <a href="#">support</a>
+      <a href="#">feedback</a>
+    </div>
+
+    {! <section class="site-footer-top">
+      <div><a href="/"><img src="/assets/img/happy-logo.svg" class="pnoc-logo"/></a></div>
+      <section class="poweredby">
+        <a href="/" class="site-name-footer">Subjer.Com</a></section>
+    </section> !}
+  </footer>
+  
+{> notifications /}
+
+<script src="/apps/build/js/common/vendors-main-bundle.js"></script>
+{?isDev}
+  <script src="/js/libs/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+{:else}
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" crossorigin="anonymous"></script>
+{/isDev}
+
+{+scripts /}
+
+<script>
+  $(function() {
+  var notification = $('.notification');
+  if (notification && notification.length) {
+    $('.delete', notification).on('click', removeNotification);
+    if (!notification.is('.is-danger, .is-permanent')) removeNotification(3000);
+  }
+  function removeNotification(time) {
+    time = time || 10;
+    setTimeout(function() {
+      $('.notification-holder').fadeOut(600, function() {
+        this.remove();
+      });
+    }, time);
+  }
+  });
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-46696062-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-46696062-2');
+</script> -->
+
+<!-- Social Code -->
+{?isProd}
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = '//connect.facebook.net/en_US/all.js#xfbml=1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+{/isProd}
+
+<script>
+$().ready(function () {
+  $('.nav-toggle').on('click', function (ev) {
+    ev.preventDefault();
+    let els = [this];
+    els.push($(this).parent().find('.nav-men'));
+    $(els).toggleClass('is-active').parent().find('.nav-menu').toggleClass('is-active');
+  });
+
+  $(window).resize(function() {
+    $('#top').find('.is-active').toggleClass('is-active');
+  });
+});
+</script>
+
+<!-- /Social Code -->
+<!-- build:liveReload -->
+<!-- endbuild -->
+</body>
+</html>

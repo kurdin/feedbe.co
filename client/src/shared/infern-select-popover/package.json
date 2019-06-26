@@ -1,0 +1,53 @@
+{
+  "name": "react-select-popover",
+  "version": "0.2.0",
+  "description": "A react component to convert a select box into a nifty popover with prepopulated options",
+  "main": "src/select-popover",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bharani91/react-select-popover.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bharani91/react-select-popover/issues"
+  },
+  "homepage": "https://github.com/bharani91/react-select-popover",
+  "keywords": [
+    "react",
+    "select-box",
+    "popover",
+    "react-component"
+  ],
+  "author": "Bharani Muthukumaraswamy",
+  "license": "MIT",
+  "devDependencies": {
+    "browserify": "^10.2.6",
+    "browserify-shim": "^3.8.9",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^2.1.0",
+    "gulp-concat": "^2.5.2",
+    "gulp-connect": "^2.2.0",
+    "gulp-copy": "0.0.2",
+    "gulp-cssmin": "^0.1.7",
+    "gulp-react": "^3.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.1.1",
+    "gulp-sourcemaps": "^1.5.0",
+    "gulp-streamify": "^0.0.5",
+    "gulp-uglify": "^1.2.0",
+    "reactify": "^1.1.1",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "peerDependencies": {
+    "react-dom": "^15.4.1",
+    "react": "^15.4.1"
+  },
+  "dependencies": {
+    "react-click-outside": "^2.2.0"
+  },
+  "browserify-shim": {
+    "classnames": "global:classNames",
+    "react": "global:React",
+    "react-dom": "global:ReactDOM",
+    "react-onclickoutside": "global:OnClickOutside"
+  }
+}

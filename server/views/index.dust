@@ -1,0 +1,76 @@
+{>"layout"/}
+
+{<main}
+<div class="columns is-gapless editor-wrap">
+	<div class="column editor-column">
+		<div id="intro">
+      <div class="social-home">
+      	<span class="follow">Follow: </span><div class="fb-like" data-href="https://www.facebook.com/Parents-Night-Out-Club-246946206014056" data-layout="button_count" data-action="like" data-size="large" data-show-faces="false" data-share="true"></div>
+    	</div>
+					<nav class="nav intro-top">
+					<div class="overlay-text d-flex align-items-center">
+            <div class="columns" id="zip-search" />
+				{! <div class="nav-left editor-logo">
+				</div> !}
+					{! <span class="nav-item is-pulled-right">
+						<a class="button is-small share">
+					    <span class="icon is-small">
+					      <i class="editor-share">&#0111;</i>
+					    </span>
+					    <span>SHARE</span>
+					  </a>
+					</span>
+					<span class="nav-item is-pulled-right">
+						<a class="button is-small copy-to-clipboard">
+					    <span class="icon is-small">
+					      <i class="editor-save">&#0109;</i>
+					    </span>
+					    <span class="text">COPY</span>
+					  </a>
+					</span> !}
+					</div>	
+			</nav>
+			<div class="parallax-holder">
+				<div class="home-image-loader" style="height: 100vh">
+					<div class="loader">Loading...</div>
+				</div>
+	     	{! <img class="parallax" src="/assets/images/8572662781_136693d093_o.jpg"/> !}
+	     	<img class="parallax" src="/assets/images/escape-intro.jpg"/>
+	    </div>
+		</div>
+	</div>
+</div>
+
+	<div class='post-holder'>
+		<header class="post-header">
+			<h1 class="post-title">
+				<a href="#" class="api-examples">Find Prefect Night Out While Your Kids Safe and Having Fun<span class="icon-angle-down"></span></a>
+			</h1>
+		</header>
+
+		<section class="section home">
+			<div class="container">
+				<div id="app"><div class="loader">Loading...</div></div>
+			</div>
+		</section>
+		<p class="has-text-centered">&nbsp;</p>
+	</div>
+
+{/main}
+
+{<scripts}
+
+	{?isDev}
+	  <script src="/js/libs/simpleParallax.min.js"></script>
+	{:else}
+		<script src="https://cdn.jsdelivr.net/npm/simple-parallax-jquery@3.0.0/src/simpleParallax.min.js" crossorigin="anonymous"></script>
+	{/isDev}
+	
+  <script src="/apps/build/js/vendors-bundle.js{staticAssetsCache}"></script>
+  <script src="/apps/build/js/main-bundle.js{staticAssetsCache}"></script>
+  {! <script src="/apps/build/js/test-bundle.js{staticAssetsCache}"></script> !}
+{/scripts}
+
+{<styles}
+	<link rel="stylesheet" type="text/css" href="/apps/build/css/main.css{staticAssetsCache}">
+{/styles}

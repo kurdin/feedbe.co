@@ -1,0 +1,21 @@
+{>"layout"/}
+
+{<body}
+<h1>Passwordless - Example: Simple-Mail</h1>
+<p>
+  User: 
+  {?user}
+  	{user} (<a href='/logout'>logout</a>)
+  {:else}
+  	Not logged in
+  {/user}
+</p>
+<ul>
+  <li>
+    <a href='/login'>Login / Register</a>
+  </li>
+  <li>
+    <a href='/restricted'>Restricted page</a>
+  </li>
+</ul>
+{/body}

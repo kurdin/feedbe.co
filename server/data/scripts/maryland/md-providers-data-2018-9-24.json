@@ -1,0 +1,2113 @@
+[
+  {
+    "id": 245987,
+    "data": {
+      "name": "4 Corners Community Nursery, Inc.",
+      "facilityName": null,
+      "license": 157045,
+      "registration": null,
+      "county": "Montgomery County",
+      "status": "Open",
+      "capacity": [
+        "99",
+        "2 years",
+        "3 years",
+        "4 years",
+        "5 years",
+        ""
+      ],
+      "approvedEducationProgram": "No",
+      "phone": "(301) 681-9520",
+      "email": "sbostermeyer@gmail.com",
+      "approvedFor": [
+        "Monday - Friday",
+        "9:15 AM - 1:15 PM",
+        "September - May",
+        ""
+      ]
+    },
+    "inspectionsData": [
+      {
+        "date": "05/09/2018",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.03.04C",
+        "finding": "LS observed an emergency card missing child's physician information. Submit evidence of correction.",
+        "status": "Corrected"
+      },
+      {
+        "date": "05/09/2018",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.03.04D(3)",
+        "finding": "LS observed a child file missing Health Inventory part 2. Submit evidence of correction.",
+        "status": "Corrected"
+      },
+      {
+        "date": "05/02/2017",
+        "inspectionType": "Routine",
+        "regulations": " ",
+        "finding": "No Noncompliances Found",
+        "status": "Open"
+      },
+      {
+        "date": "04/08/2016",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.10.01A(3)(c)",
+        "finding": "The emergency and disaster plan was not practiced as required at all of the specified intervals.",
+        "status": "Corrected"
+      }
+    ]
+  },
+  {
+    "id": 134978,
+    "data": {
+      "name": "7 Day Kiddie Kare Inc.",
+      "facilityName": null,
+      "license": 150301,
+      "registration": null,
+      "county": "Baltimore City",
+      "status": "Open",
+      "capacity": [
+        "53",
+        "6 weeks through 17 months",
+        "18 months through 23 months",
+        "2 years",
+        "3 years",
+        "4 years",
+        "5 years",
+        "5 years to 15 years",
+        ""
+      ],
+      "approvedEducationProgram": "No",
+      "phone": "(410) 539-7329",
+      "email": "dbearlylearning@gmail.com",
+      "approvedFor": [
+        "Sun.-Sat",
+        "6:00 AM - 12:20 AM",
+        "Jan.-Dec.",
+        ""
+      ]
+    },
+    "inspectionsData": [
+      {
+        "date": "12/13/2017",
+        "inspectionType": "Routine",
+        "regulations": " ",
+        "finding": "No Noncompliances Found",
+        "status": "Open"
+      },
+      {
+        "date": "12/14/2016",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.03.04C",
+        "finding": "All required emergency information was not present for each child in care.",
+        "status": "Corrected"
+      },
+      {
+        "date": "12/14/2016",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.05.11D(1)",
+        "finding": "Each trash container in the child care area did not have a disposable liner. ",
+        "status": "Corrected"
+      }
+    ]
+  },
+  {
+    "id": 903,
+    "data": {
+      "name": "A Child's Place @ Notre Dame",
+      "facilityName": null,
+      "license": 15747,
+      "registration": null,
+      "county": "Baltimore City",
+      "status": "Open",
+      "capacity": [
+        "60",
+        "2 years",
+        "3 years",
+        "4 years",
+        "5 years",
+        "5 years to 15 years",
+        ""
+      ],
+      "approvedEducationProgram": "Yes",
+      "phone": "(410) 532-5399",
+      "email": "mashton@ndm.edu",
+      "approvedFor": [
+        "Monday to Friday",
+        "7:30 AM - 5:30 PM",
+        "January to December",
+        ""
+      ]
+    },
+    "inspectionsData": [
+      {
+        "date": "06/13/2017",
+        "inspectionType": "Routine",
+        "regulations": " ",
+        "finding": "No Noncompliances Found",
+        "status": "Open"
+      },
+      {
+        "date": "05/04/2016",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.03.03B(4)",
+        "finding": "The center did not have a written record of required emergency and disaster plan drills.",
+        "status": "Corrected"
+      },
+      {
+        "date": "05/04/2016",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.06.04A(1)",
+        "finding": "The center did not obtain a medical evaluation for each prospective employee that met all requirements.\n",
+        "status": "Corrected"
+      },
+      {
+        "date": "05/04/2016",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.16.09A",
+        "finding": "The nursery school did not maintain all of the required compliance documentation.",
+        "status": "Corrected"
+      }
+    ]
+  },
+  {
+    "id": 101637,
+    "data": {
+      "name": "A Child's World Day Care Center",
+      "facilityName": null,
+      "license": 138655,
+      "registration": null,
+      "county": "Baltimore City",
+      "status": "Open",
+      "capacity": [
+        "20",
+        "2 years",
+        "3 years",
+        "4 years",
+        "5 years",
+        "5 years to 15 years",
+        ""
+      ],
+      "approvedEducationProgram": "No",
+      "phone": "(410) 433-1700",
+      "email": "sabrinadickerson91867@hotmail.com",
+      "approvedFor": [
+        "Monday to Friday",
+        "6:00 AM - 12:20 AM",
+        "January to December",
+        ""
+      ]
+    },
+    "inspectionsData": [
+      {
+        "date": "05/03/2018",
+        "inspectionType": "Complaint",
+        "regulations": "13A.16.03.06D(2)",
+        "finding": "A parent was not notified of an injury received by her child.The parent was not called, informed in writing , or told when she picked her child up because no injury seemed apparent to the provider. ",
+        "status": "Corrected"
+      },
+      {
+        "date": "04/05/2018",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.03.04C",
+        "finding": "Several children did not have complete Health Inventories or lead screening. One child's file indicated an allergy and there was no allergy action plan completed.  One child's file indicated undiagnosed asthma; Provider will seek updated medical information and an action plan if necessary.",
+        "status": "Corrected"
+      },
+      {
+        "date": "04/05/2018",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.05.07B",
+        "finding": "The water cooler was in the kitchen area inaccessible to children.",
+        "status": "Corrected"
+      },
+      {
+        "date": "04/05/2018",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.05.11A",
+        "finding": "The refrigerator had dried juice and other dirt on several shelves.",
+        "status": "Corrected"
+      },
+      {
+        "date": "04/05/2018",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.10.01A(3)(d)",
+        "finding": "The emergency and disaster plan  had not been updated",
+        "status": "Corrected"
+      },
+      {
+        "date": "04/05/2018",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.10.02E",
+        "finding": "The first aid kit had a sticky dirty substance throughout and on several bags containing Band-Aids and gauze. The scissors and tweezers were rusting because of the moisture from this wet substance.",
+        "status": "Corrected"
+      },
+      {
+        "date": "02/07/2017",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.04.02D",
+        "finding": "The center enrolled a child in an age group for which the center was not approved.",
+        "status": "Corrected"
+      },
+      {
+        "date": "02/07/2017",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.05.12D",
+        "finding": "The activity area contained a potential hazard to child health or safety. ",
+        "status": "Corrected"
+      },
+      {
+        "date": "02/07/2017",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.08.01A(2)(a)",
+        "finding": "Each child did not receive adequate supervision and care at all times.",
+        "status": "Corrected"
+      },
+      {
+        "date": "02/07/2017",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.08.03D(1)",
+        "finding": "The maximum group size requirement was not met by each group. ",
+        "status": "Corrected"
+      },
+      {
+        "date": "02/07/2017",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.11.03B",
+        "finding": "Hands were not being washed as required. ",
+        "status": "Corrected"
+      },
+      {
+        "date": "02/18/2016",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.03.02E",
+        "finding": "An appropriate lead screening was not received for each child younger than 6 who was in care for more than 30 days.",
+        "status": "Corrected"
+      },
+      {
+        "date": "02/18/2016",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.03.04C",
+        "finding": "All required emergency information was not present for each child in care.",
+        "status": "Corrected"
+      },
+      {
+        "date": "02/18/2016",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.03.05C",
+        "finding": "A record containing all specified information was not maintained for each employee.",
+        "status": "Corrected"
+      },
+      {
+        "date": "\r\n\t\t\t\t\t\r\n\t\t\t\t\t\t12\r\n\t\t\t\t\t\r\n\t\t\t\t",
+        "inspectionType": "1",
+        "regulations": "2",
+        "finding": "",
+        "status": ""
+      },
+      {
+        "date": "1",
+        "inspectionType": "2",
+        "regulations": "",
+        "finding": "",
+        "status": ""
+      }
+    ]
+  },
+  {
+    "id": 1881,
+    "data": {
+      "name": "A Childs Garden",
+      "facilityName": null,
+      "license": 103833,
+      "registration": null,
+      "county": "Anne Arundel County",
+      "status": "Open",
+      "capacity": [
+        "49",
+        "6 weeks through 17 months",
+        "18 months through 23 months",
+        "2 years",
+        "3 years",
+        "4 years",
+        "5 years",
+        "5 years to 15 years",
+        ""
+      ],
+      "approvedEducationProgram": "No",
+      "phone": "(410) 647-2300",
+      "email": "achildsgarden2@verizon.net",
+      "approvedFor": [
+        "Monday to Friday",
+        "7:00 AM - 6:00 PM",
+        "SEPTEMBER TO JUNE",
+        ""
+      ]
+    },
+    "inspectionsData": [
+      {
+        "date": "12/13/2017",
+        "inspectionType": "Complaint",
+        "regulations": "13A.16.03.03A(2)",
+        "finding": "There was one child that was not accounted for on the attendance sheet, in the lower level room.  The group size was maintained and the child/teacher ratio was maintained properly. ",
+        "status": "Corrected"
+      },
+      {
+        "date": "12/13/2017",
+        "inspectionType": "Complaint",
+        "regulations": "13A.16.03.04C",
+        "finding": "There was one child, A. DOB unknown,  in the Upper A and B room's  that did not have an emergency card. ",
+        "status": "Corrected"
+      },
+      {
+        "date": "12/13/2017",
+        "inspectionType": "Complaint",
+        "regulations": "13A.16.04.01B",
+        "finding": "The complaint alleges that there were 12 children in the upper A and B classrooms and there were 7 under the age of 2. The licensing specialist observed Upper level A and B were combined into one classroom, and had 12 children present with 6 under the age of 2. There was proper staff present, but rooms needed to be divided to maintain proper group size and capacity according to the license. ",
+        "status": "Corrected"
+      },
+      {
+        "date": "12/13/2017",
+        "inspectionType": "Complaint",
+        "regulations": "13A.16.08.03D(1)",
+        "finding": "Complaint alleges there were 12 children  in the upper A and B classrooms with 7  under the age of 2.  Licensing specialist observed there were 12 children present with 6 under the age of 2 in the upper A and B rooms that were combined. The approved license stated the rooms should have been 6 in A and 6 in B.  However, the room is not arranged accordingly at this current time. The room was measured and must be divided into 2 separate rooms. A follow up inspection will be conducted to ensure compliance. ",
+        "status": "Corrected"
+      },
+      {
+        "date": "11/16/2017",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.03.05C",
+        "finding": "A record containing all specified information was not maintained for each employee.",
+        "status": "Corrected"
+      },
+      {
+        "date": "11/16/2017",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.05.11D(1)",
+        "finding": "Each room used for child care did not have a trash container. ",
+        "status": "Corrected"
+      },
+      {
+        "date": "11/16/2017",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.06.12B",
+        "finding": "The orientation session was not completed by each aide as required.",
+        "status": "Corrected"
+      },
+      {
+        "date": "11/16/2017",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.08.02B",
+        "finding": "Each group of children did not have sufficient qualified staff assigned to it.",
+        "status": "Corrected"
+      },
+      {
+        "date": "11/16/2017",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.08.03D(1)",
+        "finding": "One or more groups met neither the maximum group size requirements nor the minimum staffing level.",
+        "status": "Corrected"
+      },
+      {
+        "date": "11/16/2017",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.09.02B",
+        "finding": "The center did not have a written individualized activity plan for each infant and toddler.",
+        "status": "Corrected"
+      },
+      {
+        "date": "11/16/2017",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.10.01A(4)",
+        "finding": "A copy of the emergency escape route floor plan was not posted in each area and room in the center.",
+        "status": "Corrected"
+      },
+      {
+        "date": "11/16/2017",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.10.02E",
+        "finding": "First aid supplies were not maintained as required by OCC.",
+        "status": "Corrected"
+      },
+      {
+        "date": "11/16/2017",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.12.04E",
+        "finding": "Secondary food storage containers did not meet all requirements.",
+        "status": "Corrected"
+      },
+      {
+        "date": "11/16/2017",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.12.05C(3)",
+        "finding": "Refrigeration did not have the required thermometer.",
+        "status": "Corrected"
+      },
+      {
+        "date": "\r\n\t\t\t\t\t\r\n\t\t\t\t\t\t12\r\n\t\t\t\t\t\r\n\t\t\t\t",
+        "inspectionType": "1",
+        "regulations": "2",
+        "finding": "",
+        "status": ""
+      },
+      {
+        "date": "1",
+        "inspectionType": "2",
+        "regulations": "",
+        "finding": "",
+        "status": ""
+      }
+    ]
+  },
+  {
+    "id": 2015,
+    "data": {
+      "name": "A Family Affair Children's Center",
+      "facilityName": null,
+      "license": 17878,
+      "registration": null,
+      "county": "Baltimore County",
+      "status": "Open",
+      "capacity": [
+        "78",
+        "2 years",
+        "3 years",
+        "4 years",
+        "5 years",
+        "5 years to 15 years",
+        ""
+      ],
+      "approvedEducationProgram": "No",
+      "phone": "(410) 668-7451",
+      "email": "julianna.brown@afamilyaffaircc.net",
+      "approvedFor": [
+        "Monday to Friday",
+        "7:00 AM - 6:00 PM",
+        "January to December",
+        ""
+      ]
+    },
+    "inspectionsData": [
+      {
+        "date": "08/03/2018",
+        "inspectionType": "Routine",
+        "regulations": " ",
+        "finding": "No Noncompliances Found",
+        "status": "Open"
+      },
+      {
+        "date": "07/26/2017",
+        "inspectionType": "Routine",
+        "regulations": " ",
+        "finding": "No Noncompliances Found",
+        "status": "Open"
+      }
+    ]
+  },
+  {
+    "id": 9296,
+    "data": {
+      "name": "A JoAnn Mercer",
+      "facilityName": null,
+      "license": null,
+      "registration": 31720,
+      "county": "Frederick County",
+      "status": "Open",
+      "capacity": [
+        "8",
+        "0-23 Months",
+        "2 years",
+        "3 years",
+        "4 years",
+        "5 years",
+        "5 years to 12 years",
+        ""
+      ],
+      "approvedEducationProgram": "No",
+      "phone": "(301) 271-2180",
+      "email": "joannsdaycare@comcast.net",
+      "approvedFor": [
+        "Monday to Friday",
+        "January to December",
+        ""
+      ]
+    },
+    "inspectionsData": [
+      {
+        "date": "03/15/2018",
+        "inspectionType": "Routine",
+        "regulations": " ",
+        "finding": "No Noncompliances Found",
+        "status": "Open"
+      },
+      {
+        "date": "04/11/2017",
+        "inspectionType": "Routine",
+        "regulations": " ",
+        "finding": "No Noncompliances Found",
+        "status": "Open"
+      },
+      {
+        "date": "04/06/2016",
+        "inspectionType": "Routine",
+        "regulations": " ",
+        "finding": "No Noncompliances Found",
+        "status": "Open"
+      }
+    ]
+  },
+  {
+    "id": 371347,
+    "data": {
+      "name": "A Place 2 Grow",
+      "facilityName": null,
+      "license": 252425,
+      "registration": null,
+      "county": "Baltimore City",
+      "status": "Open",
+      "capacity": [
+        "17",
+        "6 weeks through 17 months",
+        "18 months through 23 months",
+        "2 years",
+        "3 years",
+        "4 years",
+        "5 years",
+        ""
+      ],
+      "approvedEducationProgram": "No",
+      "phone": "(410) 358-4766",
+      "email": "tmiller4159@yahoo.com",
+      "approvedFor": [
+        "Sunday - Saturday",
+        "6:00 AM - 12:20 AM",
+        "January - December",
+        ""
+      ]
+    },
+    "inspectionsData": [
+      {
+        "date": "08/06/2018",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.03.04C",
+        "finding": "Three children did not have Dr's information on the emergency cards. ",
+        "status": "Corrected"
+      },
+      {
+        "date": "07/20/2018",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.03.05B",
+        "finding": "The staffing pattern posted was not current. ",
+        "status": "Corrected"
+      },
+      {
+        "date": "07/20/2018",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.05.11D(1)",
+        "finding": "The children's bathroom trash container did not have a disposable liner. ",
+        "status": "Corrected"
+      },
+      {
+        "date": "07/20/2018",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.10.04A",
+        "finding": "Observed cleaning wipes on sink, accessible to children in care/ ",
+        "status": "Corrected"
+      },
+      {
+        "date": "07/20/2018",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.10.04F",
+        "finding": "Observed an uncapped outlet by the fish tank. ",
+        "status": "Corrected"
+      },
+      {
+        "date": "08/23/2017",
+        "inspectionType": "Routine",
+        "regulations": " ",
+        "finding": "No Noncompliances Found",
+        "status": "Open"
+      }
+    ]
+  },
+  {
+    "id": 376831,
+    "data": {
+      "name": "A Sound Beginning",
+      "facilityName": null,
+      "license": 252296,
+      "registration": null,
+      "county": "Howard County",
+      "status": "Open",
+      "capacity": [
+        "10",
+        "2 years",
+        "3 years",
+        "4 years",
+        "5 years",
+        ""
+      ],
+      "approvedEducationProgram": "No",
+      "phone": "(410) 926-2961",
+      "email": "margaret@asoundbeginning.net",
+      "approvedFor": [
+        "Monday - Friday",
+        "8:00 AM - 1:00 PM",
+        "January - December",
+        ""
+      ]
+    },
+    "inspectionsData": [
+      {
+        "date": "06/19/2018",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.03.04C",
+        "finding": "LS observed one emergency card which was not updated annually.",
+        "status": "Corrected"
+      },
+      {
+        "date": "06/19/2018",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.03.04D(3)",
+        "finding": "LS observed one child file which did not have health inventory part II.",
+        "status": "Corrected"
+      },
+      {
+        "date": "05/21/2018",
+        "inspectionType": "Routine",
+        "regulations": " ",
+        "finding": "No Noncompliances Found",
+        "status": "Open"
+      },
+      {
+        "date": "05/18/2017",
+        "inspectionType": "Routine",
+        "regulations": " ",
+        "finding": "No Noncompliances Found",
+        "status": "Open"
+      }
+    ]
+  },
+  {
+    "id": 100529,
+    "data": {
+      "name": "A World of Friends",
+      "facilityName": null,
+      "license": 134076,
+      "registration": null,
+      "county": "Baltimore City",
+      "status": "Open",
+      "capacity": [
+        "66",
+        "2 years",
+        "3 years",
+        "4 years",
+        "5 years",
+        "5 years to 15 years",
+        ""
+      ],
+      "approvedEducationProgram": "Yes",
+      "phone": "(667) 309-3650",
+      "email": "jdorseycpncj@yahoo.com",
+      "approvedFor": [
+        "Monday to Friday",
+        "7:00 AM - 12:20 AM",
+        "January to December",
+        ""
+      ]
+    },
+    "inspectionsData": [
+      {
+        "date": "06/01/2018",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.05.01A(1)",
+        "finding": "Two cracked floor tiles in Ms. Kelly's room will need to be repaired. Ms. Dorsey has acknowledged that the tiles are scheduled to be repaired today 6-1-2018.",
+        "status": "Corrected"
+      },
+      {
+        "date": "05/19/2017",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.05.01A(1)",
+        "finding": "The building was not in good repair in all areas.",
+        "status": "Corrected"
+      },
+      {
+        "date": "05/19/2017",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.05.05C(1)",
+        "finding": "There was chipping, peeling, flaking, chalking, or deteriorated paint on a surface of an interior area used for child care.",
+        "status": "Corrected"
+      },
+      {
+        "date": "05/19/2017",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.05.09A",
+        "finding": "Each child care area did not have sufficient lighting.",
+        "status": "Corrected"
+      },
+      {
+        "date": "05/19/2017",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.05.11A",
+        "finding": "The center was not kept clean in all areas.",
+        "status": "Corrected"
+      },
+      {
+        "date": "05/19/2017",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.05.12D",
+        "finding": "The activity area contained a potential hazard to child health or safety. ",
+        "status": "Corrected"
+      },
+      {
+        "date": "05/19/2017",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.05.12E",
+        "finding": "Outdoor activity equipment did not meet all requirements.",
+        "status": "Corrected"
+      },
+      {
+        "date": "05/19/2017",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.10.02E",
+        "finding": "First aid supplies were not maintained as required by OCC.",
+        "status": "Corrected"
+      },
+      {
+        "date": "05/19/2017",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.11.03A",
+        "finding": "The written handwashing procedure was not posted at each handwashing sink.",
+        "status": "Corrected"
+      },
+      {
+        "date": "05/19/2017",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.12.01A(4)",
+        "finding": "Milk furnished to a child did not meet applicable  requirements.",
+        "status": "Corrected"
+      },
+      {
+        "date": "05/19/2017",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.12.05A",
+        "finding": "Food prep appliances and equipment did not meet all maintenance and operating requirements.",
+        "status": "Corrected"
+      },
+      {
+        "date": "05/03/2016",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.05.01A(1)",
+        "finding": "The building was not in good repair in all areas.",
+        "status": "Corrected"
+      },
+      {
+        "date": "05/03/2016",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.05.01A(3)",
+        "finding": "Signs of infestation by insects or rodents were found.",
+        "status": "Corrected"
+      },
+      {
+        "date": "05/03/2016",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.05.07B",
+        "finding": "Drinking water source requirements were not met by each source.",
+        "status": "Corrected"
+      },
+      {
+        "date": "\r\n\t\t\t\t\t\r\n\t\t\t\t\t\t12\r\n\t\t\t\t\t\r\n\t\t\t\t",
+        "inspectionType": "1",
+        "regulations": "2",
+        "finding": "",
+        "status": ""
+      },
+      {
+        "date": "1",
+        "inspectionType": "2",
+        "regulations": "",
+        "finding": "",
+        "status": ""
+      }
+    ]
+  },
+  {
+    "id": 219083,
+    "data": {
+      "name": "A+ Care At Babcock",
+      "facilityName": null,
+      "license": 155550,
+      "registration": null,
+      "county": "Baltimore County",
+      "status": "Open",
+      "capacity": [
+        "30",
+        "5 years to 15 years",
+        ""
+      ],
+      "approvedEducationProgram": "No",
+      "phone": "(410) 825-0089",
+      "email": "meolien@aol.com",
+      "approvedFor": [
+        "Monday - Friday",
+        "3:00 PM - 6:00 PM",
+        "August - June",
+        ""
+      ]
+    },
+    "inspectionsData": [
+      {
+        "date": "05/17/2018",
+        "inspectionType": "Routine",
+        "regulations": " ",
+        "finding": "No Noncompliances Found",
+        "status": "Corrected"
+      },
+      {
+        "date": "05/09/2017",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.06.10C(1)",
+        "finding": "Each child care teacher did not meet continued training requirements.",
+        "status": "Corrected"
+      },
+      {
+        "date": "06/10/2016",
+        "inspectionType": "Routine",
+        "regulations": " ",
+        "finding": "No Noncompliances Found",
+        "status": "Open"
+      }
+    ]
+  },
+  {
+    "id": 254064,
+    "data": {
+      "name": "Aaron Johnson",
+      "facilityName": null,
+      "license": null,
+      "registration": 158287,
+      "county": "Baltimore City",
+      "status": "Open",
+      "capacity": [
+        "7",
+        "0-23 Months",
+        "2 years",
+        "3 years",
+        "4 years",
+        "5 years",
+        "5 years to 12 years",
+        ""
+      ],
+      "approvedEducationProgram": "No",
+      "phone": "(443) 692-7526",
+      "email": "houseofaaronchildcare@gmail.com",
+      "approvedFor": [
+        "Mon.- Fri.",
+        "Jan.- Dec",
+        ""
+      ]
+    },
+    "inspectionsData": [
+      {
+        "date": "05/15/2018",
+        "inspectionType": "Routine",
+        "regulations": " ",
+        "finding": "No Noncompliances Found",
+        "status": "Open"
+      },
+      {
+        "date": "03/22/2017",
+        "inspectionType": "Routine",
+        "regulations": "13A.15.03.03F",
+        "finding": "The date of each required fire/emergency drill was not recorded.",
+        "status": "Corrected"
+      },
+      {
+        "date": "03/24/2016",
+        "inspectionType": "Routine",
+        "regulations": "13A.15.03.04A(3)",
+        "finding": "Each child's emergency information form was not updated as required.",
+        "status": "Corrected"
+      }
+    ]
+  },
+  {
+    "id": 148485,
+    "data": {
+      "name": "Abaynesh Abate",
+      "facilityName": null,
+      "license": null,
+      "registration": 151527,
+      "county": "Montgomery County",
+      "status": "Open",
+      "capacity": [
+        "8",
+        "0-23 Months",
+        "2 years",
+        "3 years",
+        "4 years",
+        "5 years",
+        "5 years to 12 years",
+        ""
+      ],
+      "approvedEducationProgram": "No",
+      "phone": "(301) 318-2666",
+      "email": "abaynesh100@gmail.com",
+      "approvedFor": [
+        "Monday - Friday",
+        "January - December",
+        ""
+      ]
+    },
+    "inspectionsData": [
+      {
+        "date": "09/07/2018",
+        "inspectionType": "Routine",
+        "regulations": "13A.15.03.04A(1)",
+        "finding": "LS observed children's emergency forms missing the child's physician information. Provider must have parents complete the form. Submit evidence to the OCC.",
+        "status": "Open"
+      },
+      {
+        "date": "07/10/2017",
+        "inspectionType": "Routine",
+        "regulations": "13A.15.03.04A(3)",
+        "finding": "Each child's emergency information form was not completed as required.",
+        "status": "Corrected"
+      },
+      {
+        "date": "07/10/2017",
+        "inspectionType": "Routine",
+        "regulations": "13A.15.09.01A",
+        "finding": "A written schedule of daily activities was not posted.",
+        "status": "Corrected"
+      },
+      {
+        "date": "07/10/2017",
+        "inspectionType": "Routine",
+        "regulations": "13A.15.09.01B(6)",
+        "finding": "The provider did not have a written screen time policy.",
+        "status": "Corrected"
+      },
+      {
+        "date": "07/10/2017",
+        "inspectionType": "Routine",
+        "regulations": "13A.15.10.01A(1)",
+        "finding": "The provider did not not have a written emergency and disaster plan.",
+        "status": "Corrected"
+      },
+      {
+        "date": "07/10/2017",
+        "inspectionType": "Routine",
+        "regulations": "13A.15.10.01A(3)",
+        "finding": "The  emergency and disaster plan was not practiced with children at all of the required intervals for each of the required purposes.",
+        "status": "Corrected"
+      },
+      {
+        "date": "07/10/2017",
+        "inspectionType": "Routine",
+        "regulations": "13A.15.10.01H(1)",
+        "finding": "First aid supplies were not being maintained as required.",
+        "status": "Corrected"
+      },
+      {
+        "date": "07/10/2017",
+        "inspectionType": "Routine",
+        "regulations": "13A.15.10.02",
+        "finding": "A potentially hazardous item was accessible to children in care.",
+        "status": "Corrected"
+      },
+      {
+        "date": "07/29/2016",
+        "inspectionType": "Routine",
+        "regulations": "13A.15.03.04A(3)",
+        "finding": "Each child's emergency information form was not completed as required.",
+        "status": "Corrected"
+      }
+    ]
+  },
+  {
+    "id": 351469,
+    "data": {
+      "name": "Abaynesh Fana",
+      "facilityName": null,
+      "license": null,
+      "registration": 250041,
+      "county": "Montgomery County",
+      "status": "Open",
+      "capacity": [
+        "8",
+        "0-23 Months",
+        "2 years",
+        "3 years",
+        "4 years",
+        "5 years",
+        "5 years to 12 years",
+        ""
+      ],
+      "approvedEducationProgram": "No",
+      "phone": "(301) 384-0701",
+      "email": "akebede42@gmail.com",
+      "approvedFor": [
+        "Mondays - Fridays",
+        "January - December",
+        ""
+      ]
+    },
+    "inspectionsData": [
+      {
+        "date": "09/19/2017",
+        "inspectionType": "Routine",
+        "regulations": " ",
+        "finding": "No Noncompliances Found",
+        "status": "Open"
+      },
+      {
+        "date": "10/24/2016",
+        "inspectionType": "Routine",
+        "regulations": "13A.15.03.04B",
+        "finding": "A file was not maintained for each child in care that contained all of the required information.",
+        "status": "Corrected"
+      },
+      {
+        "date": "10/24/2016",
+        "inspectionType": "Routine",
+        "regulations": "13A.15.03.04A(3)",
+        "finding": "Each child's emergency information form was not updated as required.",
+        "status": "Corrected"
+      },
+      {
+        "date": "10/24/2016",
+        "inspectionType": "Routine",
+        "regulations": "13A.15.06.02A(1)",
+        "finding": "The provider was lacking the approved first-aid, CPR or SIDS training.",
+        "status": "Corrected"
+      }
+    ]
+  },
+  {
+    "id": 298363,
+    "data": {
+      "name": "ABC CARE at MT. AIRY ELEMENTARY",
+      "facilityName": null,
+      "license": 159915,
+      "registration": null,
+      "county": "Carroll County",
+      "status": "Open",
+      "capacity": [
+        "30",
+        "5 years to 15 years",
+        ""
+      ],
+      "approvedEducationProgram": "No",
+      "phone": "(410) 751-3700",
+      "email": "abccare@abccareinc.com",
+      "approvedFor": [
+        "Monday-Friday",
+        "6:30 AM - 6:30 PM",
+        "August-June",
+        ""
+      ]
+    },
+    "inspectionsData": [
+      {
+        "date": "03/07/2018",
+        "inspectionType": "Routine",
+        "regulations": " ",
+        "finding": "No Noncompliances Found",
+        "status": "Open"
+      },
+      {
+        "date": "03/16/2017",
+        "inspectionType": "Routine",
+        "regulations": " ",
+        "finding": "No Noncompliances Found",
+        "status": "Open"
+      },
+      {
+        "date": "04/25/2016",
+        "inspectionType": "Routine",
+        "regulations": " ",
+        "finding": "No Noncompliances Found",
+        "status": "Open"
+      }
+    ]
+  },
+  {
+    "id": 2501,
+    "data": {
+      "name": "ABC Care at Sacred Heart",
+      "facilityName": null,
+      "license": 57330,
+      "registration": null,
+      "county": "Baltimore County",
+      "status": "Open",
+      "capacity": [
+        "90",
+        "3 years",
+        "4 years",
+        "5 years",
+        "5 years to 15 years",
+        ""
+      ],
+      "approvedEducationProgram": "No",
+      "phone": "(410) 833-9427",
+      "email": "abccare@abccareinc.com",
+      "approvedFor": [
+        "Monday to Friday",
+        "6:45 AM - 6:15 PM",
+        "August to June",
+        ""
+      ]
+    },
+    "inspectionsData": [
+      {
+        "date": "01/23/2018",
+        "inspectionType": "Routine",
+        "regulations": " ",
+        "finding": "No Noncompliances Found",
+        "status": "Open"
+      },
+      {
+        "date": "01/10/2017",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.06.05B(4)",
+        "finding": "The director did not meet preservice qualification requirements.",
+        "status": "Corrected"
+      },
+      {
+        "date": "01/10/2017",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.06.12B",
+        "finding": "The orientation session was not completed by each aide as required.",
+        "status": "Corrected"
+      },
+      {
+        "date": "01/10/2017",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.08.02B",
+        "finding": "Each group of children did not have sufficient qualified staff assigned to it.",
+        "status": "Corrected"
+      },
+      {
+        "date": "01/19/2016",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.03.06A(1)",
+        "finding": "Notification about a new employee did not include all required information.",
+        "status": "Corrected"
+      }
+    ]
+  },
+  {
+    "id": 100725,
+    "data": {
+      "name": "ABC Care Inc. @ Parr's Ridge Elementary School",
+      "facilityName": null,
+      "license": 134805,
+      "registration": null,
+      "county": "Carroll County",
+      "status": "Open",
+      "capacity": [
+        "45",
+        "5 years to 15 years",
+        ""
+      ],
+      "approvedEducationProgram": "No",
+      "phone": "(301) 829-3840",
+      "email": "abccare@abccareinc.com",
+      "approvedFor": [
+        "Monday to Friday",
+        "6:30 AM - 6:30 PM",
+        "January to December",
+        ""
+      ]
+    },
+    "inspectionsData": [
+      {
+        "date": "05/15/2018",
+        "inspectionType": "Routine",
+        "regulations": " ",
+        "finding": "No Noncompliances Found",
+        "status": "Open"
+      },
+      {
+        "date": "04/25/2017",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.03.04D(3)",
+        "finding": "Each child's health assessment did not meet all requirements.",
+        "status": "Corrected"
+      },
+      {
+        "date": "04/25/2017",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.11.04E(1)(c)",
+        "finding": "Expired or discontinued medication was not discarded or returned as required. ",
+        "status": "Corrected"
+      },
+      {
+        "date": "03/23/2016",
+        "inspectionType": "Routine",
+        "regulations": " ",
+        "finding": "No Noncompliances Found",
+        "status": "Open"
+      }
+    ]
+  },
+  {
+    "id": 1871,
+    "data": {
+      "name": "ABC Care Inc. @ Westminster ES",
+      "facilityName": null,
+      "license": 33273,
+      "registration": null,
+      "county": "Carroll County",
+      "status": "Open",
+      "capacity": [
+        "30",
+        "5 years to 15 years",
+        ""
+      ],
+      "approvedEducationProgram": "No",
+      "phone": "(410) 848-8702",
+      "email": "abccare@abccareinc.com",
+      "approvedFor": [
+        "Monday to Friday",
+        "6:45 AM - 6:30 PM",
+        "August to June",
+        ""
+      ]
+    },
+    "inspectionsData": [
+      {
+        "date": "01/31/2018",
+        "inspectionType": "Routine",
+        "regulations": " ",
+        "finding": "No Noncompliances Found",
+        "status": "Open"
+      },
+      {
+        "date": "01/31/2017",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.06.05C(1)",
+        "finding": "The director did not complete all continued training requirements.",
+        "status": "Corrected"
+      },
+      {
+        "date": "03/16/2016",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.03.05C",
+        "finding": "A record containing all specified information was not maintained for each employee.",
+        "status": "Corrected"
+      },
+      {
+        "date": "03/16/2016",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.06.02",
+        "finding": "Each new hire did not receive a complete employee orientation as required.",
+        "status": "Corrected"
+      },
+      {
+        "date": "03/16/2016",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.06.04A(1)",
+        "finding": "The center did not obtain a medical evaluation for each prospective employee that met all requirements.",
+        "status": "Corrected"
+      }
+    ]
+  },
+  {
+    "id": 198028,
+    "data": {
+      "name": "ABC Care Inc. @ Winfield",
+      "facilityName": null,
+      "license": 153981,
+      "registration": null,
+      "county": "Carroll County",
+      "status": "Open",
+      "capacity": [
+        "60",
+        "5 years to 15 years",
+        ""
+      ],
+      "approvedEducationProgram": "No",
+      "phone": "(410) 635-6985",
+      "email": "abccare@abccareinc.com",
+      "approvedFor": [
+        "Monday-Friday",
+        "6:30 AM - 6:30 PM",
+        "August-June",
+        ""
+      ]
+    },
+    "inspectionsData": [
+      {
+        "date": "09/27/2017",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.03.06A(1)",
+        "finding": "Notification about a new employee did not include all required information.",
+        "status": "Corrected"
+      },
+      {
+        "date": "09/27/2017",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.08.01A(2)(b)",
+        "finding": "Supervision and care were not appropriate to each child's individual age. ",
+        "status": "Corrected"
+      },
+      {
+        "date": "09/27/2017",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.08.03C",
+        "finding": "Staff/child ratio requirements were not met by each same-age group.",
+        "status": "Corrected"
+      },
+      {
+        "date": "09/13/2016",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.06.04A(1)",
+        "finding": "The center did not obtain a medical evaluation for each prospective employee that met all requirements.\n",
+        "status": "Corrected"
+      }
+    ]
+  },
+  {
+    "id": 1875,
+    "data": {
+      "name": "ABC Care Inc/Eldersburg",
+      "facilityName": null,
+      "license": 33585,
+      "registration": null,
+      "county": "Carroll County",
+      "status": "Open",
+      "capacity": [
+        "60",
+        "5 years to 15 years",
+        ""
+      ],
+      "approvedEducationProgram": "No",
+      "phone": "(410) 751-3700",
+      "email": "abccare@abccareinc.com",
+      "approvedFor": [
+        "Monday to Friday",
+        "6:45 AM - 6:15 PM",
+        "August to June",
+        ""
+      ]
+    },
+    "inspectionsData": [
+      {
+        "date": "04/20/2018",
+        "inspectionType": "Routine",
+        "regulations": " ",
+        "finding": "No Noncompliances Found",
+        "status": "Open"
+      },
+      {
+        "date": "04/24/2017",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.11.04E(1)(c)",
+        "finding": "Expired or discontinued medication was not discarded or returned as required. ",
+        "status": "Corrected"
+      },
+      {
+        "date": "05/23/2016",
+        "inspectionType": "Routine",
+        "regulations": " ",
+        "finding": "No Noncompliances Found",
+        "status": "Open"
+      }
+    ]
+  },
+  {
+    "id": 1873,
+    "data": {
+      "name": "ABC Care Inc/Friendship Valley",
+      "facilityName": null,
+      "license": 33580,
+      "registration": null,
+      "county": "Carroll County",
+      "status": "Open",
+      "capacity": [
+        "50",
+        "5 years to 15 years",
+        ""
+      ],
+      "approvedEducationProgram": "No",
+      "phone": "(410) 857-1332",
+      "email": "abccare@abccareinc.com",
+      "approvedFor": [
+        "Monday to Friday",
+        "6:45 AM - 6:15 PM",
+        "August to June",
+        ""
+      ]
+    },
+    "inspectionsData": [
+      {
+        "date": "09/21/2018",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.06.02",
+        "finding": "There is no documentation that 3 staff members have had an orientation. Correct by 9/28/18. ",
+        "status": "Corrected"
+      },
+      {
+        "date": "09/21/2018",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.06.04A(1)",
+        "finding": "Three  3 staff members do not have medicals. Correct by 10/5/18.",
+        "status": "Corrected"
+      },
+      {
+        "date": "09/21/2018",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.06.12A(3)",
+        "finding": "One Aide only had documentation of 3 hours of training for the previous licensing year. Correct by 10/5/18.",
+        "status": "Corrected"
+      },
+      {
+        "date": "09/21/2018",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.10.02B",
+        "finding": "At the time of the inspection only one staff member had documentation of current First Aid and CPR and 38 children were present. Correct by 10/5/18. ",
+        "status": "Corrected"
+      },
+      {
+        "date": "10/04/2017",
+        "inspectionType": "Routine",
+        "regulations": " ",
+        "finding": "No Noncompliances Found",
+        "status": "Open"
+      },
+      {
+        "date": "09/07/2016",
+        "inspectionType": "Routine",
+        "regulations": " ",
+        "finding": "No Noncompliances Found",
+        "status": "Open"
+      }
+    ]
+  },
+  {
+    "id": 1872,
+    "data": {
+      "name": "ABC Care Inc/Mechanicsville",
+      "facilityName": null,
+      "license": 33281,
+      "registration": null,
+      "county": "Carroll County",
+      "status": "Open",
+      "capacity": [
+        "30",
+        "5 years to 15 years",
+        ""
+      ],
+      "approvedEducationProgram": "No",
+      "phone": "(410) 549-0742",
+      "email": "abccare@abccareinc.com",
+      "approvedFor": [
+        "Monday to Friday",
+        "6:30 AM - 6:15 PM",
+        "August to June",
+        ""
+      ]
+    },
+    "inspectionsData": [
+      {
+        "date": "12/15/2017",
+        "inspectionType": "Routine",
+        "regulations": " ",
+        "finding": "No Noncompliances Found",
+        "status": "Open"
+      },
+      {
+        "date": "11/16/2016",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.08.01A(2)(a)",
+        "finding": "Each child did not receive adequate supervision and care at all times.",
+        "status": "Corrected"
+      },
+      {
+        "date": "11/16/2016",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.08.02B",
+        "finding": "Each group of children did not have sufficient qualified staff assigned to it.",
+        "status": "Corrected"
+      },
+      {
+        "date": "01/06/2016",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.10.02E",
+        "finding": "First aid supplies were not maintained as required by OCC.",
+        "status": "Corrected"
+      },
+      {
+        "date": "01/06/2016",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.12.03D(1)",
+        "finding": "Milk provided by the center did not meet all requirements.",
+        "status": "Corrected"
+      }
+    ]
+  },
+  {
+    "id": 1874,
+    "data": {
+      "name": "ABC Care Inc/Piney Ridge",
+      "facilityName": null,
+      "license": 33582,
+      "registration": null,
+      "county": "Carroll County",
+      "status": "Open",
+      "capacity": [
+        "60",
+        "5 years to 15 years",
+        ""
+      ],
+      "approvedEducationProgram": "No",
+      "phone": "(410) 795-0731",
+      "email": "abccare@abccareinc.com",
+      "approvedFor": [
+        "Monday to Friday",
+        "6:45 AM - 6:15 PM",
+        "August to June",
+        ""
+      ]
+    },
+    "inspectionsData": [
+      {
+        "date": "02/08/2018",
+        "inspectionType": "Routine",
+        "regulations": " ",
+        "finding": "No Noncompliances Found",
+        "status": "Open"
+      },
+      {
+        "date": "03/17/2017",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.06.10C(1)",
+        "finding": "Each child care teacher did not meet continued training requirements.",
+        "status": "Corrected"
+      },
+      {
+        "date": "03/31/2016",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.03.06A(1)",
+        "finding": "Notification about a new employee did not include all required information.",
+        "status": "Corrected"
+      },
+      {
+        "date": "03/31/2016",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.06.10C(1)",
+        "finding": "Each child care teacher did not meet continued training requirements.",
+        "status": "Corrected"
+      },
+      {
+        "date": "03/31/2016",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.06.12B",
+        "finding": "The orientation session was not completed by each aide as required.",
+        "status": "Corrected"
+      }
+    ]
+  },
+  {
+    "id": 1870,
+    "data": {
+      "name": "ABC Care Inc/St John's",
+      "facilityName": null,
+      "license": 33272,
+      "registration": null,
+      "county": "Carroll County",
+      "status": "Open",
+      "capacity": [
+        "45",
+        "3 years",
+        "4 years",
+        "5 years",
+        "5 years to 15 years",
+        ""
+      ],
+      "approvedEducationProgram": "No",
+      "phone": "(410) 857-3984",
+      "email": "abccare@abccareinc.com",
+      "approvedFor": [
+        "Monday to Friday",
+        "6:30 AM - 6:15 PM",
+        "August to June",
+        ""
+      ]
+    },
+    "inspectionsData": [
+      {
+        "date": "11/01/2017",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.03.06A(1)",
+        "finding": "Notification about a new employee did not include all required information.",
+        "status": "Corrected"
+      },
+      {
+        "date": "11/01/2017",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.03.06B(2)",
+        "finding": "Proof of compliance with criminal background check requirements was not submitted.",
+        "status": "Corrected"
+      },
+      {
+        "date": "11/01/2017",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.06.02",
+        "finding": "Each new hire did not receive a complete employee orientation as required.",
+        "status": "Corrected"
+      },
+      {
+        "date": "11/01/2017",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.06.04A(1)",
+        "finding": "The center did not obtain a medical evaluation for each prospective employee that met all requirements.\n",
+        "status": "Corrected"
+      },
+      {
+        "date": "09/30/2016",
+        "inspectionType": "Routine",
+        "regulations": " ",
+        "finding": "No Noncompliances Found",
+        "status": "Open"
+      },
+      {
+        "date": "10/28/2015",
+        "inspectionType": "Routine",
+        "regulations": " ",
+        "finding": "No Noncompliances Found",
+        "status": "Open"
+      }
+    ]
+  },
+  {
+    "id": 226172,
+    "data": {
+      "name": "ABC Care, Inc. at Deer Park",
+      "facilityName": null,
+      "license": 155711,
+      "registration": null,
+      "county": "Carroll County",
+      "status": "Open",
+      "capacity": [
+        "56",
+        "5 years to 15 years",
+        ""
+      ],
+      "approvedEducationProgram": "No",
+      "phone": "(410) 848-4350",
+      "email": "abccare@abccareinc.com",
+      "approvedFor": [
+        "Monday - Friday",
+        "6:45 AM - 6:15 PM",
+        "January to December",
+        ""
+      ]
+    },
+    "inspectionsData": [
+      {
+        "date": "09/21/2017",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.03.04B(1)",
+        "finding": "Each child's written records were not readily accessible to all staff members providing care to the child.",
+        "status": "Corrected"
+      },
+      {
+        "date": "09/21/2017",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.03.04C",
+        "finding": "All required emergency information was not present for each child in care.",
+        "status": "Corrected"
+      },
+      {
+        "date": "09/21/2017",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.03.04D",
+        "finding": "The center did not have a health assessment with all required information for each child.",
+        "status": "Corrected"
+      },
+      {
+        "date": "09/21/2017",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.03.04D(3)",
+        "finding": "Each child's health assessment did not meet all requirements.",
+        "status": "Corrected"
+      },
+      {
+        "date": "09/21/2017",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.03.05C",
+        "finding": "A record containing all specified information was not maintained for each employee.",
+        "status": "Corrected"
+      },
+      {
+        "date": "09/21/2017",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.10.02E",
+        "finding": "First aid supplies were not readily accessible for use as required.",
+        "status": "Corrected"
+      },
+      {
+        "date": "09/21/2017",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.11.04A(1)(a)",
+        "finding": "Documentation of medication administration was not done on a form provided by OCC.",
+        "status": "Corrected"
+      },
+      {
+        "date": "09/21/2017",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.12.05A",
+        "finding": "Food prep appliances and equipment did not meet all maintenance and operating requirements.",
+        "status": "Corrected"
+      },
+      {
+        "date": "06/06/2016",
+        "inspectionType": "Routine",
+        "regulations": " ",
+        "finding": "No Noncompliances Found",
+        "status": "Open"
+      }
+    ]
+  },
+  {
+    "id": 328468,
+    "data": {
+      "name": "ABC Child Development Center",
+      "facilityName": null,
+      "license": 162213,
+      "registration": null,
+      "county": "Baltimore City",
+      "status": "Open",
+      "capacity": [
+        "40",
+        "6 weeks through 17 months",
+        "18 months through 23 months",
+        "2 years",
+        "3 years",
+        "4 years",
+        "5 years",
+        "5 years to 15 years",
+        ""
+      ],
+      "approvedEducationProgram": "No",
+      "phone": "(410) 466-1150",
+      "email": "abcchlddev@aol.com",
+      "approvedFor": [
+        "Monday - Sunday",
+        "6:30 AM - 12:20 AM",
+        "January - December",
+        ""
+      ]
+    },
+    "inspectionsData": [
+      {
+        "date": "02/05/2018",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.05.09A",
+        "finding": "18 lights out were out in the School age room. ",
+        "status": "Corrected"
+      },
+      {
+        "date": "03/15/2017",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.03.07A",
+        "finding": "An operational change was made without prior written OCC approval.",
+        "status": "Corrected"
+      },
+      {
+        "date": "03/15/2017",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.05.05C(1)",
+        "finding": "There was chipping, peeling, flaking, chalking, or deteriorated paint on a surface of an exterior area used for child care.",
+        "status": "Corrected"
+      },
+      {
+        "date": "03/15/2017",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.05.09A",
+        "finding": "Each child care area did not have sufficient lighting.",
+        "status": "Corrected"
+      },
+      {
+        "date": "03/15/2017",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.12.04A(1)",
+        "finding": "Stored food was not protected from contamination.",
+        "status": "Corrected"
+      },
+      {
+        "date": "01/21/2016",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.03.02A",
+        "finding": "All applicable admission and documentation requirements were not met for each child.",
+        "status": "Corrected"
+      },
+      {
+        "date": "01/21/2016",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.03.04C",
+        "finding": "All required emergency information was not present for each child in care.",
+        "status": "Corrected"
+      },
+      {
+        "date": "01/21/2016",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.05.01A(1)",
+        "finding": "The building was not in good repair in all areas.",
+        "status": "Corrected"
+      },
+      {
+        "date": "01/21/2016",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.05.09A",
+        "finding": "Each child care area did not have sufficient lighting.",
+        "status": "Corrected"
+      },
+      {
+        "date": "01/21/2016",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.10.01A(3)(c)",
+        "finding": "The emergency and disaster plan was not practiced as required at all of the specified intervals.",
+        "status": "Corrected"
+      },
+      {
+        "date": "01/21/2016",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.10.02E",
+        "finding": "First aid supplies were not maintained as required by OCC.",
+        "status": "Corrected"
+      },
+      {
+        "date": "01/21/2016",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.12.01A(1)",
+        "finding": "Food or beverages used for meals or snacks did not comply with the required nutritional guidelines.",
+        "status": "Corrected"
+      },
+      {
+        "date": "01/21/2016",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.12.01A(4)",
+        "finding": "Milk furnished to a child did not meet applicable  requirements.",
+        "status": "Corrected"
+      },
+      {
+        "date": "01/21/2016",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.12.04C(2)",
+        "finding": "Food was stored less than 6 inches from the floor. ",
+        "status": "Corrected"
+      },
+      {
+        "date": "\r\n\t\t\t\t\t\r\n\t\t\t\t\t\t12\r\n\t\t\t\t\t\r\n\t\t\t\t",
+        "inspectionType": "1",
+        "regulations": "2",
+        "finding": "",
+        "status": ""
+      },
+      {
+        "date": "1",
+        "inspectionType": "2",
+        "regulations": "",
+        "finding": "",
+        "status": ""
+      }
+    ]
+  },
+  {
+    "id": 359907,
+    "data": {
+      "name": "ABC Child Development Center II",
+      "facilityName": null,
+      "license": 250624,
+      "registration": null,
+      "county": "Baltimore City",
+      "status": "Open",
+      "capacity": [
+        "9",
+        "6 weeks through 17 months",
+        "18 months through 23 months",
+        ""
+      ],
+      "approvedEducationProgram": "No",
+      "phone": "(410) 367-0405",
+      "email": "abcchlddev@aol.com",
+      "approvedFor": [
+        "Monday to Friday",
+        "6:00 AM - 12:20 AM",
+        "January - December",
+        ""
+      ]
+    },
+    "inspectionsData": [
+      {
+        "date": "05/21/2018",
+        "inspectionType": "Complaint",
+        "regulations": "13A.16.04.01B",
+        "finding": "Licensing Specialist observed 11 children between the ages of one and five.",
+        "status": "Corrected"
+      },
+      {
+        "date": "05/21/2018",
+        "inspectionType": "Complaint",
+        "regulations": "13A.16.04.02D",
+        "finding": "The center is licensed for infants and toddlers only; preschool children were observed.",
+        "status": "Corrected"
+      },
+      {
+        "date": "03/07/2017",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.03.04C",
+        "finding": "All required emergency information was not present for each child in care.",
+        "status": "Corrected"
+      },
+      {
+        "date": "03/07/2017",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.06.05C(1)",
+        "finding": "The director did not complete all continued training requirements.",
+        "status": "Corrected"
+      },
+      {
+        "date": "03/07/2017",
+        "inspectionType": "Routine",
+        "regulations": " ",
+        "finding": "No Noncompliances Found",
+        "status": "Open"
+      },
+      {
+        "date": "02/03/2016",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.05.09A",
+        "finding": "Each child care area did not have sufficient lighting.",
+        "status": "Corrected"
+      }
+    ]
+  },
+  {
+    "id": 315654,
+    "data": {
+      "name": "ABC Daycare Inc. DBA Little Lighthouse",
+      "facilityName": null,
+      "license": 161071,
+      "registration": null,
+      "county": "Howard County",
+      "status": "Open",
+      "capacity": [
+        "89",
+        "6 weeks through 17 months",
+        "18 months through 23 months",
+        "2 years",
+        "3 years",
+        "4 years",
+        "5 years",
+        "5 years to 15 years",
+        ""
+      ],
+      "approvedEducationProgram": "No",
+      "phone": "(410) 750-0660",
+      "email": "thelittlelighthousedc@gmail.com",
+      "approvedFor": [
+        "Monday - Friday",
+        "7:00 AM - 6:30 PM",
+        "January - December",
+        ""
+      ]
+    },
+    "inspectionsData": [
+      {
+        "date": "05/25/2018",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.03.03A(2)",
+        "finding": "Attendance and parent verification was not maintained to reflect the number of children in attendance in Room 3 today. ",
+        "status": "Corrected"
+      },
+      {
+        "date": "05/25/2018",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.03.06A(2)",
+        "finding": "Center did not notify OCC of a staff last day of employment in June of 2017.",
+        "status": "Corrected"
+      },
+      {
+        "date": "05/25/2018",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.05.11A",
+        "finding": "Two area rugs need to be cleaned. One in Room 1 and in Room 5. ",
+        "status": "Corrected"
+      },
+      {
+        "date": "05/25/2018",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.08.02B",
+        "finding": "There was preschool teacher in the toddler classroom did not have the infant/toddler 45 hour. ",
+        "status": "Corrected"
+      },
+      {
+        "date": "05/25/2018",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.09.04A(4)(a)",
+        "finding": "One crib in Room 3 infant room did not have a tight fitted sheet. Correct in 24 hours.",
+        "status": "Corrected"
+      },
+      {
+        "date": "03/08/2018",
+        "inspectionType": "Complaint",
+        "regulations": "13A.16.08.01A(2)(b)",
+        "finding": "Observed 1 Infant teacher with 4 infants. The 2nd teacher in the room left the room to cover the adjacent infant room with 3 infants while that teacher went to the bathroom. I was corrected while this LS was in the room. ",
+        "status": "Corrected"
+      },
+      {
+        "date": "03/08/2018",
+        "inspectionType": "Complaint",
+        "regulations": "13A.16.08.03D(1)",
+        "finding": "Observed 1 Infant Teacher with 4 infants. It was corrected while this LS was in the room.",
+        "status": "Corrected"
+      },
+      {
+        "date": "03/08/2018",
+        "inspectionType": "Complaint",
+        "regulations": "13A.16.10.03B",
+        "finding": "Observed 2 infants sleeping in a bouncy seat. Staff reported they were placed in the bouncy seats at 9 am. This LS observed them sleeping in the seats at 10:30 AM. All infants must be placed on their backs in an approved crib for napping. If a child falls asleep in a bouncy seat they must be moved to a crib for sleep. Corrected while this worker was inspecting.",
+        "status": "Corrected"
+      },
+      {
+        "date": "04/26/2017",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.03.05C",
+        "finding": "A record containing all specified information was not maintained for each employee.",
+        "status": "Corrected"
+      },
+      {
+        "date": "04/26/2017",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.05.01A(1)",
+        "finding": "The building was not in good repair in all areas.",
+        "status": "Corrected"
+      },
+      {
+        "date": "04/26/2017",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.05.08J",
+        "finding": "All sanitary supplies were not within a child's reach. ",
+        "status": "Corrected"
+      },
+      {
+        "date": "04/26/2017",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.12.01A(2)",
+        "finding": "The center did not furnish milk with all meals.",
+        "status": "Corrected"
+      },
+      {
+        "date": "04/29/2016",
+        "inspectionType": "Routine",
+        "regulations": "13A.16.03.05B",
+        "finding": "The posted staffing pattern did not meet all requirements.",
+        "status": "Corrected"
+      }
+    ]
+  }
+]

@@ -1,0 +1,17 @@
+{>"layout"/}
+
+{<title}{title} |{/title}
+{<main}
+<section class="page">
+  <div class="section-transparent p-t-0">
+    {content|s}
+  </div>
+</section>
+{/main}
+
+{<scripts}
+{/scripts}
+
+{<styles}
+<link rel="stylesheet" type="text/css" href="/css/pages.css{staticAssetsCache}">
+{/styles}

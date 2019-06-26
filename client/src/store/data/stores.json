@@ -1,0 +1,101 @@
+[
+	{
+		"id": 1,
+		"name": "Nike Store LA",
+		"region": "LA",
+		"type": "Mall",
+		"size": "3",
+		"customerId": 1,
+		"view": "big",
+		"productCatalog": null,
+		"custom": null
+	},
+	{
+		"id": 2,
+		"name": "Nike Store DC",
+		"region": "DC",
+		"type": "Shop",
+		"size": "2",
+		"customerId": 2,
+		"view": "modern",
+		"productCatalog": null,
+		"custom": null
+	},
+	{
+		"id": 3,
+		"name": "Nike Store NY",
+		"region": "NY",
+		"type": "Street",
+		"size": "1",
+		"customerId": 3,
+		"view": "modern",
+		"productCatalog": null,
+		"custom": null
+	},
+	{
+		"id": 4,
+		"name": "Adidas Store LA",
+		"region": "LA",
+		"type": "Street",
+		"size": "5",
+		"customerId": 4,
+		"view": "small",
+		"productCatalog": null,
+		"custom": null
+	},
+	{
+		"id": 5,
+		"name": "Adidas Store DC",
+		"region": "DC",
+		"type": "Mall",
+		"size": "3",
+		"customerId": 5,
+		"view": "big",
+		"productCatalog": null,
+		"custom": null
+	},
+	{
+		"id": 6,
+		"name": "Adidas Store NY",
+		"region": "NY",
+		"type": "Plaza",
+		"size": "2",
+		"customerId": 6,
+		"view": "small",
+		"productCatalog": null,
+		"custom": null
+	},
+	{
+		"id": 7,
+		"name": "Puma Store LA",
+		"region": "LA",
+		"type": "Plaza",
+		"size": "1",
+		"customerId": 7,
+		"view": "small",
+		"productCatalog": null,
+		"custom": null
+	},
+	{
+		"id": 8,
+		"name": "Puma Store DC",
+		"region": "DC",
+		"type": "Mall",
+		"size": "3",
+		"customerId": 8,
+		"view": "big",
+		"productCatalog": null,
+		"custom": null
+	},
+	{
+		"id": 9,
+		"name": "Puma Store NY",
+		"region": "NY",
+		"type": "Street",
+		"view": "modern",
+		"size": "5",
+		"customerId": 9,
+		"productCatalog": null,
+		"custom": null
+	}
+]

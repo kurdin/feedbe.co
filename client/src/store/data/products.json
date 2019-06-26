@@ -1,0 +1,68 @@
+[
+	{
+		"id": 1,
+		"name": "Cool Shoes",
+		"category": "shoes",
+		"description": "Nice and cool Shoes",
+		"image": "https://n2.sdlcdn.com/imgs/f/6/l/Nike-Air-Pegasus-33-Black-SDL948882896-1-258e6.jpeg",
+		"price": 30,
+		"gender": "female",
+		"size": "xs",
+		"custom": null
+	},
+	{
+		"id": 2,
+		"name": "Flex Shorts",
+		"category": "shorts",
+		"description": "Flexible Dri-Fit Shorts",
+		"image": "https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto/qh5dfwa75iygdiyjxrqv/challenger-mens-7-running-shorts-NKW2oE.jpg",
+		"price": 40,
+		"gender": "male",
+		"size": "xl",
+		"custom": null
+	},
+	{
+		"id": 3,
+		"name": "Cool Jacket",
+		"category": "jacket",
+		"description": "Cool Run Jacket",
+		"image": "https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto/cu8z5lfysj6afwc6aevl/run-division-mens-running-jacket-Nd8pZp.jpg",
+		"price": 50,
+		"gender": "male",
+		"size": "xl",
+		"custom": null
+	},
+	{
+		"id": 4,
+		"name": "Flex Shoes",
+		"category": "shoes",
+		"description": "Flex and cool Shoes",
+		"image": "https://n2.sdlcdn.com/imgs/f/6/l/Nike-Air-Pegasus-33-Black-SDL948882896-1-258e6.jpeg",
+		"price": 20,
+		"gender": "male",
+		"size": "s",
+		"custom": null
+	},
+	{
+		"id": 5,
+		"name": "Flex Shorts",
+		"category": "shorts",
+		"description": "Flexible Dri-Fit Shorts",
+		"image": "https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto/qh5dfwa75iygdiyjxrqv/challenger-mens-7-running-shorts-NKW2oE.jpg",
+		"price": 10,
+		"gender": "male",
+		"size": "xl",
+		"custom": null
+	},
+	{
+		"id": 6,
+		"name": "Run Shorts",
+		"category": "shorts",
+		"description": "Run Shorts Division",
+		"image": "https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto/cu8z5lfysj6afwc6aevl/run-division-mens-running-jacket-Nd8pZp.jpg",
+		"price": 30,
+		"gender": "male",
+		"size": "m",
+		"custom": null
+	}	
+]

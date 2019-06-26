@@ -1,0 +1,26 @@
+{
+	"compilerOptions": {
+		"pretty": true,
+		"target": "esnext",
+		"module": "esnext",
+		"allowSyntheticDefaultImports": true,
+		"preserveConstEnums": true,
+		"sourceMap": true,
+		"moduleResolution": "node",
+		"lib": ["es2017", "esnext", "esnext.asynciterable", "dom", "dom.iterable"],
+		"types": ["inferno"],
+		"jsx": "preserve",
+		"noUnusedLocals": true,
+		"paths": {
+			"@utils": ["src/utils/*"]
+		},
+		"baseUrl": "./client/src",
+		"noEmit": true,
+		"skipLibCheck": true,
+		"noUnusedParameters": true,
+		"noImplicitReturns": true,
+		"noFallthroughCasesInSwitch": true
+	},
+	"exclude": ["node_modules"],
+	"include": ["client/src/**/*"]
+}

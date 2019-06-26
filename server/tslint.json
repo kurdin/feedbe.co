@@ -1,0 +1,31 @@
+{
+	"extends": ["tslint:recommended", "tslint-config-prettier"],
+	"rules": {
+		"forin": false,
+		"interface-over-type-literal": false,
+		"semicolon": [true, "always", "ignore-bound-class-methods"],
+		"interface-name": false,
+		"ban-types": true,
+		"max-classes-per-file": true,
+		"max-line-length": false,
+		"member-access": false,
+		"member-ordering": false,
+		"no-bitwise": false,
+		"no-conditional-assignment": false,
+		"no-debugger": false,
+		"no-console": false,
+		"no-empty": true,
+		"no-namespace": true,
+		"no-unused-expression": true,
+		"object-literal-sort-keys": false,
+		"one-variable-per-declaration": [true, "ignore-for-loop"],
+		"only-arrow-functions": [false],
+		"ordered-imports": false,
+		"prefer-const": true,
+		"prefer-for-of": false,
+		"quotemark": [true, "single", "jsx-double"],
+		"no-var-requires": false,
+		"trailing-comma": false,
+		"variable-name": false
+	}
+}

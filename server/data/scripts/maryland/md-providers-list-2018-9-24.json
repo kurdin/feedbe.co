@@ -1,0 +1,254 @@
+[
+  {
+    "id": 245987,
+    "name": "4 Corners Community Nursery, Inc.",
+    "facilityName": " ",
+    "address": "University Boulevard West, Silver Spring, MD 20901",
+    "county": "Montgomery County",
+    "schoolName": " ",
+    "programType": "CTR"
+  },
+  {
+    "id": 134978,
+    "name": "7 Day Kiddie Kare Inc.",
+    "facilityName": " ",
+    "address": "N Howard Street, Baltimore, MD 21201",
+    "county": "Baltimore City",
+    "schoolName": " ",
+    "programType": "CTR"
+  },
+  {
+    "id": 903,
+    "name": "A Child's Place @ Notre Dame",
+    "facilityName": " ",
+    "address": "N. Charles Street, Baltimore, MD 21210",
+    "county": "Baltimore City",
+    "schoolName": " ",
+    "programType": "CTR"
+  },
+  {
+    "id": 101637,
+    "name": "A Child's World Day Care Center",
+    "facilityName": " ",
+    "address": "Woodbourne Ave., Baltimore, MD 21212",
+    "county": "Baltimore City",
+    "schoolName": "Govans Elementary",
+    "programType": "CTR"
+  },
+  {
+    "id": 1881,
+    "name": "A Childs Garden",
+    "facilityName": " ",
+    "address": "Baltimore & Annapolis Boulevard, Severna Park, MD 21146",
+    "county": "Anne Arundel County",
+    "schoolName": " ",
+    "programType": "CTR"
+  },
+  {
+    "id": 2015,
+    "name": "A Family Affair Children's Center",
+    "facilityName": " ",
+    "address": "Old Harford Road, Baltimore, MD 21234",
+    "county": "Baltimore County",
+    "schoolName": "Pine Grove Elementary",
+    "programType": "CTR"
+  },
+  {
+    "id": 9296,
+    "name": "A JoAnn Mercer",
+    "facilityName": " ",
+    "address": "Graceham Road, Thurmont, MD 21788",
+    "county": "Frederick County",
+    "schoolName": "Thurmont Elementary",
+    "programType": "FCCH"
+  },
+  {
+    "id": 371347,
+    "name": "A Place 2 Grow",
+    "facilityName": " ",
+    "address": "Reisterstown Road, Baltimore, MD 21215",
+    "county": "Baltimore City",
+    "schoolName": " ",
+    "programType": "CTR"
+  },
+  {
+    "id": 376831,
+    "name": "A Sound Beginning",
+    "facilityName": " ",
+    "address": "Old Frederick Road, Marriottsville, MD 21104",
+    "county": "Howard County",
+    "schoolName": " ",
+    "programType": "CTR"
+  },
+  {
+    "id": 100529,
+    "name": "A World of Friends",
+    "facilityName": " ",
+    "address": "Hazelwood Avenue, Baltimore, MD 21206",
+    "county": "Baltimore City",
+    "schoolName": "Hazelwood Elementary/Middle",
+    "programType": "CTR"
+  },
+  {
+    "id": 219083,
+    "name": "A+ Care At Babcock",
+    "facilityName": " ",
+    "address": "Loch Raven Boulevard, Baltimore, MD 21286",
+    "county": "Baltimore County",
+    "schoolName": "Pleasant Plains Elementary",
+    "programType": "CTR"
+  },
+  {
+    "id": 254064,
+    "name": "Aaron Johnson",
+    "facilityName": " ",
+    "address": "Mactavish Avenue, Baltimore, MD 21229",
+    "county": "Baltimore City",
+    "schoolName": " ",
+    "programType": "FCCH"
+  },
+  {
+    "id": 148485,
+    "name": "Abaynesh Abate",
+    "facilityName": " ",
+    "address": "Burnt Mills Avenue, Silver Spring, MD 20901",
+    "county": "Montgomery County",
+    "schoolName": "Burnt Mills Elementary",
+    "programType": "FCCH"
+  },
+  {
+    "id": 351469,
+    "name": "Abaynesh Fana",
+    "facilityName": " ",
+    "address": "Northcrest Drive, Silver Spring, MD 20904",
+    "county": "Montgomery County",
+    "schoolName": "William Tyler Page Elementary",
+    "programType": "FCCH"
+  },
+  {
+    "id": 298363,
+    "name": "ABC CARE at MT. AIRY ELEMENTARY",
+    "facilityName": " ",
+    "address": "N. Main Street, Mount Airy, MD 21771",
+    "county": "Carroll County",
+    "schoolName": " ",
+    "programType": "CTR"
+  },
+  {
+    "id": 2501,
+    "name": "ABC Care at Sacred Heart",
+    "facilityName": " ",
+    "address": "Sacred Heart Lane, Glyndon, MD 21071",
+    "county": "Baltimore County",
+    "schoolName": "Glyndon Elementary",
+    "programType": "CTR"
+  },
+  {
+    "id": 100725,
+    "name": "ABC Care Inc. @ Parr's Ridge Elementary School",
+    "facilityName": " ",
+    "address": "Watersville Road, Mount Airy, MD 21771",
+    "county": "Carroll County",
+    "schoolName": "Parr's Ridge Elementary",
+    "programType": "CTR"
+  },
+  {
+    "id": 1871,
+    "name": "ABC Care Inc. @ Westminster ES",
+    "facilityName": " ",
+    "address": "Uniontown Road, Westminster, MD 21158",
+    "county": "Carroll County",
+    "schoolName": "Westminster Elementary",
+    "programType": "CTR"
+  },
+  {
+    "id": 198028,
+    "name": "ABC Care Inc. @ Winfield",
+    "facilityName": " ",
+    "address": "Salem Bottom Road, Westminster, MD 21157",
+    "county": "Carroll County",
+    "schoolName": "Winfield Elementary (Carroll)",
+    "programType": "CTR"
+  },
+  {
+    "id": 1875,
+    "name": "ABC Care Inc/Eldersburg",
+    "facilityName": " ",
+    "address": "Johnsville Road, Sykesville, MD 21784",
+    "county": "Carroll County",
+    "schoolName": "Eldersburg Elementary",
+    "programType": "CTR"
+  },
+  {
+    "id": 1873,
+    "name": "ABC Care Inc/Friendship Valley",
+    "facilityName": " ",
+    "address": "Gist Road, Westminster, MD 21157",
+    "county": "Carroll County",
+    "schoolName": "Friendship Valley Elementary",
+    "programType": "CTR"
+  },
+  {
+    "id": 1872,
+    "name": "ABC Care Inc/Mechanicsville",
+    "facilityName": " ",
+    "address": "Sykesville Road, Sykesville, MD 21784",
+    "county": "Carroll County",
+    "schoolName": "Mechanicsville Elementary (Carroll)",
+    "programType": "CTR"
+  },
+  {
+    "id": 1874,
+    "name": "ABC Care Inc/Piney Ridge",
+    "facilityName": " ",
+    "address": "Freedom Avenue, Sykesville, MD 21784",
+    "county": "Carroll County",
+    "schoolName": "Piney Ridge Elementary",
+    "programType": "CTR"
+  },
+  {
+    "id": 1870,
+    "name": "ABC Care Inc/St John's",
+    "facilityName": " ",
+    "address": "Monroe Street, Westminster, MD 21157",
+    "county": "Carroll County",
+    "schoolName": "William Winchester Elementary",
+    "programType": "CTR"
+  },
+  {
+    "id": 226172,
+    "name": "ABC Care, Inc. at Deer Park",
+    "facilityName": " ",
+    "address": "Sykesville RD, Westminster , MD 21157",
+    "county": "Carroll County",
+    "schoolName": "Mechanicsville Elementary (Carroll)",
+    "programType": "CTR"
+  },
+  {
+    "id": 328468,
+    "name": "ABC Child Development Center",
+    "facilityName": " ",
+    "address": "Park Heights Avenue, Baltimore, MD 21215",
+    "county": "Baltimore City",
+    "schoolName": " ",
+    "programType": "CTR"
+  },
+  {
+    "id": 359907,
+    "name": "ABC Child Development Center II",
+    "facilityName": " ",
+    "address": "Park Heights Avenue, Baltimore , MD 21215",
+    "county": "Baltimore City",
+    "schoolName": " ",
+    "programType": "CTR"
+  },
+  {
+    "id": 315654,
+    "name": "ABC Daycare Inc. DBA Little Lighthouse",
+    "facilityName": " ",
+    "address": "Chevrolet Dr., Ellicott City, MD 21042",
+    "county": "Howard County",
+    "schoolName": " ",
+    "programType": "CTR"
+  }
+]

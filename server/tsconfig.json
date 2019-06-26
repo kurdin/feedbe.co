@@ -1,0 +1,29 @@
+{
+	"compilerOptions": {
+		"target": "es6",
+		"module": "esnext",
+		"allowJs": true,
+		"rootDir": "./",
+		"noEmit": true,
+		"esModuleInterop": true,
+		"allowSyntheticDefaultImports": true,
+		"noImplicitAny": false,
+		"preserveConstEnums": true,
+		"sourceMap": true,
+		"moduleResolution": "node",
+		"jsx": "preserve",
+		// "lib": ["es2017", "dom"],
+		"types": ["node", "express", "lodash"],
+		"noUnusedLocals": true,
+		"paths": {
+			"@client/*": ["../client/src/*"]
+		},
+		"include": ["../client/src/*"],
+		"exclude": ["node_modules", "**/*.spec.ts"],
+		"baseUrl": "./",
+		"skipLibCheck": true,
+		"noUnusedParameters": true,
+		"noImplicitReturns": true,
+		"noFallthroughCasesInSwitch": true
+	}
+}

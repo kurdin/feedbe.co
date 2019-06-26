@@ -1,0 +1,37 @@
+{>"layout"/}
+
+{<main}
+<section class="hero is-dark is-bold">
+  {?userEmail} 
+    <p class="has-text-right p-a-1">Logged in as <b>{userEmail}</b> <a href='/logout' class=" button is-small is-inverted is-black">logout</a></p>
+    {:else}
+    <p class="has-text-right p-a-1">Not logged in</p>
+  {/userEmail}
+    <div class="container">
+      <div>
+          <div class="columns is-vcentered">
+            <div class="column is-12">
+              <h1 class="title is-1 has-text-centered">
+                Restricted page!
+              </h1>
+             </div>
+          </div>
+          <div class="column is-12">
+              <p class="title is-5 has-text-centered">
+                This page is only accessible for authenticated users! Psssss... This is a secret!
+              </p>
+              <p class="is-5 has-text-centered m-b-10">
+                <span>
+                  <a href='/'><span class="icon">&#0044;</span> Back to homepage</a>
+                </span>
+                 | 
+                <span>
+                  <a href='/login'>Login</a>
+                </span>
+              </p>
+             </div>
+         </div>
+      </div>
+    </div>
+</section>
+{/main}
