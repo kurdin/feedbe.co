@@ -8,14 +8,16 @@
   {?isDev}
     <base href="/" />
   {/isDev}
+
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ff8600">
+  <meta name="theme-color" content="#e4e4e4">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
-  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#656565">
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
-  <title>{+title/} Subjer | Subject matters</title>
+  <title>{+title/} FeedBe | web content feedback platform</title>
   <meta name="description" content="Short-term drop-off child care services for parents night out" />
   <meta name="HandheldFriendly" content="True" />
   <meta name="MobileOptimized" content="320" />
@@ -33,8 +35,8 @@
   <nav class="nav" id="top">
     <div class="container">
       <div class="nav-left">
-        <a href="/"><img src="/assets/img/happy-logo.svg" class="pnoc-logo"/></a>
-        <a class="nav-item top-logo-text" href="/"><b>P</b>arents-<b>N</b>ight-<b>O</b>ut.<b>C</b>lub</a>
+        <a href="/"><img src="/assets/img/feedbee-logo.svg" class="nav-logo"/></a>
+        <a class="nav-item top-logo-text" href="/"><b>FeedBe</b></a>
       </div>
       <span class="nav-toggle">
         <span></span>
@@ -72,7 +74,7 @@
   </main>
   <footer class="site-footer">
     <div class="site-footer-left">
-      <span class="poweredby"><a href="/" class="site-name-footer">Subjer.Com</a></span>
+      <span class="poweredby"><a href="/" class="site-name-footer">FeedBe.co</a></span>
     </div>
     <div class="site-footer-right">
       <a href="#">about</a>
@@ -80,12 +82,6 @@
       <a href="#">support</a>
       <a href="#">feedback</a>
     </div>
-
-    {! <section class="site-footer-top">
-      <div><a href="/"><img src="/assets/img/happy-logo.svg" class="pnoc-logo"/></a></div>
-      <section class="poweredby">
-        <a href="/" class="site-name-footer">Subjer.Com</a></section>
-    </section> !}
   </footer>
   
 {> notifications /}

@@ -197,6 +197,12 @@
     "webpack-node-externals": "^1.7.2",
     "write-file-webpack-plugin": "^4.5.0"
   },
+  "browserslist": [
+    ">1%",
+    "last 4 versions",
+    "Firefox ESR",
+    "not ie < 11"
+  ],
   "prettier": {
     "printWidth": 120,
     "useTabs": true,

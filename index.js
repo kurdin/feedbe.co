@@ -10,4 +10,4 @@ require('@babel/register')({
 });
 // require('@babel/polyfill');
 require('./server/server.ts');
-require('./api/index');
+// require('./api/index');

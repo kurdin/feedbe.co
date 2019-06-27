@@ -488,15 +488,18 @@ a [class*=' icon-'] {
   display: inline;
 }
 
-img.pnoc-logo {
-  width: 45px;
-  opacity: 0.8;
+img.nav-logo {
+  /*color: #ff9800;*/
+  color: #f19f00;
+  width: 35px;
   height: 100%;
 }
 
-img.pnoc-logo:hover,
-img.pnoc-logo:active {
-  opacity: 1;
+img.nav-logo:hover,
+a.top-logo-text:hover,
+img.nav-logo:active {
+  opacity: 0.8;
+  color: #f19f00;
 }
 
 a.top-logo-text {
@@ -504,11 +507,9 @@ a.top-logo-text {
   font-size: 1.5rem;
   /*font-variant: small-caps;*/
   font-family: 'Ubuntu Condensed', 'Arial Narrow', Arial, sans-serif;
-  color: #f3bf00;
-}
-
-.top-logo-text > span {
-  color: #d9d9d9;
+  /*color: #ff9800;*/
+  /*color: #fff;*/
+  color: #f19f00;
 }
 
 a.autoclear {
@@ -518,10 +519,6 @@ a.autoclear {
   bottom: -28px;
   z-index: 2;
   font-size: 0.8rem;
-}
-
-a.top-logo-text:hover {
-  color: #fff;
 }
 
 .top-logo {
@@ -750,7 +747,8 @@ a {
 }
 
 a:hover {
-  color: #009704;
+  color: #009688;
+  /*color: #ff9800;*/
 }
 
 a.btn {
@@ -1074,7 +1072,8 @@ li {
 
 #top {
   /*background: #303030;*/
-  background: #d35400 !important;
+  /*background: #d35400 !important;*/
+  background: #484848 !important;
   /*background: #ff753d !important;*/
   /*background: #2486b9 !important;*/
 
@@ -1477,10 +1476,12 @@ h1.post-title {
   justify-content: space-between;
   margin: 0rem 0 0 0;
   padding: 0.5rem 0;
-  color: #fff;
+  /*color: #fff;*/
+  color: #555;
   font-size: 12px;
   text-align: center;
-  background: #5c6670;
+  /*background: #5c6670;*/
+  background: #e8e8e8;
 }
 
 .site-footer > div {
@@ -1492,7 +1493,7 @@ h1.post-title {
 }
 
 .site-footer-right a {
-  font-size: 11px;
+  font-size: 13px;
   text-transform: uppercase;
   margin-left: 10px;
 }
@@ -1503,11 +1504,12 @@ h1.post-title {
 }
 
 .site-footer a:hover {
-  color: #fff;
+  opacity: 0.8;
+  /*color: #fff;*/
 }
 
 .poweredby {
-  font-size: 14px;
+  font-size: 15px;
 }
 
 .poweredby .i-ghost {
@@ -3584,10 +3586,6 @@ h6.is-danger > b {
   border-radius: 4px;
 }
 
-footer img.pnoc-logo {
-  width: 35px;
-}
-
 .site-name-footer,
 .poweredby {
   font-weight: 700;
@@ -3596,7 +3594,7 @@ footer img.pnoc-logo {
 
 .hero.is-dark.is-bold {
   background-image: none;
-  background-color: #373f46;
+  background-color: #24292d;
 }
 
 /* spinner starts */
