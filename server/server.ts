@@ -16,8 +16,9 @@ global._ = require('lodash');
 global.globalHelper = {
 	isDev: isDev(),
 	lastCommit: getLastCommit(),
-	host: isDev() ? 'http://localhost:8080' : 'https://subjer.com'
+	host: isDev() ? 'http://localhost:8080' : 'https://feedbe.co'
 };
+global.hasSSR = process.env.SSR ? true : global.globalHelper.isDev ? false : true;
 
 require('./lib/jsx-require');
 
@@ -65,15 +66,17 @@ const ViewOptions = {
 	]
 };
 
-app.use((_req, res, next) => {
-	res.locals.staticAssetsCache = '?' + global.globalHelper.lastCommit;
-	res.locals.isDev = global.globalHelper.isDev;
-	res.locals.isProd = !global.globalHelper.isDev;
-	res.locals.isSSR = global.globalHelper.isDev ? false : true;
-	// force SSR with next line
-	// res.locals.isSSR = true;
-	next();
-});
+app.use(
+	(_req, res, next): void => {
+		res.locals.staticAssetsCache = '?' + global.globalHelper.lastCommit;
+		res.locals.isDev = global.globalHelper.isDev;
+		res.locals.isProd = !global.globalHelper.isDev;
+		res.locals.hasSSR = global.hasSSR;
+		// force SSR with next line
+		// res.locals.isSSR = true;
+		next();
+	}
+);
 
 app.use(helmet());
 app.use(
@@ -101,13 +104,13 @@ passwordless.addDelivery(function(tokenToSend, uidToSend, recipient, callback) {
 	smtpServer.send(
 		{
 			text:
-				'Hello, \n\nYou can now access subjer account via this link\n\n' +
+				'Hello, \n\nYou can now access Feedbe account via this link\n\n' +
 				global.globalHelper.host +
 				'?token=' +
 				tokenToSend +
 				'&uid=' +
 				encodeURIComponent(uidToSend),
-			from: 'Subjer Bot <noreply@subjer.com>',
+			from: 'FeedBe Bot <noreply@feedbe.co>',
 			to: recipient,
 			subject: 'Login Link for ' + global.globalHelper.host
 		},

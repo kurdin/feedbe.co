@@ -3358,7 +3358,7 @@ footer.modal-card-foot {
 
 #top .nav-toggle:hover,
 #top .nav-toggle:active {
-  background-color: #bb4a00;
+  background-color: #333333;
 }
 
 .nav-toggle span {
@@ -3366,7 +3366,7 @@ footer.modal-card-foot {
 }
 
 #top .nav-toggle.is-active span {
-  background-color: #f2d100;
+  background-color: #fff;
 }
 
 #app .nav-toggle {
@@ -3375,7 +3375,7 @@ footer.modal-card-foot {
 
 #top .nav-menu.is-active,
 #top .nav-toggle.is-active {
-  background-color: #bb4a00;
+  background-color: #333333;
 }
 
 #top .nav-toggle {

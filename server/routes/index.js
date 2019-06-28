@@ -37,7 +37,7 @@ app.get(
 );
 
 /* login screen */
-app.get(['/login', '/profile'], csrfProtection, require('../controllers/login-profile.js'));
+app.get(['/login', '/account'], csrfProtection, require('../controllers/account'));
 
 /* logout */
 app.get(

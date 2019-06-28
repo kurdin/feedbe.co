@@ -45,21 +45,21 @@
       </span>
       <div class="nav-right nav-menu top-right-menu">
         <span class="nav-item">
-          <a href="/for-parents">For Parents</a>
+          <a href="/for-parents">For Web Owners</a>
         </span>
         <span class="nav-item">
-          <a href="/for-providers">For Providers</a>
+          <a href="/for-providers">For Users</a>
         </span>
         <span class="nav-item">
           <a href="/our-services">Our Services</a>
         </span>
         <span class="nav-item">
-          <a href="/add" class="button is-primary is-small add-provider">add providers event</a>
+          <a href="/add" class="button is-primary is-small add-provider">provide feedback</a>
         </span>        
 
         {?userEmail}
         <span class="nav-item hint--flex login-item hint--timeout hint--bottom-left" aria-label="{userEmail}">
-          <a href="/profile" class="login logged"><span class="loginIcon">&#0046;</span><span class="loginName">{userName}</span></a>
+          <a href="/account" class="login logged"><span class="loginIcon">&#0046;</span><span class="loginName">{userName}</span></a>
         </span>
         {:else}   
         <span class="nav-item hint--flex login-item hint--timeout hint--bottom-left" aria-label="Passwordless Login">

@@ -1,12 +1,17 @@
 import { _extend } from 'util';
 import React from 'react';
 import { /*renderToStaticMarkup, */ renderToString } from 'react-dom/server';
-import Login from './components/Login';
+// import Login from './components/Login';
 
 global.isClient = false;
 global.isServer = true;
 
+const Login = global.hasSSR ? require('./components/Login').default : null;
+
 module.exports = (props, url, res) => {
+	if (!Login) {
+		return '';
+	}
 	url = props.baseUrl ? url.replace(new RegExp('^' + props.baseUrl), '') : url;
 	const _props = _extend({ isServer: true }, props);
 

@@ -12,6 +12,7 @@ export interface ServerGlobal extends Global {
 	clientSrc: string;
 	DBUsers: object;
 	DB: object;
+	hasSSR: boolean;
 	render: Function;
 	_: Function;
 	globalHelper: GlobalHelper;

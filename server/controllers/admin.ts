@@ -1,6 +1,6 @@
 /* globals DBUsers, globalHelper, render */
 
-import AdminComponent from '@client/apps/admin/Admin.server';
+// import AdminComponent from '@client/apps/admin/Admin.server';
 import { sortBy } from 'lodash';
 // import { _extend } from 'util';
 import util from 'util';
@@ -70,8 +70,10 @@ exports.index = async (req, res) => {
 		}
 	};
 
-	res.locals.AdminComponentHTML = AdminComponent(model.shared.AdminAppInitProps, req.originalUrl, res);
-	if (res.locals.AdminComponentHTML && res.locals.AdminComponentHTML.redirect) return;
+	// res.locals.AdminComponentHTML = AdminComponent(model.shared.AdminAppInitProps, req.originalUrl, res);
+	if (res.locals.AdminComponentHTML && res.locals.AdminComponentHTML.redirect) {
+		return;
+	}
 
 	render(view, model, res);
 };
