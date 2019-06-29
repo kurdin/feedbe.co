@@ -1,0 +1,110 @@
+.is-primary.input:focus,
+.is-primary.textarea:focus,
+.is-primary.is-focused.input,
+.is-primary.is-focused.textarea,
+.is-primary.input:active,
+.is-primary.textarea:active,
+.is-primary.is-active.input,
+.is-primary.is-active.textarea {
+	box-shadow: 0 0 0 0.125em rgba(0, 209, 178, 0.25);
+}
+
+.is-link.input,
+.is-link.textarea {
+	border-color: #3273dc;
+}
+
+.is-link.input:focus,
+.is-link.textarea:focus,
+.is-link.is-focused.input,
+.is-link.is-focused.textarea,
+.is-link.input:active,
+.is-link.textarea:active,
+.is-link.is-active.input,
+.is-link.is-active.textarea {
+	box-shadow: 0 0 0 0.125em rgba(50, 115, 220, 0.25);
+}
+
+.is-info.input,
+.is-info.textarea {
+	border-color: #209cee;
+}
+
+.input:focus,
+.textarea:focus,
+.is-focused.input,
+.is-focused.textarea,
+.input:active,
+.textarea:active,
+.is-active.input,
+.active.input,
+.is-active.textarea,
+.active.textarea {
+	box-shadow: 0 0 0 0.125em rgba(32, 156, 238, 0.2);
+}
+
+.is-info.input:focus,
+.is-info.textarea:focus,
+.is-info.is-focused.input,
+.is-info.is-focused.textarea,
+.is-info.input:active,
+.is-info.textarea:active,
+.is-info.is-active.input,
+.is-info.is-active.textarea {
+	box-shadow: 0 0 0 0.125em rgba(32, 156, 238, 0.2);
+}
+
+.is-success.input,
+.is-success.textarea {
+	border-color: #23d160;
+}
+.correct .input:focus,
+.correct .textarea:focus,
+.correct .is-focused.input,
+.correct .is-focused.textarea,
+.correct .input:active,
+.correct .textarea:active,
+.correct .is-active.input,
+.correct .is-active.textarea,
+.is-success.input:focus,
+.is-success.textarea:focus,
+.is-success.is-focused.input,
+.is-success.is-focused.textarea,
+.is-success.input:active,
+.is-success.textarea:active,
+.is-success.is-active.input,
+.is-success.is-active.textarea {
+	box-shadow: 0 0 0 0.125em rgba(35, 209, 96, 0.2);
+}
+
+.is-warning.input,
+.is-warning.textarea {
+	border-color: #ffdd57;
+}
+
+.is-warning.input:focus,
+.is-warning.textarea:focus,
+.is-warning.is-focused.input,
+.is-warning.is-focused.textarea,
+.is-warning.input:active,
+.is-warning.textarea:active,
+.is-warning.is-active.input,
+.is-warning.is-active.textarea {
+	box-shadow: 0 0 0 0.125em rgba(255, 221, 87, 0.2);
+}
+
+.is-danger.input,
+.is-danger.textarea {
+	border-color: #ff3860;
+}
+
+.is-danger.input:focus,
+.is-danger.textarea:focus,
+.is-danger.is-focused.input,
+.is-danger.is-focused.textarea,
+.is-danger.input:active,
+.is-danger.textarea:active,
+.is-danger.is-active.input,
+.is-danger.is-active.textarea {
+	box-shadow: 0 0 0 0.125em rgba(255, 56, 96, 0.2);
+}

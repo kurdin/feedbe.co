@@ -1,4 +1,8 @@
-/* globals DBUsers */
+/* globals DBUsers service */
+
+import loginQuery from 'query/server/login.graphql.js';
+// import { pingQuery } from 'query/server/ping.graphql';
+// import to from 'flatasync';
 
 const moment = require('moment');
 const passport = require('passport');
@@ -52,7 +56,23 @@ exports.passport = () => {
 	);
 };
 
-exports.userAuthMiddleware = (req, res, next) => {
+exports.userAuthMiddleware = async (req, res, next) => {
+	// console.log('loginQuery', loginQuery);
+	// console.log('pingQuery', pingQuery);
+
+	const userLoginRequest = await service.request(loginQuery, { email: 'skurdin@yahoo.com', password: '1234' });
+	// const [err, userInfo] = await to(userLoginRequest);
+	// console.log('err', err);
+	console.log('userLoginRequest', userLoginRequest);
+
+	// const pingRequest = service.request(pingQuery, { test: 'xxx' }, { token: 'xxx', debug: true });
+	// const [errPing, pingResp] = await to(pingRequest);
+	// console.log('errPing', errPing);
+
+	// if (!errPing) {
+	// 	console.log('pingResp', pingResp);
+	// }
+
 	let successLogin = req.flash('passwordless-success');
 	let failureLogin = req.flash('passwordless');
 	let userLoggedIn = req.flash('userLoggedIn');
@@ -89,8 +109,7 @@ exports.userAuthMiddleware = (req, res, next) => {
 		let email = req.user;
 		let user = DBUsers.users.findOne({ email });
 		let name =
-			(req.session.userLoggedIn && req.session.userLoggedIn.name) ||
-			req.user.substring(0, req.user.lastIndexOf('@'));
+			(req.session.userLoggedIn && req.session.userLoggedIn.name) || req.user.substring(0, req.user.lastIndexOf('@'));
 		let now = moment().format();
 		req.session.userEmail = email;
 		if (user) {

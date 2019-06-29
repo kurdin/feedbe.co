@@ -1,0 +1,15 @@
+{>"layout"/}
+
+{<main}
+{?userEmail}
+	{>"account/user" /}
+{:else}
+	{>"account/login" /}
+{/userEmail}
+{/main}
+{<scripts}
+	<script src="/apps/build/js/login-bundle.js"></script>
+{/scripts}
+{<styles}
+<link rel="stylesheet" type="text/css" href="/apps/build/css/login-bundle.css">
+{/styles}

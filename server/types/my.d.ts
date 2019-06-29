@@ -13,6 +13,7 @@ export interface ServerGlobal extends Global {
 	DBUsers: object;
 	DB: object;
 	hasSSR: boolean;
+	service: Class;
 	render: Function;
 	_: Function;
 	globalHelper: GlobalHelper;

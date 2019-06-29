@@ -1,0 +1,47 @@
+type Person {
+  id: ID
+  firstName: String
+  lastName: String
+  age: Int
+  count: Int
+  address: Address
+  pets: [Animal]
+  movies: [Movie]
+}
+
+type Address {
+  street: String
+  city: String
+  zipCode: String
+}
+
+type Animal {
+  id: ID
+  name: String
+  species: String
+}
+
+type Movie {
+  id: ID
+  name: String
+}
+
+input AnimalInput {
+  name: String
+  species: String
+}
+
+input MovieInput {
+  name: String
+}
+
+type Query {
+  getPersons: [Person]
+  getPersonsCount: Int
+  getPerson(id: ID!): Person
+  # getMovie: [Movie]
+}
+
+type Mutation {
+  createPerson(firstName: String!, lastName: String!, age: Int!, pets: [AnimalInput], movies: [MovieInput]): Person
+}

@@ -1,4 +1,4 @@
-/* globals DBUsers, DB */
+/* globals DBUsers */
 
 const moment = require('moment');
 const { checkOwnerOrAdmin, removeNullKeys } = require('./utils');
@@ -39,8 +39,7 @@ const add = (req, res) => {
 				}
 			});
 		} catch (err) {
-			if (err && err.message.indexOf('Duplicate') !== -1)
-				err.message = `User with email ${form.email} already exists`;
+			if (err && err.message.indexOf('Duplicate') !== -1) err.message = `User with email ${form.email} already exists`;
 			res.status(500).json({ err: err.message });
 		}
 	} else res.boom.unauthorized();
@@ -70,8 +69,7 @@ const update = (req, res) => {
 				}
 			});
 		} catch (err) {
-			if (err && err.message.indexOf('Duplicate') !== -1)
-				err.message = `User with email ${form.email} already exists`;
+			if (err && err.message.indexOf('Duplicate') !== -1) err.message = `User with email ${form.email} already exists`;
 			res.status(500).json({ err: err.message });
 		}
 	} else res.boom.unauthorized();

@@ -12,7 +12,6 @@ let host = null;
 
 function getHost(req, res) {
 	let site = null;
-	console.log('req.params', req.params);
 	if (req.url.indexOf('/--/') === 0) {
 		const url = req.url.split('/--/')[1];
 		const proxyPath = urls.parse(setHttp(url)).pathname;

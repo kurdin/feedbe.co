@@ -1,0 +1,9 @@
+<section class="hero is-dark is-bold">
+	<p class="has-text-right p-a-1">Logged in as <b>{userEmail}</b> <a href='/logout' class=" button is-small is-inverted is-black">logout</a></p>
+	  <div class="container" id="account-app">
+	  	<section class="home-image-loader hero is-dark is-bold" style="min-height: 45vh">
+				<div class="loader">Loading...</div>
+			</section>
+    </div>
+	<p class="has-text-right p-a-1">last login: <i class="hint--timeout hint--bottom-left" aria-label='{@formatDate date=userData.lastLogin/}'>{@timeAgo date=userData.lastLogin /}</i></p>
+</section>

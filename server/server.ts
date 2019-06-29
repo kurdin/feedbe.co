@@ -1,6 +1,7 @@
 /* globals, global */
 import path from 'path';
 import { Err, ServerGlobal } from './types/my.d';
+import GraphQLClient from 'common/graphql-request-client';
 
 console.time('Server startup time');
 
@@ -19,6 +20,12 @@ global.globalHelper = {
 	host: isDev() ? 'http://localhost:8080' : 'https://feedbe.co'
 };
 global.hasSSR = process.env.SSR ? true : global.globalHelper.isDev ? false : true;
+
+global.service = new GraphQLClient('http://localhost:8888/graphql', {
+	headers: {
+		clientType: 'server'
+	}
+});
 
 require('./lib/jsx-require');
 
@@ -136,7 +143,6 @@ if (BUILD) {
 }
 
 // Standard express setup
-app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
@@ -163,6 +169,7 @@ app.use(
 app.enable('trust proxy', 1); // trust first proxy
 
 app.use(express.static(path.join(__dirname, './public')));
+app.use(logger('dev'));
 
 // Passwordless middleware
 

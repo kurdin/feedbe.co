@@ -45,10 +45,13 @@ module.exports = clientSrc => ({
 					'shared/inferno': clientSrc + '/shared',
 					'css/main': clientSrc + '/css',
 					shared: clientSrc + '/shared',
+					common: clientSrc + '/../../common',
+					query: clientSrc + '/../../query',
 					components: clientSrc + '/components'
 				}
 			}
 		],
+		'import-graphql',
 		'@babel/plugin-proposal-object-rest-spread',
 		[
 			'@babel/plugin-transform-runtime',

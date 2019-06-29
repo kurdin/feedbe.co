@@ -1,0 +1,8 @@
+type Pong {
+  response: String!
+  date: String!
+}
+
+type Query {
+  ping: Pong
+}
