@@ -131,6 +131,7 @@ var GraphQLClient = /** @class */ (function () {
                         else {
                             console.error('GraphQL request errors', result.errors);
                             console.error({ query: query, variables: variables });
+                            result.error = true;
                             return [2 /*return*/, result];
                         }
                         return [2 /*return*/];
