@@ -1,7 +1,7 @@
 import express from 'express';
 import { ApolloServer } from 'apollo-server-express';
 import cors from 'cors';
-import knex from './config/db';
+import knex from 'datalayer/config/db';
 import { Model } from 'objection';
 import morgan from 'morgan';
 

@@ -1,4 +1,4 @@
-import { isLoggedIn, isAdmin } from '../../middlewares';
+import { isLoggedIn, isAdmin } from 'common/middlewares';
 
 const permissions = {
 	Query: {

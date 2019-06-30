@@ -1,5 +1,5 @@
 import BaseModel from './BaseModel';
-import { createToken } from '../middlewares/auth';
+import { createToken } from 'common/middlewares';
 import Password from 'objection-password';
 
 const username = {

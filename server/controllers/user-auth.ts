@@ -91,7 +91,7 @@ exports.userAuthMiddleware = async (req, res, next) => {
 	}
 
 	const user = await graphQL.users.findOne({ email: 'skurdin@yahoo.com' });
-	// console.log('user', user);
+	console.log('user2', user);
 
 	if (req.user && !req.session.userEmail) {
 		const email = req.user;

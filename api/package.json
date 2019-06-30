@@ -17,11 +17,6 @@
     "graphql-import": "^0.7.1",
     "graphql-merge-resolvers": "^1.1.11",
     "graphql-middleware": "^3.0.2",
-    "jsonwebtoken": "^8.5.1",
-    "knex": "^0.17.3",
-    "objection": "^1.6.9",
-    "objection-password": "^2.0.0",
-    "sqlite3": "^4.0.4",
     "tslint-config-prettier": "^1.18.0"
   },
   "prettier": {

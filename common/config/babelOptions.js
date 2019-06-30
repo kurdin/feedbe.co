@@ -49,6 +49,7 @@ module.exports = (clientSrc, rootPath) => {
 						components: clientSrc + '/components',
 						common: rootPath + '/common',
 						services: rootPath + '/services',
+						datalayer: rootPath + '/datalayer',
 						queries: rootPath + '/services/queries'
 					}
 				}

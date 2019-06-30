@@ -1,6 +1,6 @@
 import { AuthenticationError } from 'apollo-server-express';
-import User from '../../models/User';
-import * as error from '../../error-messages';
+import User from 'datalayer/models/User';
+import * as error from 'common/error-messages';
 
 const resolvers = {
   Query: {
