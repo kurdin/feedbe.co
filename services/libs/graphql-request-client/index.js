@@ -96,13 +96,16 @@ var GraphQLClient = /** @class */ (function () {
     // }
     GraphQLClient.prototype.request = function (query, variables, options) {
         return __awaiter(this, void 0, void 0, function () {
-            var opt, headers, token, others, body, response, result;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
+            var opt, headers, _a, adminToken, _b, token, others, body, response, result, errors;
+            return __generator(this, function (_c) {
+                switch (_c.label) {
                     case 0:
                         opt = __assign({}, this.options, options);
-                        headers = opt.headers, token = opt.token, others = __rest(opt, ["headers", "token"]);
-                        if (token) {
+                        headers = opt.headers, _a = opt.adminToken, adminToken = _a === void 0 ? null : _a, _b = opt.token, token = _b === void 0 ? null : _b, others = __rest(opt, ["headers", "adminToken", "token"]);
+                        if (adminToken) {
+                            headers.AdminAccessToken = "Bearer: " + adminToken;
+                        }
+                        else if (token) {
                             headers.Authorization = "Bearer: " + token;
                         }
                         if (others.debug) {
@@ -113,7 +116,7 @@ var GraphQLClient = /** @class */ (function () {
                             if (token) {
                                 console.log('   \nauth:', "\n { \"Authorization\": \"" + headers.Authorization + "\" }");
                             }
-                            console.log('\x1b[1m', '=== DEBUG QUERY TO GRAPHQL ===', '\x1b[0m');
+                            console.log('\x1b[1m', '=== DEBUG QUERY TO GRAPHQL ENDS ===', '\x1b[0m');
                         }
                         body = JSON.stringify({
                             query: typeof query === 'string' ? query : printer_1.print(query),
@@ -121,17 +124,29 @@ var GraphQLClient = /** @class */ (function () {
                         });
                         return [4 /*yield*/, fetch(this.url, __assign({ method: 'POST', headers: Object.assign({ 'Content-Type': 'application/json' }, headers), body: body }, others))];
                     case 1:
-                        response = _a.sent();
+                        response = _c.sent();
                         return [4 /*yield*/, getResult(response)];
                     case 2:
-                        result = _a.sent();
+                        result = _c.sent();
                         if (response.ok && !result.errors && result.data) {
                             return [2 /*return*/, result.data];
                         }
                         else {
-                            console.error('GraphQL request errors', result.errors);
-                            console.error({ query: query, variables: variables });
-                            result.error = true;
+                            if (result.errors && result.errors.length) {
+                                errors = result.errors.map(function (err) {
+                                    err.code = err.extensions.code;
+                                    return err;
+                                });
+                                if (variables.password) {
+                                    variables.password = '___HIDDEN___';
+                                }
+                                console.log('\x1b[1m', '=== GraphQL ERRORS ===', '\x1b[0m', errors);
+                                console.log('query:', '\x1b[32m\n', query, '\x1b[0m');
+                                console.log('variables:', variables);
+                                console.log('\x1b[1m', '=== GraphQL ERRORS END ===', '\x1b[0m');
+                                result.error = true;
+                                result.errors = errors;
+                            }
                             return [2 /*return*/, result];
                         }
                         return [2 /*return*/];

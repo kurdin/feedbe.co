@@ -5,7 +5,6 @@ import * as error from '../../error-messages';
 const resolvers = {
   Query: {
     me: async (_, __, { user }) => {
-      console.log('user', user);
       return await User.query().findById(user.id);
     },
     getUsers: async () => {
@@ -13,13 +12,19 @@ const resolvers = {
     },
     getUser: async (_, args) => {
       return await User.query().findById(args.id);
+    },
+    findUserByEmail: async (_, args, { isAdmin }) => {
+      if (!isAdmin) {
+        throw new AuthenticationError(error.auth.adminOnly);
+      }
+      return await User.query().findOne({ email: args.email });
     }
   },
   Mutation: {
     signup: async (_, args) => {
       try {
         if (!args.email || !args.password) {
-          throw new AuthenticationError(error.signup.invalidEmailOrPassword);
+          throw new Error(error.signup.invalidEmailOrPassword);
         }
 
         const isUniqueUser = await User.query().findOne({ email: args.email });

@@ -1,16 +1,23 @@
 /* globals, global */
 import path from 'path';
 import { Err, ServerGlobal } from './types/my.d';
-import GraphQLClient from 'common/graphql-request-client';
+import { UsersService } from 'services';
+import GraphQLClient from 'services/libs/graphql-request-client';
+import { superAdminAccessToken } from 'common/config/authToken';
 
 console.time('Server startup time');
-
-declare const global: ServerGlobal;
 
 const clientSrc = path.resolve(__dirname, '../client/src');
 const clientSrcProduction = path.resolve(__dirname, '../client/src');
 
+declare const global: ServerGlobal;
+
+global.graphQL = {
+	users: new UsersService(superAdminAccessToken)
+};
+
 global.clientSrc = isDev() ? clientSrc : clientSrcProduction;
+global.rootPath = require('path').resolve(__dirname, '../');
 global.appRoot = require('path').resolve(__dirname);
 global.render = require('./lib/render');
 global._ = require('lodash');

@@ -2,7 +2,7 @@
 const express = require('express');
 const app = express.Router();
 const passwordless = require('passwordless');
-const admins = require('../config/default').admins;
+const admins = require('common/config/application').admins;
 const admin = require('../controllers/admin');
 const multer = require('multer');
 

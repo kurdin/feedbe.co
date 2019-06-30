@@ -5,15 +5,15 @@ const permissions = {
 		me: isLoggedIn,
 		getUsers: isLoggedIn,
 		getUser: isLoggedIn
-	},
-	User: isLoggedIn
+	}
 };
 
 const role = {
 	Query: {
 		me: isAdmin,
 		getUsers: isAdmin,
-		getUser: isAdmin
+		getUser: isAdmin,
+		findUserByEmail: isAdmin
 	},
 	User: isAdmin
 };

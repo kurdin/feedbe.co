@@ -1,9 +1,9 @@
-/* global clientSrc */
+/* global clientSrc, rootPath */
 
 const pirates = require('pirates');
 const babel = require('@babel/core');
 
-const babelOptions = require('../config/babelOptionsServer')(clientSrc);
+const babelOptions = require('../../common/config/babelOptions')(clientSrc, rootPath);
 
 const loaders = {
 	babel: function(source) {

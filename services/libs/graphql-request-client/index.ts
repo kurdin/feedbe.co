@@ -1,4 +1,4 @@
-import { ClientError, Headers as HttpHeaders, Options, Variables } from './types';
+import { Headers as HttpHeaders, Options, Variables } from './types';
 import 'cross-fetch/polyfill';
 
 import { print } from 'graphql/language/printer';
@@ -49,9 +49,11 @@ export default class GraphQLClient {
 
   async request<T extends any>(query: string | object, variables?: Variables, options?: object): Promise<T> {
     const opt = { ...this.options, ...options };
-    const { headers, token, ...others } = opt;
+    const { headers, adminToken = null, token = null, ...others } = opt;
 
-    if (token) {
+    if (adminToken) {
+      headers.AdminAccessToken = `Bearer: ${adminToken}`;
+    } else if (token) {
       headers.Authorization = `Bearer: ${token}`;
     }
 
@@ -78,7 +80,7 @@ export default class GraphQLClient {
         );
       }
 
-      console.log('\x1b[1m', '=== DEBUG QUERY TO GRAPHQL ===', '\x1b[0m');
+      console.log('\x1b[1m', '=== DEBUG QUERY TO GRAPHQL ENDS ===', '\x1b[0m');
     }
 
     const body = JSON.stringify({
@@ -98,9 +100,21 @@ export default class GraphQLClient {
     if (response.ok && !result.errors && result.data) {
       return result.data;
     } else {
-      console.error('GraphQL request errors', result.errors);
-      console.error({ query, variables });
-      result.error = true;
+      if (result.errors && result.errors.length) {
+        const errors = result.errors.map(err => {
+          err.code = err.extensions.code;
+          return err;
+        });
+        if (variables.password) {
+          variables.password = '___HIDDEN___';
+        }
+        console.log('\x1b[1m', '=== GraphQL ERRORS ===', '\x1b[0m', errors);
+        console.log('query:', '\x1b[32m\n', query, '\x1b[0m');
+        console.log('variables:', variables);
+        console.log('\x1b[1m', '=== GraphQL ERRORS END ===', '\x1b[0m');
+        result.error = true;
+        result.errors = errors;
+      }
       return result;
     }
   }

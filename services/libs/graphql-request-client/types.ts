@@ -15,6 +15,7 @@ export interface Options {
   headers?: DynamicHeaders;
   debug?: boolean;
   token?: string;
+  adminToken?: string;
   mode?: RequestInit['mode'];
   credentials?: RequestInit['credentials'];
   cache?: RequestInit['cache'];

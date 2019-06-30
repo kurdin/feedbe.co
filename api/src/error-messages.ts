@@ -9,5 +9,6 @@ export const login = {
 };
 
 export const auth = {
+	adminOnly: 'This request for Admins Only',
 	failed: 'Failed to authenticate'
 };

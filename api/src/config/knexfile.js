@@ -6,7 +6,7 @@ module.exports = {
     debug: true,
     useNullAsDefault: true,
     connection: {
-      filename: path.join(__dirname, '../db-local/example.db')
+      filename: path.join(__dirname, '../db-local/feedbe.db')
     },
     pool: {
       afterCreate: (conn, cb) => {

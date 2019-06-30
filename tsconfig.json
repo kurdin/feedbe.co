@@ -18,7 +18,7 @@
 		"paths": {
 			"@client/*": ["../client/src/*"]
 		},
-		"include": ["../client/src/*"],
+		"include": ["./client/src/*", "./services/*", "./datalayer/*"],
 		"exclude": ["node_modules", "**/*.spec.ts"],
 		"baseUrl": "./",
 		"skipLibCheck": true,

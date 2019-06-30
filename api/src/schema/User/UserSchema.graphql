@@ -17,6 +17,7 @@ type Auth {
 type Query {
   me: User
   getUsers: [User]
+  findUserByEmail(email: String!): User
   getUser(id: ID!): User
 }
 

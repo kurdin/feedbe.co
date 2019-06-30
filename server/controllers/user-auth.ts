@@ -1,8 +1,8 @@
-/* globals DBUsers service */
+/* globals, DBUsers, graphQL */
 
-import loginQuery from 'query/server/login.graphql.js';
-// import { pingQuery } from 'query/server/ping.graphql';
-// import to from 'flatasync';
+// import loginQuery from 'query/server/login.graphql.js';
+import { twitterAuth, facebookAuth, googleAuth } from '../config/socialAuth';
+import { GraphQLServiceInterface } from '../services/index';
 
 const moment = require('moment');
 const passport = require('passport');
@@ -10,16 +10,17 @@ const TwitterTokenStrategy = require('passport-twitter-token');
 const FacebookTokenStrategy = require('passport-facebook-token');
 const GoogleTokenStrategy = require('passport-google-token').Strategy;
 
-const config = require('../config/auth');
-const admins = require('../config/default').admins;
+const admins = require('common/config/application').admins;
+
+declare const graphQL: GraphQLServiceInterface;
 
 exports.passport = () => {
 	passport.use(
 		new TwitterTokenStrategy(
 			{
-				consumerKey: config.twitterAuth.consumerKey,
-				consumerSecret: config.twitterAuth.consumerSecret,
-				callbackURL: config.twitterAuth.callbackURL,
+				consumerKey: twitterAuth.consumerKey,
+				consumerSecret: twitterAuth.consumerSecret,
+				callbackURL: twitterAuth.callbackURL,
 				includeEmail: true
 			},
 			function(token, tokenSecret, profile, done) {
@@ -32,8 +33,8 @@ exports.passport = () => {
 	passport.use(
 		new FacebookTokenStrategy(
 			{
-				clientID: config.facebookAuth.clientID,
-				clientSecret: config.facebookAuth.clientSecret
+				clientID: facebookAuth.clientID,
+				clientSecret: facebookAuth.clientSecret
 			},
 			function(accessToken, refreshToken, profile, done) {
 				const user = { name: profile.displayName, email: profile.emails[0].value };
@@ -45,8 +46,8 @@ exports.passport = () => {
 	passport.use(
 		new GoogleTokenStrategy(
 			{
-				clientID: config.googleAuth.clientID,
-				clientSecret: config.googleAuth.clientSecret
+				clientID: googleAuth.clientID,
+				clientSecret: googleAuth.clientSecret
 			},
 			function(accessToken, refreshToken, profile, done) {
 				const user = { name: profile.displayName, email: profile.emails[0].value };
@@ -57,27 +58,11 @@ exports.passport = () => {
 };
 
 exports.userAuthMiddleware = async (req, res, next) => {
-	// console.log('loginQuery', loginQuery);
-	// console.log('pingQuery', pingQuery);
-
-	const userLoginRequest = await service.request(loginQuery, { email: 'skurdin@yahoo.com', password: '1234' });
-	// const [err, userInfo] = await to(userLoginRequest);
-	// console.log('err', err);
-	console.log('userLoginRequest', userLoginRequest);
-
-	// const pingRequest = service.request(pingQuery, { test: 'xxx' }, { token: 'xxx', debug: true });
-	// const [errPing, pingResp] = await to(pingRequest);
-	// console.log('errPing', errPing);
-
-	// if (!errPing) {
-	// 	console.log('pingResp', pingResp);
-	// }
-
-	let successLogin = req.flash('passwordless-success');
-	let failureLogin = req.flash('passwordless');
-	let userLoggedIn = req.flash('userLoggedIn');
-	let successLogout = req.flash('successLogout');
-	let success = req.flash('success');
+	const successLogin = req.flash('passwordless-success');
+	const failureLogin = req.flash('passwordless');
+	const userLoggedIn = req.flash('userLoggedIn');
+	const successLogout = req.flash('successLogout');
+	const success = req.flash('success');
 
 	if (req.session && successLogin && userLoggedIn && userLoggedIn.email) {
 		req.session.userLoggedIn = userLoggedIn;
@@ -105,16 +90,19 @@ exports.userAuthMiddleware = async (req, res, next) => {
 		delete req.session.userIsAdmin;
 	}
 
+	const user = await graphQL.users.findOne({ email: 'skurdin@yahoo.com' });
+	// console.log('user', user);
+
 	if (req.user && !req.session.userEmail) {
-		let email = req.user;
-		let user = DBUsers.users.findOne({ email });
-		let name =
+		const email = req.user;
+
+		const name =
 			(req.session.userLoggedIn && req.session.userLoggedIn.name) || req.user.substring(0, req.user.lastIndexOf('@'));
-		let now = moment().format();
+		const now = moment().format();
 		req.session.userEmail = email;
 		if (user) {
-			const { name, created, isProvider, favorites, active, lastLogin, $loki: id } = user;
-			req.session.userName = name;
+			const { username, created, isProvider, favorites, active, lastLogin, $loki: id } = user;
+			req.session.userName = username || name;
 			req.session.userIsAdmin = admins.includes(req.user) ? true : false;
 			req.session.userData = {
 				id,
@@ -153,5 +141,7 @@ exports.userAuthMiddleware = async (req, res, next) => {
 	if (req.query.token) {
 		res.redirect(req.path);
 		return;
-	} else next();
+	} else {
+		next();
+	}
 };

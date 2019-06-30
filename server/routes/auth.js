@@ -1,7 +1,7 @@
 /*eslint camelcase: 0*/
+import { twitterAuth } from '../config/socialAuth';
 const express = require('express');
 const passport = require('passport');
-const config = require('../config/auth');
 const request = require('request');
 
 require('../controllers/user-auth').passport();
@@ -24,9 +24,9 @@ app.post('/twitter/reverse', (req, res) => {
         {
             url: 'https://api.twitter.com/oauth/request_token',
             oauth: {
-                oauth_callback: encodeURIComponent(config.twitterAuth.callbackURL),
-                consumer_key: config.twitterAuth.consumerKey,
-                consumer_secret: config.twitterAuth.consumerSecret
+                oauth_callback: encodeURIComponent(twitterAuth.callbackURL),
+                consumer_key: twitterAuth.consumerKey,
+                consumer_secret: twitterAuth.consumerSecret
             }
         },
         (err, r, body) => {
@@ -50,8 +50,8 @@ app.post(
             {
                 url: `https://api.twitter.com/oauth/access_token?oauth_verifier`,
                 oauth: {
-                    consumer_key: config.twitterAuth.consumerKey,
-                    consumer_secret: config.twitterAuth.consumerSecret,
+                    consumer_key: twitterAuth.consumerKey,
+                    consumer_secret: twitterAuth.consumerSecret,
                     token: req.query.oauth_token
                 },
                 form: { oauth_verifier: req.query.oauth_verifier }
@@ -76,11 +76,7 @@ app.post(
     sendResponseJson
 );
 
-app.post(
-    '/facebook',
-    passport.authenticate('facebook-token', { session: false }),
-    sendResponseJson
-);
+app.post('/facebook', passport.authenticate('facebook-token', { session: false }), sendResponseJson);
 
 app.post('/google', passport.authenticate('google-token', { session: false }), sendResponseJson);
 

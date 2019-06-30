@@ -7,6 +7,7 @@ import morgan from 'morgan';
 
 import schema from './schema';
 import context from './schema/context';
+import errorResolver from './error-resolver';
 import { API_URL, PORT } from './config/server-config';
 
 const { NODE_ENV } = process.env;
@@ -32,6 +33,7 @@ const playground: object | boolean = isDev
 	: false;
 
 const server = new ApolloServer({
+	formatError: errorResolver,
 	playground,
 	schema,
 	context

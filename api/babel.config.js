@@ -1,3 +1,4 @@
-const babelOptions = require('../server/config/babelOptionsServer');
+const babelOptions = require('../common/config/babelOptions');
 const clientSrc = require('path').resolve(__dirname + '/../client/src');
-module.exports = babelOptions(clientSrc);
+const rootPath = require('path').resolve(__dirname);
+module.exports = babelOptions(clientSrc, rootPath);

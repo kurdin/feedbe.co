@@ -1,5 +1,5 @@
 import { importSchema } from 'graphql-import';
-import { mergeSchemas, makeExecutableSchema } from 'graphql-tools';
+import { mergeSchemas, makeExecutableSchema } from 'apollo-server';
 import { applyMiddleware } from 'graphql-middleware';
 
 import * as path from 'path';

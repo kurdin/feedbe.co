@@ -2,6 +2,7 @@ import jwt from 'jsonwebtoken';
 import { ForbiddenError } from 'apollo-server-express';
 
 import { JWT_SECRET_KEY, JWT_EXPIRED } from '../config/server-config';
+import { superAdminAccessToken } from '../../../common/config/authToken';
 import * as error from '../error-messages';
 
 export const isLoggedIn = async (resolve, parent, args, context, info) => {
@@ -14,7 +15,8 @@ export const isLoggedIn = async (resolve, parent, args, context, info) => {
 };
 
 export const isAdmin = async (resolve, parent, args, context, info) => {
-	context.isAdmin = false;
+	const isAdminTokenValid = context.adminAccessToken === `Bearer: ${superAdminAccessToken}` ? true : false;
+	context.isAdmin = isAdminTokenValid;
 	return await resolve(parent, args, context, info);
 };
 

@@ -9,11 +9,13 @@ export type GlobalHelper = {
 
 export interface ServerGlobal extends Global {
 	appRoot: string;
+	rootPath: string;
 	clientSrc: string;
 	DBUsers: object;
 	DB: object;
 	hasSSR: boolean;
 	service: Class;
+	graphQL: object;
 	render: Function;
 	_: Function;
 	globalHelper: GlobalHelper;
