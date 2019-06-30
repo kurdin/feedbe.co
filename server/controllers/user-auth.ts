@@ -1,8 +1,9 @@
 /* globals, DBUsers, graphQL */
 
-// import loginQuery from 'query/server/login.graphql.js';
 import { twitterAuth, facebookAuth, googleAuth } from '../config/socialAuth';
-import { GraphQLServiceInterface } from '../services/index';
+// import { GraphQLServiceInterface } from 'services/index';
+import User from 'datalayer/models/User';
+// import * as error from 'common/error-messages';
 
 const moment = require('moment');
 const passport = require('passport');
@@ -12,7 +13,7 @@ const GoogleTokenStrategy = require('passport-google-token').Strategy;
 
 const admins = require('common/config/application').admins;
 
-declare const graphQL: GraphQLServiceInterface;
+// declare const graphQL: GraphQLServiceInterface;
 
 exports.passport = () => {
 	passport.use(
@@ -23,7 +24,7 @@ exports.passport = () => {
 				callbackURL: twitterAuth.callbackURL,
 				includeEmail: true
 			},
-			function(token, tokenSecret, profile, done) {
+			function(_, __, profile, done) {
 				const user = { name: profile.displayName, email: profile.emails[0].value };
 				done(null, user);
 			}
@@ -36,7 +37,7 @@ exports.passport = () => {
 				clientID: facebookAuth.clientID,
 				clientSecret: facebookAuth.clientSecret
 			},
-			function(accessToken, refreshToken, profile, done) {
+			function(_, __, profile, done) {
 				const user = { name: profile.displayName, email: profile.emails[0].value };
 				done(null, user);
 			}
@@ -49,7 +50,7 @@ exports.passport = () => {
 				clientID: googleAuth.clientID,
 				clientSecret: googleAuth.clientSecret
 			},
-			function(accessToken, refreshToken, profile, done) {
+			function(_, __, profile, done) {
 				const user = { name: profile.displayName, email: profile.emails[0].value };
 				done(null, user);
 			}
@@ -86,12 +87,10 @@ exports.userAuthMiddleware = async (req, res, next) => {
 		delete req.session.userEmail;
 		delete req.session.userName;
 		delete req.session.userData;
+		delete req.session.userToken;
 		delete req.session.userLoggedI;
 		delete req.session.userIsAdmin;
 	}
-
-	const user = await graphQL.users.findOne({ email: 'skurdin@yahoo.com' });
-	console.log('user2', user);
 
 	if (req.user && !req.session.userEmail) {
 		const email = req.user;
@@ -100,28 +99,32 @@ exports.userAuthMiddleware = async (req, res, next) => {
 			(req.session.userLoggedIn && req.session.userLoggedIn.name) || req.user.substring(0, req.user.lastIndexOf('@'));
 		const now = moment().format();
 		req.session.userEmail = email;
-		if (user) {
-			const { username, created, isProvider, favorites, active, lastLogin, $loki: id } = user;
+
+		const user = await User.query().findOne({ email });
+
+		if (user && user.id) {
+			const { username, createdAt, settings, isActive, lastLogin, id } = user;
 			req.session.userName = username || name;
 			req.session.userIsAdmin = admins.includes(req.user) ? true : false;
+			req.session.userToken = user.token;
 			req.session.userData = {
 				id,
-				active,
-				created,
-				isProvider,
-				favorites,
+				active: isActive ? true : false,
+				createdAt,
+				settings,
 				lastLogin
 			};
-			user.lastLogin = now;
-			DBUsers.users.update(user);
+			await user.$query().patch({
+				lastLogin: now
+			});
 		} else {
-			// lets create new user
-			DBUsers.users.insert({ email, name, active: true, created: now, favorites: null });
+			// lets create new user and login
+
+			const newUser = await User.query().insert({ email, lastLogin: now, username: name, createdAt: now });
 			req.session.userName = name;
+			req.session.userToken = newUser.token;
 			req.session.userData = {
 				created: now,
-				isProvider: null,
-				favorites: null,
 				lastLogin: now
 			};
 		}
@@ -134,6 +137,7 @@ exports.userAuthMiddleware = async (req, res, next) => {
 		res.locals.userIsAdmin = req.session.userIsAdmin;
 		res.locals.shared.userName = req.session.userName;
 		res.locals.shared.userData = req.session.userData;
+		res.locals.shared.userToken = req.session.userToken;
 		res.locals.shared.userEmail = req.session.userEmail;
 		res.locals.shared.userIsAdmin = req.session.userIsAdmin;
 	}

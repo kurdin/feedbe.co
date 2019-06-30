@@ -4,8 +4,12 @@ import { Err, ServerGlobal } from './types/my.d';
 import { UsersService } from 'services';
 import GraphQLClient from 'services/libs/graphql-request-client';
 import { superAdminAccessToken } from 'common/config/authToken';
+import knex from 'datalayer/config/db';
+import { Model } from 'objection';
 
 console.time('Server startup time');
+
+Model.knex(knex);
 
 const clientSrc = path.resolve(__dirname, '../client/src');
 const clientSrcProduction = path.resolve(__dirname, '../client/src');
@@ -79,6 +83,9 @@ const ViewOptions = {
 		'dustjs-helpers'
 	]
 };
+
+app.use(express.static(path.join(__dirname, './public')));
+app.use(logger('dev'));
 
 app.use(
 	(_req, res, next): void => {
@@ -154,6 +161,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 
+app.enable('trust proxy', 1); // trust first proxy
 app.use(
 	expressSession({
 		secret: '99SGGEESSX!X!@@@3!',
@@ -161,7 +169,8 @@ app.use(
 		resave: false,
 		proxy: true,
 		cookie: {
-			secure: false
+			secure: false,
+			httpOnly: true
 		},
 		store: new RedisStore({ ttl: 432000 })
 	})
@@ -172,11 +181,6 @@ app.use(
 		locals: 'flash'
 	})
 );
-
-app.enable('trust proxy', 1); // trust first proxy
-
-app.use(express.static(path.join(__dirname, './public')));
-app.use(logger('dev'));
 
 // Passwordless middleware
 

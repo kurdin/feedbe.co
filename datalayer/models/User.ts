@@ -1,6 +1,6 @@
 import BaseModel from './BaseModel';
 import { createToken } from 'common/middlewares';
-import Password from 'objection-password';
+import Password from 'datalayer/libs/objection-password';
 
 const username = {
   type: 'string',
@@ -19,7 +19,7 @@ const properties = {
   password
 };
 
-export default class User extends Password()(BaseModel) {
+export default class User extends Password({ allowEmptyPassword: true })(BaseModel) {
   static tableName = 'users';
 
   readonly id!: string;
