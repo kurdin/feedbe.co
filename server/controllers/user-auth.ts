@@ -1,9 +1,7 @@
-/* globals, DBUsers, graphQL */
+/* globals, DBUsers */
 
 import { twitterAuth, facebookAuth, googleAuth } from '../config/socialAuth';
-// import { GraphQLServiceInterface } from 'services/index';
 import User from 'datalayer/models/User';
-// import * as error from 'common/error-messages';
 
 const moment = require('moment');
 const passport = require('passport');

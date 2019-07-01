@@ -1,9 +1,6 @@
 /* globals DB */
 
 import { isLoggedIn } from 'common/middlewares/server';
-import { loginController } from '../controllers/login';
-import { accountController } from '../controllers/account';
-
 const express = require('express');
 const app = express.Router();
 const passwordless = require('passwordless');
@@ -40,10 +37,9 @@ app.get(
 	}
 );
 
-// console.log('loginController', loginController);
 /* login account screen */
-app.get('/account', csrfProtection, isLoggedIn, accountController);
-app.get('/login', csrfProtection, loginController);
+app.get('/account', csrfProtection, require('../controllers/account'));
+app.get('/login', csrfProtection, require('../controllers/login'));
 
 /* logout */
 app.get(
