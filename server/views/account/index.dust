@@ -1,15 +1,11 @@
 {>"layout"/}
 
 {<main}
-{?userEmail}
-	{>"account/user" /}
-{:else}
-	{>"account/login" /}
-{/userEmail}
+	{>"account/account-app" /}
 {/main}
 {<scripts}
-	<script src="/apps/build/js/login-bundle.js"></script>
+	<script src="/apps/build/js/account-bundle.js"></script>
 {/scripts}
 {<styles}
-<link rel="stylesheet" type="text/css" href="/apps/build/css/login-bundle.css">
+<link rel="stylesheet" type="text/css" href="/apps/build/css/account-bundle.css">
 {/styles}

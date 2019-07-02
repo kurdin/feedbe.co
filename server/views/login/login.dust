@@ -1,9 +1,0 @@
-{?hasSSR}
-	<div id="login-app">{LoginComponentHTML|s}</div>
-{:else}
-	<div id="login-app">
-		<section class="home-image-loader hero is-dark is-bold" style="min-height: 200px">
-			<div class="loader">Loading...</div>
-		</section>
-	</div>
-{/hasSSR}

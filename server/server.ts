@@ -6,6 +6,7 @@ import GraphQLClient from 'services/libs/graphql-request-client';
 import { superAdminAccessToken } from 'common/config/authToken';
 import knex from 'datalayer/config/db';
 import { Model } from 'objection';
+import { render } from './lib/render';
 
 console.time('Server startup time');
 
@@ -23,7 +24,7 @@ global.graphQL = {
 global.clientSrc = isDev() ? clientSrc : clientSrcProduction;
 global.rootPath = require('path').resolve(__dirname, '../');
 global.appRoot = require('path').resolve(__dirname);
-global.render = require('./lib/render');
+global.render = render;
 global._ = require('lodash');
 global.globalHelper = {
 	isDev: isDev(),
@@ -58,6 +59,19 @@ const routes = require('./routes/index');
 const flash = require('./lib/req-flash');
 const { loadDb, loadUsersDb } = require('./lib/db');
 const app = express();
+
+app.use(helmet());
+app.use(
+	helmet.hidePoweredBy({
+		setTo: 'PHP 4.2.0'
+	})
+);
+
+app.use(
+	helmet.frameguard({
+		action: 'deny'
+	})
+);
 
 const yourEmail = 'sergey@webcorrector.co';
 const yourPwd = '!Makaveli2Pac';
@@ -97,19 +111,6 @@ app.use(
 		// res.locals.isSSR = true;
 		next();
 	}
-);
-
-app.use(helmet());
-app.use(
-	helmet.hidePoweredBy({
-		setTo: 'PHP 4.2.0'
-	})
-);
-
-app.use(
-	helmet.frameguard({
-		action: 'deny'
-	})
 );
 
 app.use(boom());

@@ -1,9 +1,12 @@
-declare const clientSrc: string;
-declare const render: Function;
+import { clientSrc, render } from '../types';
 
 const LoginComponent = require(clientSrc + '/apps/login/server');
 
 export const loginController = (req, res) => {
+	if (req.isAuthenticated()) {
+		return res.redirect('/account');
+	}
+
 	const LoginComponentHTML = LoginComponent({ origin: req.query.origin }, req.originalUrl, res);
 
 	if (LoginComponentHTML && LoginComponentHTML.redirect) {

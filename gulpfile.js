@@ -46,7 +46,10 @@ function nodemonServer(cb) {
 			'./server/routes',
 			'./server/models',
 			'./server/views',
-			'./server/pages'
+			'./server/pages',
+			'./datalayer/models',
+			'./services',
+			'./common/'
 		],
 
 		// ignore: [
@@ -56,7 +59,7 @@ function nodemonServer(cb) {
 		env: {
 			NODE_ENV: 'development'
 		},
-		ext: 'html dust js ts tsx jsx'
+		ext: 'html dust js ts tsx jsx graphql'
 	})
 		.on('change')
 		.on('start', function() {
@@ -78,7 +81,7 @@ function nodemonServerApi(cb) {
 	let started = false;
 	nodemon({
 		script: './api/index.js',
-		watch: ['./api/src'],
+		watch: ['./api/src', './datalayer/models', './common'],
 		// ignore: [
 		//          'apps/src',
 		//          'node_modules'
@@ -86,7 +89,7 @@ function nodemonServerApi(cb) {
 		env: {
 			NODE_ENV: 'development'
 		},
-		ext: 'js ts'
+		ext: 'js ts graphql'
 	})
 		.on('change')
 		.on('start', function() {

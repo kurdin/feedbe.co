@@ -1,8 +1,6 @@
 // const CacheRedis = require('cacheman-redis');
 // const cache = new CacheRedis({ port: null, host: null });
-
-declare const clientSrc: string;
-declare const render: Function;
+import { clientSrc, render } from '../types';
 
 const LoginComponent = require(clientSrc + '/apps/login/server');
 

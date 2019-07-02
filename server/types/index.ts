@@ -1,1 +1,2 @@
-export * from './my.d.ts';
+export * from './my.d';
+export * from './globals';

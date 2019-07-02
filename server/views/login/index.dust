@@ -1,7 +1,7 @@
 {>"layout"/}
 
 {<main}
-	{>"account/login" /}
+	{>"login/login-app" /}
 {/main}
 {<scripts}
 	<script src="/apps/build/js/login-bundle.js"></script>

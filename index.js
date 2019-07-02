@@ -3,7 +3,7 @@ const rootPath = path.join(__dirname, './');
 
 require('@babel/register')({
 	root: rootPath,
-	ignore: [/node_modules/, /lib/],
+	ignore: [/node_modules/],
 	only: [rootPath],
 	extensions: ['.js', '.jsx', '.ts', '.tsx'],
 	cache: true
