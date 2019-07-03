@@ -1,10 +1,13 @@
 /*eslint camelcase: 0*/
-import { twitterAuth } from '../config/socialAuth';
+
+import { twitterAuth } from 'common/config/socialAuth';
+import { passportAuth } from 'common/middlewares/server/passport-auth';
+
 const express = require('express');
 const passport = require('passport');
 const request = require('request');
 
-require('../controllers/user-auth').passport();
+passportAuth();
 
 const app = express.Router();
 

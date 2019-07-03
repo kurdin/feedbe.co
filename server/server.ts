@@ -7,6 +7,7 @@ import { superAdminAccessToken } from 'common/config/authToken';
 import knex from 'datalayer/config/db';
 import { Model } from 'objection';
 import { render } from './lib/render';
+import { userSessionMiddleware } from 'common/middlewares/server';
 
 console.time('Server startup time');
 
@@ -194,7 +195,17 @@ app.use(
 	})
 );
 
-app.use(require('./controllers/user-auth').userAuthMiddleware);
+// page render performace time if speedtest param in url
+app.use(
+	(req, res, next): void => {
+		if (req.query.speedtest != null) {
+			res.locals.renderStartTime = Date.now();
+		}
+		next();
+	}
+);
+
+app.use(userSessionMiddleware);
 
 app.use('/', routes);
 

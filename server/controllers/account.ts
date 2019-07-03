@@ -1,28 +1,15 @@
 // const CacheRedis = require('cacheman-redis');
 // const cache = new CacheRedis({ port: null, host: null });
-import { clientSrc, render } from '../types';
+import { render } from '../types';
+import { User } from 'datalayer/models';
 
-const LoginComponent = require(clientSrc + '/apps/login/server');
-
-export const accountController = (req, res) => {
-	let userProviders;
-
-	if (req.user && req.session.userData && req.session.userData.id) {
-		// userProviders = DB.providers.find({ userId: req.session.userData.id });
-	}
-
-	const LoginComponentHTML = LoginComponent({ origin: req.query.origin }, req.originalUrl, res);
-
-	if (LoginComponentHTML && LoginComponentHTML.redirect) {
-		return;
-	}
-
-	res.locals.LoginComponentHTML = LoginComponentHTML;
+export const accountController = async (req, res) => {
+	const user = await User.query().findById(req.session.userId);
 
 	const model = {
 		shared: {
-			origin: req.query.origin,
-			userProviders
+			user,
+			origin: req.query.origin
 		}
 	};
 

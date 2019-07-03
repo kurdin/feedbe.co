@@ -1,6 +1,9 @@
-/* globals DB */
+/* globals */
 
 import { isLoggedIn } from 'common/middlewares/server';
+import { loginController } from '../controllers/login';
+import { accountController } from '../controllers/account';
+
 const express = require('express');
 const app = express.Router();
 const passwordless = require('passwordless');
@@ -37,9 +40,10 @@ app.get(
 	}
 );
 
+// console.log('loginController', loginController);
 /* login account screen */
-app.get('/account', csrfProtection, require('../controllers/account'));
-app.get('/login', csrfProtection, require('../controllers/login'));
+app.get('/account', csrfProtection, isLoggedIn, accountController);
+app.get('/login', csrfProtection, loginController);
 
 /* logout */
 app.get(
@@ -58,12 +62,16 @@ app.get(
 	},
 	passwordless.logout(),
 	(req, res) => {
-		if (res.locals.wasLogged) req.flash('successLogout', 'successLogout');
+		if (res.locals.wasLogged) {
+			req.flash('successLogout', 'successLogout');
+		}
 		if (req.session && req.session.destroy) {
 			req.session.destroy(() => {
 				res.redirect('/login');
 			});
-		} else res.redirect('/login');
+		} else {
+			res.redirect('/login');
+		}
 	}
 );
 

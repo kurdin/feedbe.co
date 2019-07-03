@@ -1,62 +1,11 @@
 /* globals, DBUsers */
 
-import { twitterAuth, facebookAuth, googleAuth } from '../config/socialAuth';
-import User from 'datalayer/models/User';
+import { User } from 'datalayer/models/User';
 
 const moment = require('moment');
-const passport = require('passport');
-const TwitterTokenStrategy = require('passport-twitter-token');
-const FacebookTokenStrategy = require('passport-facebook-token');
-const GoogleTokenStrategy = require('passport-google-token').Strategy;
-
 const admins = require('common/config/application').admins;
 
-// declare const graphQL: GraphQLServiceInterface;
-
-exports.passport = () => {
-	passport.use(
-		new TwitterTokenStrategy(
-			{
-				consumerKey: twitterAuth.consumerKey,
-				consumerSecret: twitterAuth.consumerSecret,
-				callbackURL: twitterAuth.callbackURL,
-				includeEmail: true
-			},
-			function(_, __, profile, done) {
-				const user = { name: profile.displayName, email: profile.emails[0].value };
-				done(null, user);
-			}
-		)
-	);
-
-	passport.use(
-		new FacebookTokenStrategy(
-			{
-				clientID: facebookAuth.clientID,
-				clientSecret: facebookAuth.clientSecret
-			},
-			function(_, __, profile, done) {
-				const user = { name: profile.displayName, email: profile.emails[0].value };
-				done(null, user);
-			}
-		)
-	);
-
-	passport.use(
-		new GoogleTokenStrategy(
-			{
-				clientID: googleAuth.clientID,
-				clientSecret: googleAuth.clientSecret
-			},
-			function(_, __, profile, done) {
-				const user = { name: profile.displayName, email: profile.emails[0].value };
-				done(null, user);
-			}
-		)
-	);
-};
-
-exports.userAuthMiddleware = async (req, res, next) => {
+export const userSessionMiddleware = async (req, res, next) => {
 	const successLogin = req.flash('passwordless-success');
 	const failureLogin = req.flash('passwordless');
 	const userLoggedIn = req.flash('userLoggedIn');
@@ -82,6 +31,7 @@ exports.userAuthMiddleware = async (req, res, next) => {
 	}
 
 	if (req.user && req.user !== req.session.userEmail) {
+		delete req.session.userId;
 		delete req.session.userEmail;
 		delete req.session.userName;
 		delete req.session.userData;
@@ -105,6 +55,7 @@ exports.userAuthMiddleware = async (req, res, next) => {
 			req.session.userName = username || name;
 			req.session.userIsAdmin = admins.includes(req.user) ? true : false;
 			req.session.userToken = user.token;
+			req.session.userId = id;
 			req.session.userData = {
 				id,
 				active: isActive ? true : false,
@@ -119,25 +70,28 @@ exports.userAuthMiddleware = async (req, res, next) => {
 			// lets create new user and login
 
 			const newUser = await User.query().insert({ email, lastLogin: now, username: name, createdAt: now });
+			const { id, createdAt, token } = newUser;
 			req.session.userName = name;
-			req.session.userToken = newUser.token;
+			req.session.userToken = token;
+			req.session.userId = id;
+			req.session.userIsAdmin = admins.includes(req.user) ? true : false;
 			req.session.userData = {
-				created: now,
+				id,
+				createdAt,
+				active: true,
 				lastLogin: now
 			};
 		}
 	}
 
 	if (req.user && req.session.userEmail) {
-		res.locals.userEmail = req.session.userEmail;
-		res.locals.userName = req.session.userName;
-		res.locals.userData = req.session.userData;
-		res.locals.userIsAdmin = req.session.userIsAdmin;
-		res.locals.shared.userName = req.session.userName;
-		res.locals.shared.userData = req.session.userData;
-		res.locals.shared.userToken = req.session.userToken;
-		res.locals.shared.userEmail = req.session.userEmail;
-		res.locals.shared.userIsAdmin = req.session.userIsAdmin;
+		const { userEmail, userId, userName, userData, userIsAdmin, userToken } = req.session;
+		res.locals.userEmail = res.locals.shared.userEmail = userEmail;
+		res.locals.userId = res.locals.shared.userName = userId;
+		res.locals.userName = res.locals.shared.userName = userName;
+		res.locals.userData = res.locals.shared.userData = userData;
+		res.locals.userIsAdmin = res.locals.shared.userIsAdmin = userIsAdmin;
+		res.locals.userToken = res.locals.shared.userToken = userToken;
 	}
 
 	if (req.query.token) {

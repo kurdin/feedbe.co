@@ -1,25 +1,34 @@
 import { Model } from 'objection';
 import uuid from 'uuid/v4';
+import visibilityPlugin from 'objection-visibility';
 
-export default class BaseModel extends Model {
+export default class BaseModel extends visibilityPlugin(Model) {
   id!: string;
   createdAt!: string;
   updatedAt!: string;
   deletedAt!: string;
   isDeleted: boolean;
 
-  $beforeInsert() {
-    this.id = this.id || uuid();
-    this.createdAt = new Date().toISOString();
-    this.updatedAt = new Date().toDateString();
+  $beforeInsert(context) {
+    const maybePromise = super.$beforeInsert(context);
+
+    return Promise.resolve(maybePromise).then(() => {
+      this.id = this.id || uuid();
+      this.createdAt = new Date().toISOString();
+      this.updatedAt = new Date().toDateString();
+    });
   }
 
-  $beforeUpdate() {
-    this.updatedAt = new Date().toDateString();
+  $beforeUpdate(opt, context) {
+    const maybePromise = super.$beforeUpdate(opt, context);
 
-    if (this.isDeleted) {
-      this.deletedAt = new Date().toISOString();
-    }
+    return Promise.resolve(maybePromise).then(() => {
+      this.updatedAt = new Date().toDateString();
+
+      if (this.isDeleted) {
+        this.deletedAt = new Date().toISOString();
+      }
+    });
   }
 
   $beforeDelete() {
