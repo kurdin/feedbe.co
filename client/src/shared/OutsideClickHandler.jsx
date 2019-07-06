@@ -1,5 +1,4 @@
 import { Component, createElement } from 'react';
-// import { ChildFlags, VNodeFlags } from 'inferno-vnode-flags';
 import { addEventListener } from 'consolidated-events';
 
 const defaultProps = {

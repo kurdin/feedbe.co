@@ -594,10 +594,6 @@ a.autoclear {
   content: '\e809';
 } /* '' */
 
-.icon-angle-down:before {
-  content: '\e801';
-}
-
 .icon-down:before {
   content: '\e805';
 } /* '' */
@@ -2695,6 +2691,7 @@ a.history--down {
 a.console-new-window,
 .loginIcon {
   opacity: 1;
+  text-align: center;
   color: #9a9a9a;
   font-family: 'WebSymbolsLiga', 'Courier New', monospace;
   text-decoration: none;
@@ -3557,13 +3554,13 @@ h6.is-danger > b {
   outline: none;
 }
 
-.top-right-menu .nav-item a {
+.top-right-menu .nav-item > a {
   color: #fff;
   font-size: 17px;
   opacity: 0.8;
 }
 
-.top-right-menu .nav-item a:hover {
+.top-right-menu .nav-item > a:hover {
   opacity: 1;
 }
 
@@ -4317,6 +4314,18 @@ div.tabs a {
   margin-left: 0;
 }
 
+.tabs-account {
+  font-family: 'Ubuntu Condensed', 'Arial Narrow', Arial, sans-serif;
+}
+
+.tabs-account-panel {
+  h3 {
+    color: #f19f00;
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
+}
+
 nav.pagination {
   width: 80%;
   max-width: 700px;
@@ -4398,4 +4407,36 @@ nav.pagination a {
 
 .has-text-black {
   color: #000 !important;
+}
+
+#account-header-app {
+  .icon-angle-down {
+    padding-left: 5px;
+  }
+  .tooltip-container {
+    background: #000;
+  }
+}
+
+#account-header-menu {
+  top: 36px;
+
+  .log-out {
+    margin-left: 5px;
+  }
+  .menu-icons {
+    padding-top: 2px;
+    margin-right: 5px;
+  }
+  a.dropdown-item {
+    &:hover {
+      background: #ffd583;
+    }
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 13px;
+    padding-right: 2rem;
+    text-align: left;
+  }
 }

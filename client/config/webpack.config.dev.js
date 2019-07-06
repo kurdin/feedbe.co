@@ -76,6 +76,7 @@ module.exports = {
       libs: path.join(paths.appSrcRoot, './libs'),
       'jsx-filters': path.join(paths.appSrcRoot, './shared/jsx/filters'),
       'shared/inferno': path.join(paths.appSrcRoot, './shared'),
+      'styled-components': path.resolve(paths.appNodeModules, 'styled-components'),
       'css/main': path.join(paths.appSrcRoot, './css'),
       shared: path.join(paths.appSrcRoot, './shared'),
       components: path.join(paths.appSrcRoot, './components')

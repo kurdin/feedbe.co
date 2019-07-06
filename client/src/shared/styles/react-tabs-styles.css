@@ -1,0 +1,149 @@
+/*!
+ * Copyright Zendesk, Inc.
+ * 
+ * Use of this source code is governed under the Apache License, Version 2.0
+ * found at http://www.apache.org/licenses/LICENSE-2.0
+ */
+.index__c-tab___2ToGc {
+	display: block;
+	overflow: hidden;
+}
+.index__c-tab___2ToGc.index__is-rtl___3dY0B {
+	direction: rtl;
+}
+.index__c-tab__list___3SyZH {
+	display: block;
+	margin-top: 0;
+	margin-bottom: 20px;
+	border-bottom: 1px solid #d8dcde;
+	padding: 0;
+	line-height: 20px;
+	white-space: nowrap;
+	color: #68737d;
+	font-size: 14px;
+}
+.index__c-tab__list__item___PLi-k {
+	display: inline-block;
+	position: relative;
+	transition: color 0.25s ease-in-out;
+	border-bottom: solid transparent;
+	border-width: 3px;
+	cursor: pointer;
+	overflow: hidden;
+	vertical-align: top;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	text-align: center;
+	text-overflow: ellipsis;
+}
+.index__c-tab__list__item___PLi-k,
+.index__c-tab__list__item___PLi-k a {
+	padding: 10px 28px 6px;
+	text-decoration: none;
+	color: inherit;
+}
+.index__c-tab__list__item___PLi-k a {
+	display: block;
+	margin: -10px -28px -6px;
+}
+.index__c-tab__panel___B3W-G {
+	display: block;
+}
+.index__c-tab--block___15Cat {
+	display: table;
+}
+.index__c-tab--block___15Cat .index__c-tab__list___3SyZH {
+	display: table-cell;
+	border-bottom: none;
+	vertical-align: top;
+}
+.index__c-tab--block___15Cat .index__c-tab__list__item___PLi-k {
+	display: block;
+	border-bottom-style: none;
+	border-left-style: solid;
+	border-left-color: transparent;
+	padding: 4px 8px;
+	text-align: left;
+}
+.index__c-tab--block___15Cat .index__c-tab__list__item___PLi-k a {
+	margin: -4px -8px;
+	padding: 4px 8px;
+}
+.index__c-tab--block___15Cat .index__c-tab__list__item___PLi-k.index__is-last___27x2Q,
+.index__c-tab--block___15Cat .index__c-tab__list__item___PLi-k:last-of-type {
+	margin-bottom: 0;
+}
+.index__c-tab--block___15Cat .index__c-tab__list__item___PLi-k.index__is-focused___3Drbt:before,
+.index__c-tab--block___15Cat .index__c-tab__list__item___PLi-k:focus:before {
+	top: 4px;
+	right: 4px;
+	left: 4px;
+}
+.index__c-tab--block___15Cat.index__is-rtl___3dY0B .index__c-tab__list__item___PLi-k {
+	margin-left: 0;
+	border-left: 0;
+	border-right-style: solid;
+	border-right-color: transparent;
+	text-align: right;
+}
+.index__c-tab--block___15Cat .index__c-tab__panel___B3W-G {
+	margin-left: 32px;
+	vertical-align: top;
+}
+.index__c-tab--block___15Cat.index__is-rtl___3dY0B .index__c-tab__panel___B3W-G {
+	margin-right: 32px;
+}
+.index__c-tab__list__item___PLi-k.index__is-hovered___HvGTc,
+.index__c-tab__list__item___PLi-k a:hover {
+	text-decoration: none;
+}
+.index__c-tab__list__item___PLi-k:focus,
+.index__c-tab__list__item___PLi-k a:focus {
+	outline: none;
+	text-decoration: none;
+}
+.index__c-tab__list__item___PLi-k.index__is-focused___3Drbt,
+.index__c-tab__list__item___PLi-k:before {
+	transition: box-shadow 0.1s ease-in-out;
+	content: '';
+}
+.index__c-tab__list__item___PLi-k.index__is-focused___3Drbt:before,
+.index__c-tab__list__item___PLi-k:focus:before {
+	position: absolute;
+	top: 10px;
+	right: 24px;
+	left: 24px;
+	border-radius: 4px;
+	box-shadow: inset 0 0 0 2px rgba(31, 115, 183, 0.35);
+	height: 20px;
+	pointer-events: none;
+}
+.index__c-tab__list__item___PLi-k.index__c-tab__list__item___PLi-k.index__is-active___36Mvu,
+.index__c-tab__list__item___PLi-k.index__c-tab__list__item___PLi-k:active {
+	border-color: currentColor;
+}
+.index__c-tab__list__item___PLi-k.index__c-tab__list__item___PLi-k.index__is-active___36Mvu:before,
+.index__c-tab__list__item___PLi-k.index__c-tab__list__item___PLi-k:active:before {
+	box-shadow: none;
+}
+.index__c-tab__list__item___PLi-k.index__c-tab__list__item___PLi-k.index__is-selected___2upPm {
+	border-color: currentColor;
+}
+.index__c-tab__list__item___PLi-k.index__c-tab__list__item___PLi-k.index__is-disabled___QiKeO,
+.index__c-tab__list__item___PLi-k.index__c-tab__list__item___PLi-k[aria-disabled='true'],
+.index__c-tab__list__item___PLi-k.index__c-tab__list__item___PLi-k[disabled] {
+	border-color: transparent;
+	cursor: default;
+	color: #c2c8cc;
+}
+.index__c-tab__list__item___PLi-k.index__c-tab__list__item___PLi-k.index__is-disabled___QiKeO a,
+.index__c-tab__list__item___PLi-k.index__c-tab__list__item___PLi-k[aria-disabled='true'] a,
+.index__c-tab__list__item___PLi-k.index__c-tab__list__item___PLi-k[disabled] a {
+	cursor: inherit;
+}
+.index__c-tab__panel___B3W-G.index__is-hidden___M8iKI,
+.index__c-tab__panel___B3W-G[aria-hidden='true'] {
+	display: none;
+}

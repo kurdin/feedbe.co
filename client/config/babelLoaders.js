@@ -49,6 +49,12 @@ module.exports = function(env) {
             regenerator: true
           }
         ],
+        [
+          'babel-plugin-styled-components',
+          {
+            ssr: false
+          }
+        ],
         '@babel/plugin-syntax-dynamic-import',
         '@wordpress/babel-plugin-import-jsx-pragma',
         '@babel/plugin-proposal-export-default-from',

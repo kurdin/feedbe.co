@@ -2,25 +2,33 @@
 	"compilerOptions": {
 		"pretty": true,
 		"target": "esnext",
-		"module": "esnext",
-		"allowSyntheticDefaultImports": true,
+		"module": "commonjs",
 		"preserveConstEnums": true,
 		"sourceMap": true,
+		"allowJs": true,
+		"noImplicitAny": false,
 		"moduleResolution": "node",
 		"lib": ["es2017", "esnext", "esnext.asynciterable", "dom", "dom.iterable"],
-		"types": ["inferno"],
+		"types": ["react"],
 		"jsx": "preserve",
 		"noUnusedLocals": true,
 		"paths": {
-			"@utils": ["src/utils/*"]
+			"*": ["../node_modules/*", "./src/types/*"],
+			"@utils": ["src/utils/*"],
+			"shared/*": ["shared/*"],
+			"components/*": ["components/*"],
+			"@client/*": ["../src/*"]
 		},
-		"baseUrl": "./client/src",
+		"rootDir": "./src",
+		"baseUrl": "./src",
 		"noEmit": true,
 		"skipLibCheck": true,
 		"noUnusedParameters": true,
 		"noImplicitReturns": true,
-		"noFallthroughCasesInSwitch": true
+		"allowSyntheticDefaultImports": true,
+		"noFallthroughCasesInSwitch": true,
+		"typeRoots": ["../node_modules/@types"]
 	},
-	"exclude": ["node_modules"],
-	"include": ["client/src/**/*"]
+	"exclude": ["../node_modules"],
+	"include": ["./src/**/*"]
 }

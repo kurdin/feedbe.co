@@ -4,6 +4,34 @@ import { Component } from 'react';
 import NewProvider from 'components/Providers/NewProvider';
 import ProviderCard from 'components/Providers/ProviderCard';
 import Notification from 'components/Notification';
+import { ThemeProvider } from '@zendeskgarden/react-theming';
+
+import { Tabs, TabPanel } from '@zendeskgarden/react-tabs';
+import { css } from 'styled-components';
+
+import { Badges } from './Badgers';
+
+import 'shared/styles/react-tabs-styles.css';
+
+const theme = {
+	'tabs.tab': css`
+		&& {
+			margin-bottom: 15px;
+			font-size: 18px;
+		}
+		&&:hover {
+			color: #00d1b2;
+			opacity: 1;
+		}
+		${props => {
+			if (props.selected || props.active || props.focused) {
+				return '&& { color: #00d1b2; opacity: 1; font-weight: 900;}';
+			} else {
+				return '&& { color: #fff; opacity: 0.2;}';
+			}
+		}};
+	`
+};
 
 class Account extends Component {
 	static displayName = 'Account';
@@ -121,6 +149,68 @@ class Account extends Component {
 			<div class="section-transparent animated fadeIn">
 				<div class="columns is-vcentered">
 					<div class="column is-12">
+						<ThemeProvider theme={theme}>
+							<Tabs vertical>
+								<TabPanel
+									className="tabs-account-panel"
+									label={<span class="tabs-account">My Websites</span>}
+									key={'account-tab1'}
+								>
+									<h3>My Websites and Roles</h3>
+									My Websites goes here
+									<Badges />
+								</TabPanel>
+								<TabPanel
+									className="tabs-account-panel"
+									label={<span class="tabs-account">Profile</span>}
+									key={'account-tab2'}
+								>
+									<h3>Profile Information</h3>
+									Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum
+									amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+								</TabPanel>
+								<TabPanel
+									className="tabs-account-panel"
+									label={<span class="tabs-account">Account</span>}
+									key={'account-tab3'}
+								>
+									<h3>Account Settings</h3>
+									Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+									labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+									et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem
+									ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+									dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
+									rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
+									dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+									dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
+									rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+								</TabPanel>
+								<TabPanel
+									className="tabs-account-panel"
+									label={<span class="tabs-account">Advanced</span>}
+									key={'account-tab4'}
+								>
+									<h3>Advanced Options</h3>
+									Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum
+									dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit
+									praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit
+									amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+									aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
+									lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in
+									vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et
+									accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te
+									feugait nulla facilisi. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie
+									consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio
+									dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+									Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
+									laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
+									ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor
+									in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis
+									at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue
+									duis dolore te feugait nulla facilisi.
+								</TabPanel>
+							</Tabs>
+						</ThemeProvider>
 						<h3 class="title is-5 has-text-centered">
 							{changeName ? (
 								<div class="field is-grouped is-grouped-centered">
@@ -214,7 +304,7 @@ class Account extends Component {
 									</div>
 								) : (
 									<div>
-										<p style={{ 'margin-top': '5px' }}>
+										<p style={{ marginTop: '5px' }}>
 											{' '}
 											Account Type:{' '}
 											{isProvider ? (

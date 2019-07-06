@@ -108,3 +108,86 @@
 .is-danger.is-active.textarea {
 	box-shadow: 0 0 0 0.125em rgba(255, 56, 96, 0.2);
 }
+
+.tags {
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+}
+
+.tags .tag {
+	margin-bottom: 0.5rem;
+}
+
+.tags .tag:not(:last-child) {
+	margin-right: 0.5rem;
+}
+
+.tags:last-child {
+	margin-bottom: -0.5rem;
+}
+
+.tags:not(:last-child) {
+	margin-bottom: 1rem;
+}
+
+.tags.has-addons .tag {
+	margin-right: 0;
+}
+
+.tags.has-addons .tag:not(:first-child) {
+	border-bottom-left-radius: 0;
+	border-top-left-radius: 0;
+}
+
+.tags.has-addons .tag:not(:last-child) {
+	border-bottom-right-radius: 0;
+	border-top-right-radius: 0;
+}
+
+.tags.is-centered {
+	justify-content: center;
+}
+
+.tags.is-centered .tag {
+	margin-right: 0.25rem;
+	margin-left: 0.25rem;
+}
+
+.tags.is-right {
+	justify-content: flex-end;
+}
+
+.tags.is-right .tag:not(:first-child) {
+	margin-left: 0.5rem;
+}
+
+.tags.is-right .tag:not(:last-child) {
+	margin-right: 0;
+}
+
+.tags.inline {
+	display: inline-flex;
+}
+
+.tag.is-not-rounded:not(body) {
+	border-radius: 4px;
+	display: inline-flex;
+	height: 2em;
+	justify-content: center;
+	line-height: 1.5;
+	padding-left: 0.75em;
+	padding-right: 0.75em;
+	white-space: nowrap;
+}
+
+.tag:not(body).is-white {
+	background-color: #fff;
+	color: #0a0a0a;
+}
+
+.tag:not(body).is-black {
+	background-color: #0a0a0a;
+	color: #fff;
+}
