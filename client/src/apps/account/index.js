@@ -2,7 +2,7 @@
 
 import { render } from 'react-dom';
 import React from 'react';
-import Account from './components/Account';
+import { AccountRouter } from './AccountRoutes';
 
 const email = window.datashared && window.datashared.userEmail;
 const name = window.datashared && window.datashared.userName;
@@ -14,7 +14,7 @@ const accountApp = document.getElementById('account-app');
 
 window.isClient = true;
 
-render(<Account {...{ email, isAdmin, name, data, userProviders }} />, accountApp);
+render(<AccountRouter {...{ email, isAdmin, name, data, userProviders }} />, accountApp);
 
 if (process.env.NODE_ENV !== 'production') {
 	if (module.hot) {

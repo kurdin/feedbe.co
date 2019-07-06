@@ -33,12 +33,13 @@ const theme = {
 	`
 };
 
-class Account extends Component {
+export class Account extends Component {
 	static displayName = 'Account';
 
 	constructor(props) {
 		super(props);
 		this.state = {
+			activeTab: props.activeTab || 'my-website',
 			isProvider: props.data.isProvider,
 			userProvider: props.userProviders && props.userProviders[0],
 			name: props.name
@@ -141,7 +142,7 @@ class Account extends Component {
 	};
 
 	render() {
-		const { name, changeName, changeType, userProvider, isProvider, newProviderAdded } = this.state;
+		const { name, changeName, changeType, userProvider, isProvider, newProviderAdded, activeTab } = this.state;
 		const { email, data, isAdmin } = this.props;
 		const { handleAferFormSubmit, handleAferEditSubmit } = this;
 
@@ -150,11 +151,11 @@ class Account extends Component {
 				<div class="columns is-vcentered">
 					<div class="column is-12">
 						<ThemeProvider theme={theme}>
-							<Tabs vertical>
+							<Tabs vertical selectedKey={activeTab} onChange={activeTab => this.setState({ activeTab })}>
 								<TabPanel
 									className="tabs-account-panel"
 									label={<span class="tabs-account">My Websites</span>}
-									key={'account-tab1'}
+									key="my-website"
 								>
 									<h3>My Websites and Roles</h3>
 									My Websites goes here
@@ -163,7 +164,7 @@ class Account extends Component {
 								<TabPanel
 									className="tabs-account-panel"
 									label={<span class="tabs-account">Profile</span>}
-									key={'account-tab2'}
+									key="profile"
 								>
 									<h3>Profile Information</h3>
 									Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum
@@ -172,7 +173,7 @@ class Account extends Component {
 								<TabPanel
 									className="tabs-account-panel"
 									label={<span class="tabs-account">Account</span>}
-									key={'account-tab3'}
+									key="account-settings"
 								>
 									<h3>Account Settings</h3>
 									Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
@@ -188,7 +189,7 @@ class Account extends Component {
 								<TabPanel
 									className="tabs-account-panel"
 									label={<span class="tabs-account">Advanced</span>}
-									key={'account-tab4'}
+									key="advanced"
 								>
 									<h3>Advanced Options</h3>
 									Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum
@@ -354,5 +355,3 @@ class Account extends Component {
 		);
 	}
 }
-
-export default Account;
