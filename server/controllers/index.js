@@ -5,7 +5,7 @@ const cache = new CacheRedis({ port: null, host: null });
 // const Shared = require('./share').manage;
 
 module.exports = (req, res) => {
-	let view = 'index';
+	let view = 'home';
 	let cacheKey = 'db.providers/all';
 	let noCache = !globalHelper.isDev || req.query.nocache !== undefined ? true : false;
 	let cacheTTL = noCache ? 0 : 60;

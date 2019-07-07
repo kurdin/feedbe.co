@@ -246,7 +246,9 @@ loadUsersDb
 		global.DB = db;
 		const server = app.listen(app.get('port'), () => {
 			console.timeEnd('Server startup time');
-			console.log('Express server listening on port ' + server.address().port);
+			console.log(
+				`Express server listening on port ${server.address().port} running in ${BUILD ? 'PRODUCTION' : 'DEV'} env`
+			);
 		});
 	});
 

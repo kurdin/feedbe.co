@@ -66,8 +66,7 @@
 		<script src="https://cdn.jsdelivr.net/npm/simple-parallax-jquery@3.0.0/src/simpleParallax.min.js" crossorigin="anonymous"></script>
 	{/isDev}
 	
-  <script src="/apps/build/js/vendors-bundle.js{staticAssetsCache}"></script>
-  <script src="/apps/build/js/main-bundle.js{staticAssetsCache}"></script>
+  {! <script src="/apps/build/js/main-bundle.js{staticAssetsCache}"></script> !}
   {! <script src="/apps/build/js/test-bundle.js{staticAssetsCache}"></script> !}
 {/scripts}
 
