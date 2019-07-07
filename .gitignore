@@ -1,6 +1,7 @@
 .DS_Store
 logs
 node_modules
+server/views-js
 server/node_modules
 client/node_modules
 server/.build

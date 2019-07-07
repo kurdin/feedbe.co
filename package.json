@@ -6,8 +6,9 @@
     "main": "index.js",
     "scripts": {
         "start": "gulp",
-        "production": "NODE_ENV=production node server/.build",
-        "build": "NODE_ENV=production gulp build",
+        "production": "NODE_ENV=production node .build/server/server",
+        "build": "NODE_ENV=production gulp build && npm run buildServer",
+        "buildServer": "NODE_ENV=production node ./common/build-production",
         "dev": "gulp",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
@@ -220,12 +221,7 @@
         "webpack-node-externals": "^1.7.2",
         "write-file-webpack-plugin": "^4.5.0"
     },
-    "browserslist": [
-        ">1%",
-        "last 4 versions",
-        "Firefox ESR",
-        "not ie < 11"
-    ],
+    "browserslist": [">1%", "last 4 versions", "Firefox ESR", "not ie < 11"],
     "prettier": {
         "printWidth": 120,
         "useTabs": true,

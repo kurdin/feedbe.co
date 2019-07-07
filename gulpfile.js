@@ -142,7 +142,7 @@ gulp.task('setProdNodeEnv', cb => {
 });
 
 gulp.task('dustBuild', async () => {
-	await del(['./server/.build/views'], { force: true });
+	await del(['./server/views-js'], { force: true });
 	return gulp
 		.src('./server/views/**/*.dust')
 		.pipe(dust())
@@ -155,7 +155,7 @@ gulp.task('dustBuild', async () => {
 				])
 			})
 		)
-		.pipe(gulp.dest('./server/.build/views'));
+		.pipe(gulp.dest('./server/views-js'));
 });
 
 gulp.task('webpackBuild', async cb => {

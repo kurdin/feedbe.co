@@ -154,7 +154,7 @@ passwordless.addDelivery(function(tokenToSend, uidToSend, recipient, callback) {
 if (BUILD) {
 	app.engine('js', adaro.js(ViewOptions));
 	app.set('view engine', 'js');
-	app.set('views', path.resolve(__dirname, './views'));
+	app.set('views', path.resolve(__dirname, './views-js'));
 } else {
 	app.engine('dust', adaro.dust(ViewOptions));
 	app.set('view engine', 'dust');
