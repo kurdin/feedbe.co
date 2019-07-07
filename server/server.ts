@@ -103,11 +103,14 @@ app.use(express.static(path.join(__dirname, './public')));
 app.use(logger('dev'));
 
 app.use(
-	(_req, res, next): void => {
+	(req, res, next): void => {
 		res.locals.staticAssetsCache = '?' + global.globalHelper.lastCommit;
 		res.locals.isDev = global.globalHelper.isDev;
 		res.locals.isProd = !global.globalHelper.isDev;
 		res.locals.hasSSR = global.hasSSR;
+		if (req.headers['X-PJAX'] || req.headers['x-pjax']) {
+			res.locals.PJAX = true;
+		}
 		// force SSR with next line
 		// res.locals.isSSR = true;
 		next();

@@ -146,6 +146,7 @@
         "script-loader": "^0.7.0",
         "select": "^1.1.2",
         "shortid": "^2.2.14",
+        "simple-pjax": "^0.3.0",
         "sqlite3": "^4.0.4",
         "string-replace-loader": "^2.1.1",
         "styled-components": "^4.3.2",

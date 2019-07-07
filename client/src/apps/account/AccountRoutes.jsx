@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 
 import { Account } from './components/Account';
 
@@ -13,10 +13,12 @@ const AccountRoute = ({ component: Component, path, exact, ...rest }) => (
 
 const AccountRoutes = props => (
 	<Switch>
+		<AccountRoute path="/" exact component={Account} {...props} activeTab="my-website" />
 		<AccountRoute path="/my-websites" exact component={Account} {...props} activeTab="my-website" />
 		<AccountRoute path="/settings" component={Account} {...props} activeTab="account-settings" />
 		<AccountRoute path="/profile" component={Account} {...props} activeTab="profile" />
 		<AccountRoute path="/advanced" component={Account} {...props} activeTab="advanced" />
+		<Redirect from="/*" to="/" />
 	</Switch>
 );
 

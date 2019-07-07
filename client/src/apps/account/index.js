@@ -1,6 +1,6 @@
 /* globals window */
 
-import { render } from 'react-dom';
+import { render, unmountComponentAtNode } from 'react-dom';
 import React from 'react';
 import { AccountRouter } from './AccountRoutes';
 
@@ -15,6 +15,13 @@ const accountApp = document.getElementById('account-app');
 window.isClient = true;
 
 render(<AccountRouter {...{ email, isAdmin, name, data, userProviders }} />, accountApp);
+
+// unmount component before pjax
+$(document).one('pjax:send', () => {
+	if (accountApp) {
+		unmountComponentAtNode(accountApp);
+	}
+});
 
 if (process.env.NODE_ENV !== 'production') {
 	if (module.hot) {

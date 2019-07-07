@@ -42,7 +42,7 @@ app.get(
 
 // console.log('loginController', loginController);
 /* login account screen */
-app.get('/account/*', csrfProtection, isLoggedIn, accountController);
+app.get('/account*', csrfProtection, isLoggedIn, accountController);
 app.get('/login', csrfProtection, loginController);
 
 /* logout */

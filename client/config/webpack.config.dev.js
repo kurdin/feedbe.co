@@ -167,6 +167,10 @@ module.exports = {
     ]
   },
   plugins: [
+    //   new webpack.ProvidePlugin({
+    //   $: 'jquery',
+    //   jQuery: 'jquery'
+    // });
     new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.DefinePlugin(env.stringified),
@@ -174,6 +178,9 @@ module.exports = {
     new WatchMissingNodeModulesPlugin(paths.appNodeModules),
     new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)
   ],
+  externals: {
+    jquery: 'jQuery'
+  },
   // Some libraries import Node modules but don't use them in the browser.
   // Tell Webpack to provide empty mocks for them so importing them works.
   node: {

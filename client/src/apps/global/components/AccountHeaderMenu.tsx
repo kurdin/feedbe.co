@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import $ from 'jquery';
 import { LogOut, User, Settings, Heart } from 'react-feather';
 import OutsideClickHandler from 'shared/OutsideClickHandler';
 import Tooltip from 'shared/tooltip';
@@ -18,6 +19,12 @@ export class AccountHeaderMenu extends Component<AccountHeaderMenuProps, Account
 		isActive: false
 	};
 
+	componentDidMount() {
+		$(document).on('pjax:complete', e => {
+			this.handleMenuClose(e);
+		});
+	}
+
 	handleAccountMenuClick = e => {
 		e.preventDefault();
 		e.stopPropagation();
@@ -30,6 +37,10 @@ export class AccountHeaderMenu extends Component<AccountHeaderMenuProps, Account
 		if (!this.state.isActive) {
 			return;
 		}
+		this.handleMenuClose(e);
+	};
+
+	handleMenuClose = e => {
 		this.setState({
 			isActive: false
 		});
@@ -38,7 +49,7 @@ export class AccountHeaderMenu extends Component<AccountHeaderMenuProps, Account
 	render() {
 		const { userName, userEmail } = this.props;
 		const { isActive } = this.state;
-		const { handleAccountMenuClick, handleOutSideAccountMenuClick } = this;
+		const { handleAccountMenuClick, handleOutSideAccountMenuClick, handleMenuClose } = this;
 
 		return (
 			<>
@@ -78,15 +89,15 @@ export class AccountHeaderMenu extends Component<AccountHeaderMenuProps, Account
 					>
 						<div class="dropdown-menu" id="account-header-menu" role="menu">
 							<div class="dropdown-content">
-								<a href="/account/my-websites" class="dropdown-item">
+								<a href="/account/my-websites" data-pjax class="dropdown-item">
 									<Heart size={14} class="menu-icons" />
 									<span>My Websites</span>
 								</a>
-								<a href="/account/profile" class="dropdown-item">
+								<a href="/account/profile" data-pjax class="dropdown-item">
 									<User size={14} class="menu-icons" />
 									<span>Profile</span>
 								</a>
-								<a href="/account/settings" class="dropdown-item">
+								<a href="/account/settings" data-pjax class="dropdown-item">
 									<Settings size={14} class="menu-icons" />
 									<span>Account Settings</span>
 								</a>

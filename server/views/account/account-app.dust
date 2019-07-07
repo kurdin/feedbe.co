@@ -1,7 +1,7 @@
 <section class="hero is-dark is-bold">
 	<p class="has-text-right p-a-1">Logged in as <b>{userEmail}</b> <a href='/logout' class=" button is-small is-inverted is-black">logout</a></p>
 	  <div class="container" id="account-app">
-	  	<section class="home-image-loader hero is-dark is-bold" style="min-height: 45vh">
+	  	<section class="home-image-loader hero is-dark is-bold" style="min-height: 75vh">
 				<div class="loader">Loading...</div>
 			</section>
     </div>

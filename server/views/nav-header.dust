@@ -1,0 +1,41 @@
+<nav class="nav" id="top">
+	<div class="container">
+		<div class="nav-left">
+			<a href="/"><img src="/assets/img/feedbee-logo.svg" class="nav-logo"/></a>
+			<a class="nav-item top-logo-text" href="/"><b>FeedBe</b></a>
+		</div>
+		<span class="nav-toggle">
+			<span></span>
+			<span></span>
+			<span></span>
+		</span>
+		<div class="nav-right nav-menu top-right-menu">
+			<span class="nav-item">
+				<a href="/for-parents" data-pjax>For Web Owners</a>
+			</span>
+			<span class="nav-item" data-pjax>
+				<a href="/for-providers">For Users</a>
+			</span>
+			<span class="nav-item" data-pjax>
+				<a href="/our-services">Our Services</a>
+			</span>
+			<span class="nav-item">
+				<a href="/add" class="button is-primary is-small add-provider">provide feedback</a>
+			</span>        
+
+			{?userEmail}
+			<span class="nav-item login-item">
+				<span id="account-header-app">
+					<a class="login logged" aria-haspopup="true" aria-controls="account-header-menu" aria-label="email address here">
+						 <span class="loginIcon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="menu-icons ignore-onclickoutside-account-menu"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></span><span class="loginName ignore-onclickoutside-account-menu">{userName}</span><span class="icon-angle-down ignore-onclickoutside-account-menu"></span>
+					</a>
+				</span>
+			</span>
+			{:else}   
+			<span class="nav-item hint--flex login-item hint--timeout hint--bottom-left" aria-label="Passwordless Login">
+				<a href="/login" data-pjax class="button is-light is-small">Login</a>
+			</span>
+			{/userEmail}
+		</div>
+		</div>
+</nav>
