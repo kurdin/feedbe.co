@@ -39,12 +39,19 @@ export class Account extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			activeTab: props.activeTab || 'my-website',
+			activeTab: props.activeTab || 'my-websites',
 			isProvider: props.data.isProvider,
 			userProvider: props.userProviders && props.userProviders[0],
 			name: props.name
 		};
 	}
+
+	handleChangeActiveTab = tab => {
+		console.log('tab', tab);
+		this.setState({ activeTab: tab }, () => {
+			this.props.history.push('/' + tab);
+		});
+	};
 
 	handleChangeName = () => {
 		this.setState({ changeName: true, changeType: false });
@@ -144,18 +151,18 @@ export class Account extends Component {
 	render() {
 		const { name, changeName, changeType, userProvider, isProvider, newProviderAdded, activeTab } = this.state;
 		const { email, data, isAdmin } = this.props;
-		const { handleAferFormSubmit, handleAferEditSubmit } = this;
+		const { handleAferFormSubmit, handleAferEditSubmit, handleChangeActiveTab } = this;
 
 		return (
 			<div class="section-transparent animated fadeIn">
 				<div class="columns is-vcentered">
 					<div class="column is-12">
 						<ThemeProvider theme={theme}>
-							<Tabs vertical selectedKey={activeTab} onChange={activeTab => this.setState({ activeTab })}>
+							<Tabs vertical selectedKey={activeTab} onChange={handleChangeActiveTab}>
 								<TabPanel
 									className="tabs-account-panel"
 									label={<span class="tabs-account">My Websites</span>}
-									key="my-website"
+									key="my-websites"
 								>
 									<h3>My Websites and Roles</h3>
 									My Websites goes here
@@ -173,7 +180,7 @@ export class Account extends Component {
 								<TabPanel
 									className="tabs-account-panel"
 									label={<span class="tabs-account">Account</span>}
-									key="account-settings"
+									key="settings"
 								>
 									<h3>Account Settings</h3>
 									Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut

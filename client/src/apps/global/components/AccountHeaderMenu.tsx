@@ -20,8 +20,8 @@ export class AccountHeaderMenu extends Component<AccountHeaderMenuProps, Account
 	};
 
 	componentDidMount() {
-		$(document).on('pjax:complete', e => {
-			this.handleMenuClose(e);
+		$(document).on('pjax:complete', () => {
+			this.handleMenuClose();
 		});
 	}
 
@@ -33,14 +33,14 @@ export class AccountHeaderMenu extends Component<AccountHeaderMenuProps, Account
 		}));
 	};
 
-	handleOutSideAccountMenuClick = e => {
+	handleOutSideAccountMenuClick = () => {
 		if (!this.state.isActive) {
 			return;
 		}
-		this.handleMenuClose(e);
+		this.handleMenuClose();
 	};
 
-	handleMenuClose = e => {
+	handleMenuClose = () => {
 		this.setState({
 			isActive: false
 		});
@@ -49,7 +49,7 @@ export class AccountHeaderMenu extends Component<AccountHeaderMenuProps, Account
 	render() {
 		const { userName, userEmail } = this.props;
 		const { isActive } = this.state;
-		const { handleAccountMenuClick, handleOutSideAccountMenuClick, handleMenuClose } = this;
+		const { handleAccountMenuClick, handleOutSideAccountMenuClick } = this;
 
 		return (
 			<>

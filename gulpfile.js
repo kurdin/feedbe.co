@@ -164,13 +164,8 @@ gulp.task('webpackBuild', async cb => {
 
 	return new Promise(function(resolve, reject) {
 		webpack(webpackConfigProd, (err, stats) => {
-			if (stats.hasErrors()) {
-				log.error(
-					stats.toString({
-						chunks: false,
-						colors: true
-					})
-				);
+			if (err) {
+				log.error(err);
 				log.error(c.red('[webpack build has errors]'));
 				reject();
 				process.exit(-1);
