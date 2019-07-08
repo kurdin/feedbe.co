@@ -3,6 +3,7 @@
 
 import React, { Component } from 'react';
 import cn from 'classnames';
+import { Row, Col } from '@zendeskgarden/react-grid';
 import Animate from 'animate.css-react';
 import { emailRegex } from 'shared/utils';
 import FacebookLogin from 'shared/facebook-login';
@@ -10,6 +11,7 @@ import TwitterLogin from 'shared/twitter-login';
 import GoogleLogin from 'shared/google-login';
 
 import './css/Login.css';
+import '@zendeskgarden/react-grid/dist/styles.css';
 
 const _getCSRF = () => typeof window !== 'undefined' && window.datashared && window.datashared.csrfToken;
 
@@ -44,55 +46,63 @@ class Login extends Component {
     super(props);
     this.origin = props.origin;
     this.state = {
+      usePassword: false,
       success: false,
       sending: false,
       error: null
     };
   }
 
-  on = {
-    handleInput: e => {
-      this.email = e.currentTarget.value.trim();
+  handleUsePasswordToggle = e => {
+    e.preventDefault();
+    this.setState(prevState => ({
+      usePassword: !prevState.usePassword
+    }));
+  };
 
-      if (this.state.error && ((this.email && this.email.match(emailRegex)) || this.email === '')) {
-        this.setState({
-          error: null
-        });
-      }
-    },
-    handleSubmit: e => {
+  handleInput = e => {
+    this.email = e.currentTarget.value.trim();
+
+    if (this.state.error && ((this.email && this.email.match(emailRegex)) || this.email === '')) {
+      this.setState({
+        error: null
+      });
+    }
+  };
+
+  handleSubmit = e => {
+    e.preventDefault();
+    let email = this.inputEmail.value.trim() || '';
+    if (!email.match(emailRegex)) {
+      this.setState({
+        error: 'This email is invalid'
+      });
+    } else {
+      this.email = email;
+      this.setState({
+        error: null,
+        sending: true
+      });
+      $.ajax({
+        url: '/login',
+        dataType: 'json',
+        type: 'POST',
+        data: { email: this.email, origin: this.origin, _csrf: _getCSRF() },
+        success: data => {
+          this.setState({ success: true });
+        },
+        error: (xhr, status, err) => {
+          console.error(this.props.url, status, err.toString());
+        }
+      });
+    }
+  };
+
+  goBack = e => {
+    if (typeof this.origin !== 'undefined') return;
+    else {
       e.preventDefault();
-      let email = this.inputEmail.value.trim() || '';
-      if (!email.match(emailRegex)) {
-        this.setState({
-          error: 'This email is invalid'
-        });
-      } else {
-        this.email = email;
-        this.setState({
-          error: null,
-          sending: true
-        });
-        $.ajax({
-          url: '/login',
-          dataType: 'json',
-          type: 'POST',
-          data: { email: this.email, origin: this.origin, _csrf: _getCSRF() },
-          success: data => {
-            this.setState({ success: true });
-          },
-          error: (xhr, status, err) => {
-            console.error(this.props.url, status, err.toString());
-          }
-        });
-      }
-    },
-    goBack: e => {
-      if (typeof this.origin !== 'undefined') return;
-      else {
-        e.preventDefault();
-        window.history.back();
-      }
+      window.history.back();
     }
   };
 
@@ -140,6 +150,7 @@ class Login extends Component {
 
   render() {
     const { origin } = this.props;
+    const { usePassword } = this.state;
 
     // return (
     //   // <section class="hero is-dark is-bold">
@@ -154,11 +165,17 @@ class Login extends Component {
             <div class="columns">
               <div class="column is-4 is-offset-2">
                 <h3 class="title is-5 m-b-sm">
-                  <div>{!this.state.success ? <span>Passwordless Login</span> : <span>Email Sent</span>}</div>
+                  <div>
+                    {!this.state.success ? (
+                      <span>{usePassword ? 'Passwordless Login with Email' : 'Login with Email and Password'}</span>
+                    ) : (
+                      <span>Email Sent</span>
+                    )}
+                  </div>
                 </h3>
                 <LoginBox>
                   {!this.state.success ? (
-                    <form method="POST" onSubmit={this.on.handleSubmit}>
+                    <form method="POST" onSubmit={this.handleSubmit}>
                       <label class="label">Email</label>
                       <p class="control m-b-sm">
                         <input
@@ -170,7 +187,7 @@ class Login extends Component {
                           ref={el => {
                             this.inputEmail = el;
                           }}
-                          onInput={this.on.handleInput}
+                          onInput={this.handleInput}
                         />
                         {/* this.origin && <input type="hidden" name="origin" value={origin} /> */}
                         {this.state.error && (
@@ -186,9 +203,18 @@ class Login extends Component {
                         )}
                       </p>
                       <p class="control m-b-sm">
-                        <button type="submit" class={cn('button is-primary', { 'is-loading': this.state.sending })}>
-                          Login / Register
-                        </button>
+                        <Row gutters={false}>
+                          <Col>
+                            <button type="submit" class={cn('button is-primary', { 'is-loading': this.state.sending })}>
+                              Login / Register
+                            </button>
+                          </Col>
+                          <Col class="has-text-right">
+                            <span class="button is-link" onClick={this.handleUsePasswordToggle}>
+                              {usePassword ? 'Use Password' : 'Use Email'}
+                            </span>
+                          </Col>
+                        </Row>
                       </p>
                     </form>
                   ) : (
@@ -210,7 +236,7 @@ class Login extends Component {
                 ) : (
                   <ul>
                     <li class="is-pulled-left m-l-0 m-r-sm">
-                      <a href={origin} onClick={this.on.goBack}>
+                      <a href={origin} onClick={this.goBack}>
                         &larr; Go Back
                       </a>{' '}
                       |
