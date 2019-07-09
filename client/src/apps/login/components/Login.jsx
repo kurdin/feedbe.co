@@ -9,6 +9,7 @@ import { emailRegex } from 'shared/utils';
 import FacebookLogin from 'shared/facebook-login';
 import TwitterLogin from 'shared/twitter-login';
 import GoogleLogin from 'shared/google-login';
+import { setUrl } from 'shared/utils';
 
 import './css/Login.css';
 import '@zendeskgarden/react-grid/dist/styles.css';
@@ -46,7 +47,7 @@ class Login extends Component {
     super(props);
     this.origin = props.origin;
     this.state = {
-      usePassword: false,
+      usePassword: JSON.parse(localStorage.getItem('feedbe_usePassword')) || false,
       success: false,
       sending: false,
       error: null
@@ -55,12 +56,17 @@ class Login extends Component {
 
   handleUsePasswordToggle = e => {
     e.preventDefault();
-    this.setState(prevState => ({
-      usePassword: !prevState.usePassword
-    }));
+    this.setState(
+      prevState => ({
+        usePassword: !prevState.usePassword
+      }),
+      () => {
+        localStorage.setItem('feedbe_usePassword', JSON.stringify(this.state.usePassword));
+      }
+    );
   };
 
-  handleInput = e => {
+  handleInputEmail = e => {
     this.email = e.currentTarget.value.trim();
 
     if (this.state.error && ((this.email && this.email.match(emailRegex)) || this.email === '')) {
@@ -69,6 +75,20 @@ class Login extends Component {
       });
     }
   };
+
+  handleInputPassword = e => {
+    this.password = e.currentTarget.value;
+  };
+
+  checkLoginSuccess() {
+    $.get('/login/success/check', data => {
+      if (data && data.isAuthenticated) {
+        location.href = data.redirect;
+      } else {
+        setTimeout(this.checkLoginSuccess, 240000);
+      }
+    });
+  }
 
   handleSubmit = e => {
     e.preventDefault();
@@ -89,7 +109,10 @@ class Login extends Component {
         type: 'POST',
         data: { email: this.email, origin: this.origin, _csrf: _getCSRF() },
         success: data => {
-          this.setState({ success: true });
+          this.setState({ success: true }, () => {
+            setUrl('/login/success', 'replaceState');
+            setTimeout(this.checkLoginSuccess, 180000);
+          });
         },
         error: (xhr, status, err) => {
           console.error(this.props.url, status, err.toString());
@@ -151,6 +174,7 @@ class Login extends Component {
   render() {
     const { origin } = this.props;
     const { usePassword } = this.state;
+    const { handleUsePasswordToggle, handleInputEmail, handleInputPassword } = this;
 
     // return (
     //   // <section class="hero is-dark is-bold">
@@ -167,7 +191,7 @@ class Login extends Component {
                 <h3 class="title is-5 m-b-sm">
                   <div>
                     {!this.state.success ? (
-                      <span>{usePassword ? 'Passwordless Login with Email' : 'Login with Email and Password'}</span>
+                      <span>{usePassword ? 'Login with Email and Password' : 'Passwordless Login with Email'}</span>
                     ) : (
                       <span>Email Sent</span>
                     )}
@@ -177,20 +201,21 @@ class Login extends Component {
                   {!this.state.success ? (
                     <form method="POST" onSubmit={this.handleSubmit}>
                       <label class="label">Email</label>
-                      <p class="control m-b-sm">
+                      <div class="control m-b-sm">
                         <input
                           class={cn('input', { 'is-danger': this.state.error })}
                           type="text"
-                          name="user"
+                          name="username"
                           required="required"
+                          autoComplete="username"
                           placeholder="user@example.com"
                           ref={el => {
                             this.inputEmail = el;
                           }}
-                          onInput={this.handleInput}
+                          onInput={handleInputEmail}
                         />
                         {/* this.origin && <input type="hidden" name="origin" value={origin} /> */}
-                        {this.state.error && (
+                        {!usePassword && this.state.error && (
                           <Animate
                             component="div"
                             appear="pulse"
@@ -201,8 +226,38 @@ class Login extends Component {
                             <p class="help is-danger pulse">{this.state.error} </p>
                           </Animate>
                         )}
-                      </p>
-                      <p class="control m-b-sm">
+                      </div>
+                      {usePassword && (
+                        <>
+                          <label class="label">Password</label>
+                          <div class="control m-b-sm">
+                            <input
+                              class={cn('input', { 'is-danger': this.state.error })}
+                              type="password"
+                              name="password"
+                              autoComplete="current-password"
+                              required="required"
+                              ref={el => {
+                                this.inputPassword = el;
+                              }}
+                              onInput={handleInputPassword}
+                            />
+                            {this.state.error && (
+                              <Animate
+                                component="div"
+                                appear="pulse"
+                                change="pulse"
+                                durationAppear={300}
+                                durationChange={300}
+                              >
+                                <p class="help is-danger pulse">{this.state.error} </p>
+                              </Animate>
+                            )}
+                          </div>
+                        </>
+                      )}
+
+                      <div class="control m-b-sm">
                         <Row gutters={false}>
                           <Col>
                             <button type="submit" class={cn('button is-primary', { 'is-loading': this.state.sending })}>
@@ -210,12 +265,12 @@ class Login extends Component {
                             </button>
                           </Col>
                           <Col class="has-text-right">
-                            <span class="button is-link" onClick={this.handleUsePasswordToggle}>
-                              {usePassword ? 'Use Password' : 'Use Email'}
+                            <span class="button is-link" onClick={handleUsePasswordToggle}>
+                              {usePassword ? 'Use Email' : 'Use Password'}
                             </span>
                           </Col>
                         </Row>
-                      </p>
+                      </div>
                     </form>
                   ) : (
                     <Animate component="div" appear="pulse" durationAppear={300}>
@@ -229,10 +284,20 @@ class Login extends Component {
                   )}
                 </LoginBox>
                 {!this.state.success ? (
-                  <p>
-                    Enter your email to login or register, we'll send you token-based authentication link. No need for
-                    passwords.
-                  </p>
+                  usePassword ? (
+                    <p>
+                      Enter your email and password to login, if you don't have account, click{' '}
+                      <a href="#" class="has-underline" onClick={handleUsePasswordToggle}>
+                        register with email
+                      </a>
+                      .
+                    </p>
+                  ) : (
+                    <p>
+                      Enter your email to login or register, we'll send you token-based authentication link. No need for
+                      passwords.
+                    </p>
+                  )
                 ) : (
                   <ul>
                     <li class="is-pulled-left m-l-0 m-r-sm">

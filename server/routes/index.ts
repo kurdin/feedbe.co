@@ -1,7 +1,7 @@
 /* globals */
 
 import { isLoggedIn } from 'common/middlewares/server';
-import { loginController } from '../controllers/login';
+import { loginController, loginSuccessCheck } from '../controllers/login';
 import { accountController } from '../controllers/account';
 
 const express = require('express');
@@ -42,7 +42,9 @@ app.get(
 
 // console.log('loginController', loginController);
 /* login account screen */
-app.get('/account*', csrfProtection, isLoggedIn, accountController);
+// app.get('/login', csrfProtection, loginController);
+app.get(['/login/success', '/account*'], csrfProtection, isLoggedIn, accountController);
+app.get('/login/success/check', loginSuccessCheck);
 app.get('/login', csrfProtection, loginController);
 
 /* logout */

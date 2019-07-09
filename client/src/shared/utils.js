@@ -30,7 +30,8 @@ const scrollTo = (el, time = 600, offset = 0, cb = void 0) => {
 	);
 };
 
-const shallowCompare = (obj1, obj2) => Object.keys(obj1).length === Object.keys(obj2).length && Object.keys(obj1).every(key => obj1[key] === obj2[key]);
+const shallowCompare = (obj1, obj2) =>
+	Object.keys(obj1).length === Object.keys(obj2).length && Object.keys(obj1).every(key => obj1[key] === obj2[key]);
 
 const slugify = text =>
 	text
@@ -43,4 +44,11 @@ const slugify = text =>
 		.replace(/^-+/, '') // Trim - from start of text
 		.replace(/-+$/, ''); // Trim - from end of text;
 
-export { checkErrorProps, slugify, shallowCompare, scrollTo, emailRegex, uniqueArr, flatAsync, cn };
+const setUrl = (path, method = 'pushState') => {
+	if (typeof window === 'undefined') return;
+	if (window.history && !window.history.pushState) return;
+	var params = window.location.search || '';
+	window.history[method ? 'replaceState' : method]({}, '', path + params);
+};
+
+export { setUrl, checkErrorProps, slugify, shallowCompare, scrollTo, emailRegex, uniqueArr, flatAsync, cn };

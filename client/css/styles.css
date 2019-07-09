@@ -1264,7 +1264,8 @@ h1.post-title {
   text-decoration: none;
 }
 
-.post-meta a:hover {
+.post-meta a:hover,
+a.has-underline {
   text-decoration: underline;
 }
 

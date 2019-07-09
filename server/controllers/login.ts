@@ -2,6 +2,10 @@ import { clientSrc, render } from '../types';
 
 const LoginComponent = require(clientSrc + '/apps/login/server');
 
+export const loginSuccessCheck = (req, res) => {
+	return res.json({ isAuthenticated: req.isAuthenticated(), redirect: '/account' });
+};
+
 export const loginController = (req, res) => {
 	if (req.isAuthenticated()) {
 		return res.redirect('/account');
