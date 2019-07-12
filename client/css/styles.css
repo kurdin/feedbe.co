@@ -4326,6 +4326,11 @@ div.tabs a {
     font-size: 26px;
     margin-bottom: 20px;
   }
+  .tabs-section-header {
+    font-size: 24px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid gray;
+  }
 }
 
 nav.pagination {

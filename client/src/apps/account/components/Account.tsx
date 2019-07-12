@@ -27,9 +27,19 @@ const theme = {
 			if (props.selected || props.active || props.focused) {
 				return '&& { color: #00d1b2; opacity: 1; font-weight: 900;}';
 			} else {
-				return '&& { color: #fff; opacity: 0.2;}';
+				return '&& { color: #fff; opacity: 0.4;}';
 			}
 		}};
+	`,
+	'tabs.tab_list': css`
+		&& {
+			width: 120px;
+		}
+	`,
+	'tabs.tabs': css`
+		&& {
+			width: 100%;
+		}
 	`
 };
 
@@ -183,15 +193,60 @@ export class Account extends Component {
 									key="settings"
 								>
 									<h3>Account Settings</h3>
-									Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-									labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-									et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem
-									ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-									dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-									rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
-									dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-									dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-									rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+									<div class="content account-settings">
+										<h4 class="title tabs-section-header">Change password</h4>
+
+										<div class="field is-horizontal">
+											<div class="field-label is-normal">
+												<label class="label">Current password</label>
+											</div>
+											<div class="field-body">
+												<div class="field">
+													<div class="control is-half">
+														<input class="input" type="password" required />
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="field is-horizontal">
+											<div class="field-label is-normal">
+												<label class="label">New password</label>
+											</div>
+											<div class="field-body">
+												<div class="field">
+													<div class="control is-half">
+														<input class="input" type="password" name="new-password" required />
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="field is-horizontal">
+											<div class="field-label is-normal">
+												<label class="label">Confirm new password</label>
+											</div>
+											<div class="field-body">
+												<div class="field">
+													<div class="control is-half">
+														<input class="input" type="password" name="confirm-new-password" required />
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="field is-horizontal">
+											<div class="field-label" />
+											<div class="field-body">
+												<div class="field">
+													<div class="control">
+														<button class="button is-light">Upadate Password</button>
+														<button class="button is-link">Forgot password?</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
 								</TabPanel>
 								<TabPanel
 									className="tabs-account-panel"
@@ -219,7 +274,8 @@ export class Account extends Component {
 								</TabPanel>
 							</Tabs>
 						</ThemeProvider>
-						<h3 class="title is-5 has-text-centered">
+						<br />
+						<h3 class="title is-5 has-text-centered" hidden>
 							{changeName ? (
 								<div class="field is-grouped is-grouped-centered">
 									<p class="control-label" style={{ padding: '7px 7px' }}>

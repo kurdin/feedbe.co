@@ -261,7 +261,7 @@ class Login extends Component {
                         <Row gutters={false}>
                           <Col>
                             <button type="submit" class={cn('button is-primary', { 'is-loading': this.state.sending })}>
-                              Login / Register
+                              {usePassword ? 'Login' : 'Login / Register'}
                             </button>
                           </Col>
                           <Col class="has-text-right">

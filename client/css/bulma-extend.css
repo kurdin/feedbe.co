@@ -191,3 +191,33 @@
 	background-color: #0a0a0a;
 	color: #fff;
 }
+
+@media screen and (min-width: 769px) {
+	.account-settings {
+		.field-body {
+			padding-right: 50px;
+		}
+		.field-label {
+			flex-grow: 1.7;
+		}
+	}
+}
+
+.is-dark {
+	.button.is-link {
+		font-family: 'Roboto', sans-serif;
+		color: #fff;
+		&:hover,
+		&:active,
+		&:focus {
+			background: none;
+		}
+	}
+	.input {
+		background: #2b2b2b;
+		color: white;
+	}
+	.label {
+		color: #fff;
+	}
+}
