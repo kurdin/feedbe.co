@@ -3,6 +3,7 @@
 
 import React, { Component } from 'react';
 import cn from 'classnames';
+import { Link } from 'react-router-dom';
 import { Row, Col } from '@zendeskgarden/react-grid';
 import Animate from 'animate.css-react';
 import { emailRegex } from 'shared/utils';
@@ -288,9 +289,13 @@ class Login extends Component {
                     <p>
                       Enter your email and password to login, if you don't have account, click{' '}
                       <a href="#" class="has-underline" onClick={handleUsePasswordToggle}>
-                        register with email
+                        register with email.
                       </a>
-                      .
+                      <div>
+                        <Link to="/reset-password" class="has-underline">
+                          Forgot password?
+                        </Link>
+                      </div>
                     </p>
                   ) : (
                     <p>

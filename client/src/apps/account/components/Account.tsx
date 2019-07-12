@@ -195,6 +195,17 @@ export class Account extends Component {
 									<h3>Account Settings</h3>
 									<div class="content account-settings">
 										<h4 class="title tabs-section-header">Change password</h4>
+										<p class="has-text-light">
+											You can update or create password for your account. If you did not have password and used
+											paswordless or social network login, you'll need to{' '}
+											<a class="has-underline" target="new-pass" href="/login/reset-password">
+												reset password
+											</a>{' '}
+											first and then change it with your new password.{' '}
+										</p>
+										<p class="has-text-highlight">
+											We recommend to use passwordless or social network login to minimise security risks.
+										</p>
 
 										<div class="field is-horizontal">
 											<div class="field-label is-normal">
@@ -241,7 +252,9 @@ export class Account extends Component {
 												<div class="field">
 													<div class="control">
 														<button class="button is-light">Upadate Password</button>
-														<button class="button is-link">Forgot password?</button>
+														<a href="/login/reset-password" target="new-pass" class="button is-link is-pulled-right">
+															Reset password
+														</a>
 													</div>
 												</div>
 											</div>

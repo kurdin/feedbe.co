@@ -7,7 +7,8 @@ export const loginSuccessCheck = (req, res) => {
 };
 
 export const loginController = (req, res) => {
-	if (req.isAuthenticated()) {
+	console.log('req.originalUrl', req.originalUrl);
+	if (req.isAuthenticated() && !req.originalUrl.includes('/login/reset-password')) {
 		return res.redirect('/account');
 	}
 

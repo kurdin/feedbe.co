@@ -45,7 +45,7 @@ app.get(
 // app.get('/login', csrfProtection, loginController);
 app.get(['/login/success', '/account*'], csrfProtection, isLoggedIn, accountController);
 app.get('/login/success/check', loginSuccessCheck);
-app.get('/login', csrfProtection, loginController);
+app.get('/login*', csrfProtection, loginController);
 
 /* logout */
 app.get(

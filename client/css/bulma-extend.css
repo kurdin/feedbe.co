@@ -204,20 +204,34 @@
 }
 
 .is-dark {
-	.button.is-link {
-		font-family: 'Roboto', sans-serif;
-		color: #fff;
-		&:hover,
-		&:active,
-		&:focus {
-			background: none;
+	#account-app {
+		.has-text-highlight {
+			color: #e5b60b;
 		}
-	}
-	.input {
-		background: #2b2b2b;
-		color: white;
-	}
-	.label {
-		color: #fff;
+		.has-text-weight-bold {
+			font-weight: bold;
+		}
+		.has-text-light {
+			color: #f5f5f5;
+		}
+		.button.is-link {
+			font-family: 'Roboto', sans-serif;
+			color: #fff;
+			&:hover {
+				color: #000;
+			}
+			,
+			&:active,
+			&:focus {
+				background: none;
+			}
+		}
+		.input {
+			background: #2b2b2b;
+			color: white;
+		}
+		.label {
+			color: #fff;
+		}
 	}
 }
