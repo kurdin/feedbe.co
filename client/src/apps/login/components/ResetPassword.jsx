@@ -70,13 +70,13 @@ export default class ResetPassword extends Component {
         sending: true
       });
       $.ajax({
-        url: '/login',
+        url: '/login/reset-password',
         dataType: 'json',
         type: 'POST',
         data: { email: this.email, origin: this.origin, _csrf: _getCSRF() },
         success: data => {
           this.setState({ success: true }, () => {
-            setUrl('/login/success', 'replaceState');
+            setUrl('/login/reset-password/success', 'replaceState');
             setTimeout(this.checkLoginSuccess, 180000);
           });
         },
@@ -158,7 +158,7 @@ export default class ResetPassword extends Component {
                 </LoginBox>
                 {!this.state.success ? (
                   <p>
-                    Enter your account email and we'll send link to reset password or go to{' '}
+                    Enter your account email and we'll send link where you can reset password, or go to{' '}
                     <Link to="/" class="has-underline">
                       login page.
                     </Link>

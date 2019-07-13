@@ -7,7 +7,12 @@ export type GlobalHelper = {
 	host: string;
 };
 
+export type Mailer = {
+	send: Function;
+};
+
 export interface ServerGlobal extends Global {
+	mailer: Mailer;
 	appRoot: string;
 	rootPath: string;
 	clientSrc: string;

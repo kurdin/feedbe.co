@@ -267,7 +267,7 @@ class Login extends Component {
                           </Col>
                           <Col class="has-text-right">
                             <span class="button is-link" onClick={handleUsePasswordToggle}>
-                              {usePassword ? 'Use Email' : 'Use Password'}
+                              {usePassword ? 'use Email' : 'Use Password'}
                             </span>
                           </Col>
                         </Row>
@@ -277,7 +277,7 @@ class Login extends Component {
                     <Animate component="div" appear="pulse" durationAppear={300}>
                       <p class="text is-dark">
                         <p>
-                          We sent you email to <b>{this.email}</b> with login link.
+                          We sent you email to <b>{this.email}</b> with login magic link.
                         </p>
                         <p>Please check your inbox and click on the link provided to login.</p>
                       </p>
@@ -287,9 +287,9 @@ class Login extends Component {
                 {!this.state.success ? (
                   usePassword ? (
                     <p>
-                      Enter your email and password to login, if you don't have account, click{' '}
+                      Don't have account?{' '}
                       <a href="#" class="has-underline" onClick={handleUsePasswordToggle}>
-                        register with email.
+                        Login or register with email.
                       </a>
                       <div>
                         <Link to="/reset-password" class="has-underline">

@@ -194,10 +194,11 @@
 
 @media screen and (min-width: 769px) {
 	.account-settings {
-		.field-body {
-			padding-right: 50px;
+		.field {
+			max-width: 650px;
 		}
 		.field-label {
+			min-width: 200px;
 			flex-grow: 1.7;
 		}
 	}

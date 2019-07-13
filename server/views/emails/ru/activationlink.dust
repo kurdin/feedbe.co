@@ -1,0 +1,9 @@
+{>"emails/styles-default" /}
+{!
+<style>
+	p {
+		color: red;
+	}
+</style>
+!}
+ <p>Please verify your email to activate account on <a href="http://{domain}">{site}</a>, click on the link below or copy and paste it in your browser: <a href="http://{domain}/activate/{hash}">http://{domain}/activate/{hash}</a></p>

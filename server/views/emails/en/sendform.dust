@@ -1,0 +1,16 @@
+{>"emails/styles-default" /}
+<style>
+	h3 { text-transform: capitalize }
+	p { margin: 10px 0 }
+	pre {font-size: 120%; padding: 10px; background-color: #f0f0f0; }
+	div { background-color: #f0f0f0; padding: 10px}
+</style>
+{?nameTo}<h3>{nameTo},</h3>{/nameTo}
+<p>You have received new FORM submission posted from <b>{eOverlayName}</b> on {?site}<a href="http://{site}">{site}</a>{/site}</p>
+{?messageTo}<p>Message: {messageTo}</p>{/messageTo}
+
+<p>Submited Data {?formHeaderName} from Form <b>{formHeaderName}</b> {/formHeaderName}:</p>
+<pre>
+
+{@iterate key=formData}{$key}: <b>{$value}</b>{~n}{/iterate}</pre>
+<p>This message sent to <b>{emailTo}</b>{?emailCC} and <b>{emailCC}</b> {/emailCC} by <a href="https://www.eoverlay.com">eOverlay</a> Form Mailer</p>

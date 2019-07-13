@@ -4,6 +4,7 @@ import { Err, ServerGlobal } from './types/my.d';
 import { UsersService } from 'services';
 import GraphQLClient from 'services/libs/graphql-request-client';
 import { superAdminAccessToken } from 'common/config/authToken';
+import Mailer from 'common/mailer';
 import knex from 'datalayer/config/db';
 import { Model } from 'objection';
 import { render } from './lib/render';
@@ -61,6 +62,8 @@ const flash = require('./lib/req-flash');
 const { loadDb, loadUsersDb } = require('./lib/db');
 const app = express();
 
+global.mailer = Mailer(app);
+
 app.use(helmet());
 app.use(
 	helmet.hidePoweredBy({
@@ -74,15 +77,15 @@ app.use(
 	})
 );
 
-const yourEmail = 'sergey@webcorrector.co';
-const yourPwd = '!Makaveli2Pac';
-const yourSmtp = 'smtp.gmail.com';
-const smtpServer = email.server.connect({
-	user: yourEmail,
-	password: yourPwd,
-	host: yourSmtp,
-	ssl: true
-});
+// const yourEmail = 'sergey@webcorrector.co';
+// const yourPwd = '!Makaveli2Pac';
+// const yourSmtp = 'smtp.gmail.com';
+// const smtpServer = email.server.connect({
+// 	user: yourEmail,
+// 	password: yourPwd,
+// 	host: yourSmtp,
+// 	ssl: true
+// });
 
 const ViewOptions = {
 	cache: BUILD ? true : false,
@@ -125,28 +128,30 @@ app.use(datashared);
 
 // Setup of Passwordless
 passwordless.init(new RedisStorePasswordless());
-passwordless.addDelivery(function(tokenToSend, uidToSend, recipient, callback) {
+passwordless.addDelivery(async function(tokenToSend, uidToSend, recipient, callback) {
 	// Send out token
-	smtpServer.send(
-		{
+
+	const sent = await global.mailer.send({
+		lang: 'en',
+		test: false,
+		message: {
 			text:
-				'Hello, \n\nYou can now access Feedbe account via this link\n\n' +
+				'Hello, \n\nYou can now access Feedbe account using this magic link\n\n' +
 				global.globalHelper.host +
 				'?token=' +
 				tokenToSend +
 				'&uid=' +
 				encodeURIComponent(uidToSend),
-			from: 'FeedBe Bot <noreply@feedbe.co>',
 			to: recipient,
-			subject: 'Login Link for ' + global.globalHelper.host
-		},
-		(err: string) => {
-			if (err) {
-				console.log(err);
-			}
-			callback(err);
+			subject: '[Account] Login Link for ' + global.globalHelper.host
 		}
-	);
+	});
+
+	if (sent.success) {
+		callback(null);
+	} else {
+		callback(sent.error);
+	}
 });
 
 // view engine setup

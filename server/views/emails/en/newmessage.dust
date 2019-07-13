@@ -1,0 +1,17 @@
+{>"emails/styles-default" /}
+<style>
+	b { text-transform: capitalize }
+	p { margin: 10px 0 }
+	div { background-color: #f0f0f0; padding: 10px}
+</style>
+{?data}<h3>{data.name},</h3>{/data}
+<p>You have received new message to your <a href="http://{domain}">{site}</a> account.</p>
+{?data.from}<p>From: <b>{data.from.name}</b></p>{/data.from}
+{?data.subject}<p>Subject: <b>{data.subject}</b></p>{/data.subject}
+<div>{data.text|messageHTML|s}</div>
+
+<p>View this message online: <a href="http://{domain}/messages/view/{data._id}">http://{domain}/messages/view/{data._id}</a>.</p>
+
+<p>
+	At anytime, you can change email notifications preferences for your account on <a href="http://{domain}/settings">account settings page.</a>
+</p>

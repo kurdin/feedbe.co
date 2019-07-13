@@ -1,0 +1,14 @@
+{
+	"smtpConfig": {
+		"host": "smtp.gmail.com",
+		"service": "gmail",
+		"auth": {
+			"user": "sergey@webcorrector.co",
+			"pass": "!Makaveli2Pac"
+		}
+	},
+	"message": {
+		"from": "FeedBe <noreply@feedbe.co>",
+		"subject": "[FeedBe] "
+	}
+}

@@ -1,0 +1,2 @@
+{>"emails/styles-default" /}
+ <p>Someone requested a password change for your account on <a href="http://{domain}">{site}</a>, if it was you please click on the link to complete it: <a href="http://{domain}/passreset/{hash}">http://{domain}/passreset/{hash}</a></p>

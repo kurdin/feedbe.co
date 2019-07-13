@@ -1,0 +1,12 @@
+{>"emails/styles-default" /}
+<style>
+	b { text-transform: capitalize }
+</style>
+{?name}<h3>{name},</h3>{/name}
+<p>You recently linked your <b>{socialSite}</b> account with <a href="http://{domain}">{site}</a> account. From now, you can quickly <a href="{site}/login">login</a> using <b>Login with {socialSite}</b> button.</p>
+
+<p>At anytime, you can unlink your social accounts from <a href="http://{domain}">{site}</a> on your account access settings page.</p>
+
+<br/>
+<br/>
+If you did not perform this account linking action, please contact us at <a href="mailto:support@{domain}">support@{domain}</a>

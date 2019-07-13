@@ -1,0 +1,2 @@
+{>"emails/styles-default" /}
+<p>You recently changed your password to access your <a href="http://{domain}">{site}</a> account. From now, use new password to <a href="http://{domain}/login">login</a>. If you did not request this action, please contact us at <a href="mailto:support@{domain}">support@{domain}</a></p>
