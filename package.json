@@ -33,7 +33,7 @@
         "@zendeskgarden/react-modals": "^6.2.0",
         "@zendeskgarden/react-tabs": "^6.2.0",
         "@zendeskgarden/react-theming": "^6.2.0",
-        "acorn": "^6.0.4",
+        "acorn": "^6.4.1",
         "adaro": "^1.0.4",
         "animate.css-react": "^0.1.0",
         "ansi-colors": "^3.2.4",
