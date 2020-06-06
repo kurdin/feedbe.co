@@ -11,7 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "apollo-server": "^2.6.7",
-    "apollo-server-express": "^2.6.7",
+    "apollo-server-express": "^2.14.2",
     "fsevents": "^2.0.7",
     "graphql": "^14.3.1",
     "graphql-import": "^0.7.1",
