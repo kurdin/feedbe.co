@@ -46,7 +46,7 @@
         "babel-plugin-root-import": "^6.2.0",
         "babel-plugin-styled-components": "^1.10.6",
         "babel-preset-react-app": "^9.0.0",
-        "bcrypt": "^3",
+        "bcrypt": "^5",
         "body-parser": "^1.18.3",
         "cacheman": "^2.2.1",
         "cacheman-redis": "^2.0.0",
