@@ -205,7 +205,7 @@
         "mobx-devtools-mst": "^0.9.21",
         "prettier": "1.17.0",
         "proptypes": "^1.1.0",
-        "react-dev-utils": "^9.0.1",
+        "react-dev-utils": "^11.0.4",
         "regenerator-runtime": "^0.13.2",
         "sass-loader": "^7.1.0",
         "shipit-now": "^1.0.1",
