@@ -14,7 +14,7 @@
     "es6-promise": "^4.2.8",
     "express": "^4.17.1",
     "express-session": "^1.16.2",
-    "follow-redirects": "^1.7.0",
+    "follow-redirects": "^1.14.8",
     "raw-body": "^2.4.1",
     "optimist": "^0.6.1",
     "request": "^2.88.0"
