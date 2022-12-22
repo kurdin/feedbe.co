@@ -13,7 +13,7 @@
     "buildify": "^0.4.0",
     "css-loader": "^0.15.3",
     "dust-loader": "^1.0.1",
-    "dustjs-linkedin": "^2.7.2",
+    "dustjs-linkedin": "^3.0.0",
     "extract-text-webpack-plugin": "^0.8.2",
     "file-loader": "^0.8.4",
     "gulp": "^3.9.0",
