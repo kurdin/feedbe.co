@@ -9,7 +9,7 @@
   "dependencies": {
     "backbone": "^1.2.1",
     "backbone.marionette": "^2.4.4",
-    "baobab": "^2.0.0",
+    "baobab": "^2.6.1",
     "buildify": "^0.4.0",
     "css-loader": "^0.15.3",
     "dust-loader": "^1.0.1",
