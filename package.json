@@ -103,7 +103,7 @@
         "jsonwebtoken": "^8.5.1",
         "jsx-html-class": "^1.0.3",
         "juice": "^5.2.0",
-        "knex": "^0.17.3",
+        "knex": "^2.4.0",
         "lodash": "^4.17.11",
         "lokijs": "^1.5.6",
         "marked": "^0.6.0",
